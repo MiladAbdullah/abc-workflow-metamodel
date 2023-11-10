@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/com.extremexp.emf.model/src-gen" creationIcons="false"
+    editDirectory="/com.extremexp.emf.model.edit/src-gen" editorDirectory="/com.extremexp.emf.model.editor/src-gen"
+    modelPluginID="com.extremexp.emf.model" modelName="Workflow" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>workflow.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Workflow" basePackage="com.extremexp.emf.model" disposableProviderFactory="true"
+      ecorePackage="workflow.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="workflow.ecore#//Event"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="workflow.ecore#//Primitive"/>
+    <genClasses ecoreClass="workflow.ecore#//Workflow"/>
+    <genClasses ecoreClass="workflow.ecore#//Node"/>
+    <genClasses ecoreClass="workflow.ecore#//InputData">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute workflow.ecore#//InputData/name"/>
+    </genClasses>
+    <genClasses ecoreClass="workflow.ecore#//ExternalInputData">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute workflow.ecore#//ExternalInputData/eligibilityCondition"/>
+    </genClasses>
+    <genClasses ecoreClass="workflow.ecore#//IntermediateInputData"/>
+    <genClasses ecoreClass="workflow.ecore#//OutputData">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute workflow.ecore#//OutputData/name"/>
+    </genClasses>
+    <genClasses ecoreClass="workflow.ecore#//Metric"/>
+    <genClasses ecoreClass="workflow.ecore#//Parameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute workflow.ecore#//Parameter/name"/>
+    </genClasses>
+    <genClasses ecoreClass="workflow.ecore#//DynamicParameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute workflow.ecore#//DynamicParameter/name"/>
+    </genClasses>
+    <genClasses ecoreClass="workflow.ecore#//StaticParameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute workflow.ecore#//StaticParameter/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute workflow.ecore#//StaticParameter/value"/>
+    </genClasses>
+    <genClasses ecoreClass="workflow.ecore#//ParameterType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute workflow.ecore#//ParameterType/name"/>
+    </genClasses>
+    <genClasses ecoreClass="workflow.ecore#//Array">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute workflow.ecore#//Array/length"/>
+    </genClasses>
+    <genClasses ecoreClass="workflow.ecore#//Structure"/>
+    <genClasses ecoreClass="workflow.ecore#//Field">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute workflow.ecore#//Field/name"/>
+    </genClasses>
+    <genClasses ecoreClass="workflow.ecore#//Task">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute workflow.ecore#//Task/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute workflow.ecore#//Task/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute workflow.ecore#//Task/isAbstract"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute workflow.ecore#//Task/implementationRef"/>
+    </genClasses>
+    <genClasses ecoreClass="workflow.ecore#//Operator"/>
+    <genClasses ecoreClass="workflow.ecore#//Link"/>
+    <genClasses ecoreClass="workflow.ecore#//ConditionalLink">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute workflow.ecore#//ConditionalLink/condition"/>
+    </genClasses>
+    <genClasses ecoreClass="workflow.ecore#//RegularLink"/>
+    <genClasses ecoreClass="workflow.ecore#//ExceptionalLink">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute workflow.ecore#//ExceptionalLink/event"/>
+    </genClasses>
+    <genClasses ecoreClass="workflow.ecore#//UI"/>
+    <genClasses ecoreClass="workflow.ecore#//Group">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute workflow.ecore#//Group/name"/>
+    </genClasses>
+    <genClasses ecoreClass="workflow.ecore#//MetaData">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute workflow.ecore#//MetaData/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute workflow.ecore#//MetaData/value"/>
+    </genClasses>
+    <genClasses ecoreClass="workflow.ecore#//Parallel"/>
+    <genClasses ecoreClass="workflow.ecore#//Exclusive">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute workflow.ecore#//Exclusive/condition"/>
+    </genClasses>
+    <genClasses ecoreClass="workflow.ecore#//Inclusive">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute workflow.ecore#//Inclusive/conditions"/>
+    </genClasses>
+    <genClasses ecoreClass="workflow.ecore#//Complex"/>
+    <genClasses ecoreClass="workflow.ecore#//ParallelJoin"/>
+    <genClasses ecoreClass="workflow.ecore#//ExclusiveJoin"/>
+    <genClasses ecoreClass="workflow.ecore#//InclusiveJoin"/>
+    <genClasses ecoreClass="workflow.ecore#//ComplexJoin"/>
+    <nestedGenPackages prefix="NewPackage1" disposableProviderFactory="true" ecorePackage="workflow.ecore#//Algorithm"/>
+  </genPackages>
+</genmodel:GenModel>
