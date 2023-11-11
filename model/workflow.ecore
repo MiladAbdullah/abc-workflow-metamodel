@@ -117,4 +117,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="InclusiveJoin" eSuperTypes="#//Operator"/>
   <eClassifiers xsi:type="ecore:EClass" name="ComplexJoin" eSuperTypes="#//Operator"/>
   <eClassifiers xsi:type="ecore:EDataType" name="NewDataType3" instanceTypeName="newDataType3"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EventNode" eSuperTypes="#//Node">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="event" eType="#//Event"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PrimitiveParameter" eSuperTypes="#//ParameterType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="primitive" eType="#//Primitive"/>
+  </eClassifiers>
 </ecore:EPackage>

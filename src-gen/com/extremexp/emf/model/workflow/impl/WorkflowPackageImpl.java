@@ -8,6 +8,7 @@ import com.extremexp.emf.model.workflow.ComplexJoin;
 import com.extremexp.emf.model.workflow.ConditionalLink;
 import com.extremexp.emf.model.workflow.DynamicParameter;
 import com.extremexp.emf.model.workflow.Event;
+import com.extremexp.emf.model.workflow.EventNode;
 import com.extremexp.emf.model.workflow.ExceptionalLink;
 import com.extremexp.emf.model.workflow.Exclusive;
 import com.extremexp.emf.model.workflow.ExclusiveJoin;
@@ -29,6 +30,7 @@ import com.extremexp.emf.model.workflow.ParallelJoin;
 import com.extremexp.emf.model.workflow.Parameter;
 import com.extremexp.emf.model.workflow.ParameterType;
 import com.extremexp.emf.model.workflow.Primitive;
+import com.extremexp.emf.model.workflow.PrimitiveParameter;
 import com.extremexp.emf.model.workflow.RegularLink;
 import com.extremexp.emf.model.workflow.StaticParameter;
 import com.extremexp.emf.model.workflow.Structure;
@@ -269,6 +271,20 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 	 * @generated
 	 */
 	private EClass complexJoinEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eventNodeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass primitiveParameterEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1008,6 +1024,42 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getEventNode() {
+		return eventNodeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEventNode_Event() {
+		return (EAttribute) eventNodeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPrimitiveParameter() {
+		return primitiveParameterEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPrimitiveParameter_Primitive() {
+		return (EAttribute) primitiveParameterEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getEvent() {
 		return eventEEnum;
 	}
@@ -1162,6 +1214,12 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 
 		complexJoinEClass = createEClass(COMPLEX_JOIN);
 
+		eventNodeEClass = createEClass(EVENT_NODE);
+		createEAttribute(eventNodeEClass, EVENT_NODE__EVENT);
+
+		primitiveParameterEClass = createEClass(PRIMITIVE_PARAMETER);
+		createEAttribute(primitiveParameterEClass, PRIMITIVE_PARAMETER__PRIMITIVE);
+
 		// Create enums
 		eventEEnum = createEEnum(EVENT);
 		primitiveEEnum = createEEnum(PRIMITIVE);
@@ -1219,6 +1277,8 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 		exclusiveJoinEClass.getESuperTypes().add(this.getOperator());
 		inclusiveJoinEClass.getESuperTypes().add(this.getOperator());
 		complexJoinEClass.getESuperTypes().add(this.getOperator());
+		eventNodeEClass.getESuperTypes().add(this.getNode());
+		primitiveParameterEClass.getESuperTypes().add(this.getParameterType());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(workflowEClass, Workflow.class, "Workflow", !IS_ABSTRACT, !IS_INTERFACE,
@@ -1410,6 +1470,17 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 
 		initEClass(complexJoinEClass, ComplexJoin.class, "ComplexJoin", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(eventNodeEClass, EventNode.class, "EventNode", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEventNode_Event(), this.getEvent(), "event", null, 0, 1, EventNode.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(primitiveParameterEClass, PrimitiveParameter.class, "PrimitiveParameter", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPrimitiveParameter_Primitive(), this.getPrimitive(), "primitive", null, 0, 1,
+				PrimitiveParameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(eventEEnum, Event.class, "Event");

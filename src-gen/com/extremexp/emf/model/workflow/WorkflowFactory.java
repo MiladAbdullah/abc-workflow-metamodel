@@ -256,6 +256,24 @@ public interface WorkflowFactory extends EFactory {
 	ComplexJoin createComplexJoin();
 
 	/**
+	 * Returns a new object of class '<em>Event Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Event Node</em>'.
+	 * @generated
+	 */
+	EventNode createEventNode();
+
+	/**
+	 * Returns a new object of class '<em>Primitive Parameter</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Primitive Parameter</em>'.
+	 * @generated
+	 */
+	PrimitiveParameter createPrimitiveParameter();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

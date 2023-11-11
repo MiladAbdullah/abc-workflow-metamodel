@@ -222,6 +222,16 @@ public class WorkflowAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseEventNode(EventNode object) {
+			return createEventNodeAdapter();
+		}
+
+		@Override
+		public Adapter casePrimitiveParameter(PrimitiveParameter object) {
+			return createPrimitiveParameterAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -671,6 +681,34 @@ public class WorkflowAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createComplexJoinAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.extremexp.emf.model.workflow.EventNode <em>Event Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.extremexp.emf.model.workflow.EventNode
+	 * @generated
+	 */
+	public Adapter createEventNodeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.extremexp.emf.model.workflow.PrimitiveParameter <em>Primitive Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.extremexp.emf.model.workflow.PrimitiveParameter
+	 * @generated
+	 */
+	public Adapter createPrimitiveParameterAdapter() {
 		return null;
 	}
 

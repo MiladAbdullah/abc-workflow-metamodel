@@ -109,6 +109,10 @@ public class WorkflowFactoryImpl extends EFactoryImpl implements WorkflowFactory
 			return createInclusiveJoin();
 		case WorkflowPackage.COMPLEX_JOIN:
 			return createComplexJoin();
+		case WorkflowPackage.EVENT_NODE:
+			return createEventNode();
+		case WorkflowPackage.PRIMITIVE_PARAMETER:
+			return createPrimitiveParameter();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -410,6 +414,26 @@ public class WorkflowFactoryImpl extends EFactoryImpl implements WorkflowFactory
 	public ComplexJoin createComplexJoin() {
 		ComplexJoinImpl complexJoin = new ComplexJoinImpl();
 		return complexJoin;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EventNode createEventNode() {
+		EventNodeImpl eventNode = new EventNodeImpl();
+		return eventNode;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PrimitiveParameter createPrimitiveParameter() {
+		PrimitiveParameterImpl primitiveParameter = new PrimitiveParameterImpl();
+		return primitiveParameter;
 	}
 
 	/**

@@ -341,6 +341,24 @@ public class WorkflowSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case WorkflowPackage.EVENT_NODE: {
+			EventNode eventNode = (EventNode) theEObject;
+			T result = caseEventNode(eventNode);
+			if (result == null)
+				result = caseNode(eventNode);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case WorkflowPackage.PRIMITIVE_PARAMETER: {
+			PrimitiveParameter primitiveParameter = (PrimitiveParameter) theEObject;
+			T result = casePrimitiveParameter(primitiveParameter);
+			if (result == null)
+				result = caseParameterType(primitiveParameter);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -808,6 +826,36 @@ public class WorkflowSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseComplexJoin(ComplexJoin object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Event Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Event Node</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEventNode(EventNode object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Primitive Parameter</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Primitive Parameter</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePrimitiveParameter(PrimitiveParameter object) {
 		return null;
 	}
 
