@@ -21,27 +21,24 @@ package com.extremexp.emf.model.workflow;
 public interface ExceptionalLink extends Link {
 	/**
 	 * Returns the value of the '<em><b>Event</b></em>' attribute.
-	 * The literals are from the enumeration {@link com.extremexp.emf.model.workflow.Event}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Event</em>' attribute.
-	 * @see com.extremexp.emf.model.workflow.Event
-	 * @see #setEvent(Event)
+	 * @see #setEvent(Object)
 	 * @see com.extremexp.emf.model.workflow.WorkflowPackage#getExceptionalLink_Event()
 	 * @model
 	 * @generated
 	 */
-	Event getEvent();
+	Object getEvent();
 
 	/**
 	 * Sets the value of the '{@link com.extremexp.emf.model.workflow.ExceptionalLink#getEvent <em>Event</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Event</em>' attribute.
-	 * @see com.extremexp.emf.model.workflow.Event
 	 * @see #getEvent()
 	 * @generated
 	 */
-	void setEvent(Event value);
+	void setEvent(Object value);
 
 } // ExceptionalLink

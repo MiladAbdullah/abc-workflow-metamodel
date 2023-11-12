@@ -18,30 +18,30 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link com.extremexp.emf.model.workflow.impl.ComplexImpl#getComplexCondition <em>Complex Condition</em>}</li>
+ *   <li>{@link com.extremexp.emf.model.workflow.impl.ComplexImpl#isComplexCondition <em>Complex Condition</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ComplexImpl extends OperatorImpl implements Complex {
 	/**
-	 * The default value of the '{@link #getComplexCondition() <em>Complex Condition</em>}' attribute.
+	 * The default value of the '{@link #isComplexCondition() <em>Complex Condition</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getComplexCondition()
+	 * @see #isComplexCondition()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String COMPLEX_CONDITION_EDEFAULT = null;
+	protected static final boolean COMPLEX_CONDITION_EDEFAULT = false;
 	/**
-	 * The cached value of the '{@link #getComplexCondition() <em>Complex Condition</em>}' attribute.
+	 * The cached value of the '{@link #isComplexCondition() <em>Complex Condition</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getComplexCondition()
+	 * @see #isComplexCondition()
 	 * @generated
 	 * @ordered
 	 */
-	protected String complexCondition = COMPLEX_CONDITION_EDEFAULT;
+	protected boolean complexCondition = COMPLEX_CONDITION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -67,7 +67,7 @@ public class ComplexImpl extends OperatorImpl implements Complex {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getComplexCondition() {
+	public boolean isComplexCondition() {
 		return complexCondition;
 	}
 
@@ -76,8 +76,8 @@ public class ComplexImpl extends OperatorImpl implements Complex {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setComplexCondition(String newComplexCondition) {
-		String oldComplexCondition = complexCondition;
+	public void setComplexCondition(boolean newComplexCondition) {
+		boolean oldComplexCondition = complexCondition;
 		complexCondition = newComplexCondition;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WorkflowPackage.COMPLEX__COMPLEX_CONDITION,
@@ -93,7 +93,7 @@ public class ComplexImpl extends OperatorImpl implements Complex {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case WorkflowPackage.COMPLEX__COMPLEX_CONDITION:
-			return getComplexCondition();
+			return isComplexCondition();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -107,7 +107,7 @@ public class ComplexImpl extends OperatorImpl implements Complex {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case WorkflowPackage.COMPLEX__COMPLEX_CONDITION:
-			setComplexCondition((String) newValue);
+			setComplexCondition((Boolean) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -137,8 +137,7 @@ public class ComplexImpl extends OperatorImpl implements Complex {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case WorkflowPackage.COMPLEX__COMPLEX_CONDITION:
-			return COMPLEX_CONDITION_EDEFAULT == null ? complexCondition != null
-					: !COMPLEX_CONDITION_EDEFAULT.equals(complexCondition);
+			return complexCondition != COMPLEX_CONDITION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}

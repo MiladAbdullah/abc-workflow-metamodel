@@ -11,7 +11,7 @@ package com.extremexp.emf.model.workflow;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link com.extremexp.emf.model.workflow.Exclusive#getCondition <em>Condition</em>}</li>
+ *   <li>{@link com.extremexp.emf.model.workflow.Exclusive#isCondition <em>Condition</em>}</li>
  * </ul>
  *
  * @see com.extremexp.emf.model.workflow.WorkflowPackage#getExclusive()
@@ -24,21 +24,21 @@ public interface Exclusive extends Operator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Condition</em>' attribute.
-	 * @see #setCondition(String)
+	 * @see #setCondition(boolean)
 	 * @see com.extremexp.emf.model.workflow.WorkflowPackage#getExclusive_Condition()
 	 * @model
 	 * @generated
 	 */
-	String getCondition();
+	boolean isCondition();
 
 	/**
-	 * Sets the value of the '{@link com.extremexp.emf.model.workflow.Exclusive#getCondition <em>Condition</em>}' attribute.
+	 * Sets the value of the '{@link com.extremexp.emf.model.workflow.Exclusive#isCondition <em>Condition</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Condition</em>' attribute.
-	 * @see #getCondition()
+	 * @see #isCondition()
 	 * @generated
 	 */
-	void setCondition(String value);
+	void setCondition(boolean value);
 
 } // Exclusive

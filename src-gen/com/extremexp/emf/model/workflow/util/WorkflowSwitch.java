@@ -350,11 +350,11 @@ public class WorkflowSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case WorkflowPackage.PRIMITIVE_PARAMETER: {
-			PrimitiveParameter primitiveParameter = (PrimitiveParameter) theEObject;
-			T result = casePrimitiveParameter(primitiveParameter);
+		case WorkflowPackage.PRIMITIVE_TYPE: {
+			PrimitiveType primitiveType = (PrimitiveType) theEObject;
+			T result = casePrimitiveType(primitiveType);
 			if (result == null)
-				result = caseParameterType(primitiveParameter);
+				result = caseParameterType(primitiveType);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -845,17 +845,17 @@ public class WorkflowSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Primitive Parameter</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Primitive Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Primitive Parameter</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Primitive Type</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePrimitiveParameter(PrimitiveParameter object) {
+	public T casePrimitiveType(PrimitiveType object) {
 		return null;
 	}
 

@@ -19,31 +19,31 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link com.extremexp.emf.model.workflow.impl.ExclusiveImpl#getCondition <em>Condition</em>}</li>
+ *   <li>{@link com.extremexp.emf.model.workflow.impl.ExclusiveImpl#isCondition <em>Condition</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ExclusiveImpl extends OperatorImpl implements Exclusive {
 	/**
-	 * The default value of the '{@link #getCondition() <em>Condition</em>}' attribute.
+	 * The default value of the '{@link #isCondition() <em>Condition</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCondition()
+	 * @see #isCondition()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CONDITION_EDEFAULT = null;
+	protected static final boolean CONDITION_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #getCondition() <em>Condition</em>}' attribute.
+	 * The cached value of the '{@link #isCondition() <em>Condition</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCondition()
+	 * @see #isCondition()
 	 * @generated
 	 * @ordered
 	 */
-	protected String condition = CONDITION_EDEFAULT;
+	protected boolean condition = CONDITION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,7 +69,7 @@ public class ExclusiveImpl extends OperatorImpl implements Exclusive {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getCondition() {
+	public boolean isCondition() {
 		return condition;
 	}
 
@@ -78,8 +78,8 @@ public class ExclusiveImpl extends OperatorImpl implements Exclusive {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCondition(String newCondition) {
-		String oldCondition = condition;
+	public void setCondition(boolean newCondition) {
+		boolean oldCondition = condition;
 		condition = newCondition;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WorkflowPackage.EXCLUSIVE__CONDITION, oldCondition,
@@ -95,7 +95,7 @@ public class ExclusiveImpl extends OperatorImpl implements Exclusive {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case WorkflowPackage.EXCLUSIVE__CONDITION:
-			return getCondition();
+			return isCondition();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -109,7 +109,7 @@ public class ExclusiveImpl extends OperatorImpl implements Exclusive {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case WorkflowPackage.EXCLUSIVE__CONDITION:
-			setCondition((String) newValue);
+			setCondition((Boolean) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -139,7 +139,7 @@ public class ExclusiveImpl extends OperatorImpl implements Exclusive {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case WorkflowPackage.EXCLUSIVE__CONDITION:
-			return CONDITION_EDEFAULT == null ? condition != null : !CONDITION_EDEFAULT.equals(condition);
+			return condition != CONDITION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}

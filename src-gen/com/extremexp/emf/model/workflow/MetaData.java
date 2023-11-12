@@ -49,12 +49,12 @@ public interface MetaData extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
-	 * @see #setValue(double)
+	 * @see #setValue(Object)
 	 * @see com.extremexp.emf.model.workflow.WorkflowPackage#getMetaData_Value()
 	 * @model
 	 * @generated
 	 */
-	double getValue();
+	Object getValue();
 
 	/**
 	 * Sets the value of the '{@link com.extremexp.emf.model.workflow.MetaData#getValue <em>Value</em>}' attribute.
@@ -64,6 +64,6 @@ public interface MetaData extends EObject {
 	 * @see #getValue()
 	 * @generated
 	 */
-	void setValue(double value);
+	void setValue(Object value);
 
 } // MetaData

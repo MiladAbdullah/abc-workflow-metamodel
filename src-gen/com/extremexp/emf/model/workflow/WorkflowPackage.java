@@ -1531,13 +1531,13 @@ public interface WorkflowPackage extends EPackage {
 	int EVENT_NODE = 31;
 
 	/**
-	 * The feature id for the '<em><b>Event</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EVENT_NODE__EVENT = NODE_FEATURE_COUNT + 0;
+	int EVENT_NODE__NAME = NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Event Node</em>' class.
@@ -1558,14 +1558,14 @@ public interface WorkflowPackage extends EPackage {
 	int EVENT_NODE_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.PrimitiveParameterImpl <em>Primitive Parameter</em>}' class.
+	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.PrimitiveTypeImpl <em>Primitive Type</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see com.extremexp.emf.model.workflow.impl.PrimitiveParameterImpl
-	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getPrimitiveParameter()
+	 * @see com.extremexp.emf.model.workflow.impl.PrimitiveTypeImpl
+	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getPrimitiveType()
 	 * @generated
 	 */
-	int PRIMITIVE_PARAMETER = 32;
+	int PRIMITIVE_TYPE = 32;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1574,34 +1574,34 @@ public interface WorkflowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMITIVE_PARAMETER__NAME = PARAMETER_TYPE__NAME;
+	int PRIMITIVE_TYPE__NAME = PARAMETER_TYPE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Primitive</b></em>' attribute.
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMITIVE_PARAMETER__PRIMITIVE = PARAMETER_TYPE_FEATURE_COUNT + 0;
+	int PRIMITIVE_TYPE__TYPE = PARAMETER_TYPE_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Primitive Parameter</em>' class.
+	 * The number of structural features of the '<em>Primitive Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMITIVE_PARAMETER_FEATURE_COUNT = PARAMETER_TYPE_FEATURE_COUNT + 1;
+	int PRIMITIVE_TYPE_FEATURE_COUNT = PARAMETER_TYPE_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Primitive Parameter</em>' class.
+	 * The number of operations of the '<em>Primitive Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRIMITIVE_PARAMETER_OPERATION_COUNT = PARAMETER_TYPE_OPERATION_COUNT + 0;
+	int PRIMITIVE_TYPE_OPERATION_COUNT = PARAMETER_TYPE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.Event <em>Event</em>}' enum.
@@ -1707,11 +1707,11 @@ public interface WorkflowPackage extends EPackage {
 	EClass getExternalInputData();
 
 	/**
-	 * Returns the meta object for the attribute '{@link com.extremexp.emf.model.workflow.ExternalInputData#getEligibilityCondition <em>Eligibility Condition</em>}'.
+	 * Returns the meta object for the attribute '{@link com.extremexp.emf.model.workflow.ExternalInputData#isEligibilityCondition <em>Eligibility Condition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Eligibility Condition</em>'.
-	 * @see com.extremexp.emf.model.workflow.ExternalInputData#getEligibilityCondition()
+	 * @see com.extremexp.emf.model.workflow.ExternalInputData#isEligibilityCondition()
 	 * @see #getExternalInputData()
 	 * @generated
 	 */
@@ -2302,11 +2302,11 @@ public interface WorkflowPackage extends EPackage {
 	EClass getExclusive();
 
 	/**
-	 * Returns the meta object for the attribute '{@link com.extremexp.emf.model.workflow.Exclusive#getCondition <em>Condition</em>}'.
+	 * Returns the meta object for the attribute '{@link com.extremexp.emf.model.workflow.Exclusive#isCondition <em>Condition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Condition</em>'.
-	 * @see com.extremexp.emf.model.workflow.Exclusive#getCondition()
+	 * @see com.extremexp.emf.model.workflow.Exclusive#isCondition()
 	 * @see #getExclusive()
 	 * @generated
 	 */
@@ -2344,11 +2344,11 @@ public interface WorkflowPackage extends EPackage {
 	EClass getComplex();
 
 	/**
-	 * Returns the meta object for the attribute '{@link com.extremexp.emf.model.workflow.Complex#getComplexCondition <em>Complex Condition</em>}'.
+	 * Returns the meta object for the attribute '{@link com.extremexp.emf.model.workflow.Complex#isComplexCondition <em>Complex Condition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Complex Condition</em>'.
-	 * @see com.extremexp.emf.model.workflow.Complex#getComplexCondition()
+	 * @see com.extremexp.emf.model.workflow.Complex#isComplexCondition()
 	 * @see #getComplex()
 	 * @generated
 	 */
@@ -2405,36 +2405,36 @@ public interface WorkflowPackage extends EPackage {
 	EClass getEventNode();
 
 	/**
-	 * Returns the meta object for the attribute '{@link com.extremexp.emf.model.workflow.EventNode#getEvent <em>Event</em>}'.
+	 * Returns the meta object for the attribute '{@link com.extremexp.emf.model.workflow.EventNode#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Event</em>'.
-	 * @see com.extremexp.emf.model.workflow.EventNode#getEvent()
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see com.extremexp.emf.model.workflow.EventNode#getName()
 	 * @see #getEventNode()
 	 * @generated
 	 */
-	EAttribute getEventNode_Event();
+	EAttribute getEventNode_Name();
 
 	/**
-	 * Returns the meta object for class '{@link com.extremexp.emf.model.workflow.PrimitiveParameter <em>Primitive Parameter</em>}'.
+	 * Returns the meta object for class '{@link com.extremexp.emf.model.workflow.PrimitiveType <em>Primitive Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Primitive Parameter</em>'.
-	 * @see com.extremexp.emf.model.workflow.PrimitiveParameter
+	 * @return the meta object for class '<em>Primitive Type</em>'.
+	 * @see com.extremexp.emf.model.workflow.PrimitiveType
 	 * @generated
 	 */
-	EClass getPrimitiveParameter();
+	EClass getPrimitiveType();
 
 	/**
-	 * Returns the meta object for the attribute '{@link com.extremexp.emf.model.workflow.PrimitiveParameter#getPrimitive <em>Primitive</em>}'.
+	 * Returns the meta object for the attribute '{@link com.extremexp.emf.model.workflow.PrimitiveType#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Primitive</em>'.
-	 * @see com.extremexp.emf.model.workflow.PrimitiveParameter#getPrimitive()
-	 * @see #getPrimitiveParameter()
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see com.extremexp.emf.model.workflow.PrimitiveType#getType()
+	 * @see #getPrimitiveType()
 	 * @generated
 	 */
-	EAttribute getPrimitiveParameter_Primitive();
+	EAttribute getPrimitiveType_Type();
 
 	/**
 	 * Returns the meta object for enum '{@link com.extremexp.emf.model.workflow.Event <em>Event</em>}'.
@@ -3139,30 +3139,30 @@ public interface WorkflowPackage extends EPackage {
 		EClass EVENT_NODE = eINSTANCE.getEventNode();
 
 		/**
-		 * The meta object literal for the '<em><b>Event</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EVENT_NODE__EVENT = eINSTANCE.getEventNode_Event();
+		EAttribute EVENT_NODE__NAME = eINSTANCE.getEventNode_Name();
 
 		/**
-		 * The meta object literal for the '{@link com.extremexp.emf.model.workflow.impl.PrimitiveParameterImpl <em>Primitive Parameter</em>}' class.
+		 * The meta object literal for the '{@link com.extremexp.emf.model.workflow.impl.PrimitiveTypeImpl <em>Primitive Type</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see com.extremexp.emf.model.workflow.impl.PrimitiveParameterImpl
-		 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getPrimitiveParameter()
+		 * @see com.extremexp.emf.model.workflow.impl.PrimitiveTypeImpl
+		 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getPrimitiveType()
 		 * @generated
 		 */
-		EClass PRIMITIVE_PARAMETER = eINSTANCE.getPrimitiveParameter();
+		EClass PRIMITIVE_TYPE = eINSTANCE.getPrimitiveType();
 
 		/**
-		 * The meta object literal for the '<em><b>Primitive</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PRIMITIVE_PARAMETER__PRIMITIVE = eINSTANCE.getPrimitiveParameter_Primitive();
+		EAttribute PRIMITIVE_TYPE__TYPE = eINSTANCE.getPrimitiveType_Type();
 
 		/**
 		 * The meta object literal for the '{@link com.extremexp.emf.model.workflow.Event <em>Event</em>}' enum.

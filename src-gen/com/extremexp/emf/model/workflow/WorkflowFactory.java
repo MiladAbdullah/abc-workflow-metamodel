@@ -265,13 +265,13 @@ public interface WorkflowFactory extends EFactory {
 	EventNode createEventNode();
 
 	/**
-	 * Returns a new object of class '<em>Primitive Parameter</em>'.
+	 * Returns a new object of class '<em>Primitive Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Primitive Parameter</em>'.
+	 * @return a new object of class '<em>Primitive Type</em>'.
 	 * @generated
 	 */
-	PrimitiveParameter createPrimitiveParameter();
+	PrimitiveType createPrimitiveType();
 
 	/**
 	 * Returns the package supported by this factory.

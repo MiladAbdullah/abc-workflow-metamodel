@@ -55,7 +55,7 @@ public class MetaDataImpl extends MinimalEObjectImpl.Container implements MetaDa
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double VALUE_EDEFAULT = 0.0;
+	protected static final Object VALUE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -65,7 +65,7 @@ public class MetaDataImpl extends MinimalEObjectImpl.Container implements MetaDa
 	 * @generated
 	 * @ordered
 	 */
-	protected double value = VALUE_EDEFAULT;
+	protected Object value = VALUE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -112,7 +112,7 @@ public class MetaDataImpl extends MinimalEObjectImpl.Container implements MetaDa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getValue() {
+	public Object getValue() {
 		return value;
 	}
 
@@ -121,8 +121,8 @@ public class MetaDataImpl extends MinimalEObjectImpl.Container implements MetaDa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(double newValue) {
-		double oldValue = value;
+	public void setValue(Object newValue) {
+		Object oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WorkflowPackage.META_DATA__VALUE, oldValue, value));
@@ -156,7 +156,7 @@ public class MetaDataImpl extends MinimalEObjectImpl.Container implements MetaDa
 			setName((String) newValue);
 			return;
 		case WorkflowPackage.META_DATA__VALUE:
-			setValue((Double) newValue);
+			setValue(newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -191,7 +191,7 @@ public class MetaDataImpl extends MinimalEObjectImpl.Container implements MetaDa
 		case WorkflowPackage.META_DATA__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case WorkflowPackage.META_DATA__VALUE:
-			return value != VALUE_EDEFAULT;
+			return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 		}
 		return super.eIsSet(featureID);
 	}

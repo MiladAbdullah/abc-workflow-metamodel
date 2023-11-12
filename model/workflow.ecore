@@ -16,7 +16,7 @@
     <eLiterals name="END" value="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ExternalInputData" eSuperTypes="#//InputData">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="eligibilityCondition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="eligibilityCondition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IntermediateInputData" eSuperTypes="#//InputData">
     <eStructuralFeatures xsi:type="ecore:EReference" name="outputdata" eType="#//OutputData"/>
@@ -87,7 +87,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RegularLink" eSuperTypes="#//Link"/>
   <eClassifiers xsi:type="ecore:EClass" name="ExceptionalLink" eSuperTypes="#//Link">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="event" eType="#//Event"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="event" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="UI"/>
   <eClassifiers xsi:type="ecore:EClass" name="Group">
@@ -99,18 +99,18 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MetaData">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Parallel" eSuperTypes="#//Operator"/>
   <eClassifiers xsi:type="ecore:EClass" name="Exclusive" eSuperTypes="#//Operator">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="condition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="condition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Inclusive" eSuperTypes="#//Operator">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="conditions" upperBound="-1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Complex" eSuperTypes="#//Operator">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="complexCondition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="complexCondition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ParallelJoin" eSuperTypes="#//Operator"/>
   <eClassifiers xsi:type="ecore:EClass" name="ExclusiveJoin" eSuperTypes="#//Operator"/>
@@ -118,9 +118,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="ComplexJoin" eSuperTypes="#//Operator"/>
   <eClassifiers xsi:type="ecore:EDataType" name="NewDataType3" instanceTypeName="newDataType3"/>
   <eClassifiers xsi:type="ecore:EClass" name="EventNode" eSuperTypes="#//Node">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="event" eType="#//Event"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="#//Event"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PrimitiveParameter" eSuperTypes="#//ParameterType">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="primitive" eType="#//Primitive"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PrimitiveType" eSuperTypes="#//ParameterType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//Primitive"/>
   </eClassifiers>
 </ecore:EPackage>

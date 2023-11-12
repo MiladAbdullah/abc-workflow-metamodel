@@ -11,7 +11,7 @@ package com.extremexp.emf.model.workflow;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link com.extremexp.emf.model.workflow.EventNode#getEvent <em>Event</em>}</li>
+ *   <li>{@link com.extremexp.emf.model.workflow.EventNode#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see com.extremexp.emf.model.workflow.WorkflowPackage#getEventNode()
@@ -20,28 +20,28 @@ package com.extremexp.emf.model.workflow;
  */
 public interface EventNode extends Node {
 	/**
-	 * Returns the value of the '<em><b>Event</b></em>' attribute.
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * The literals are from the enumeration {@link com.extremexp.emf.model.workflow.Event}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Event</em>' attribute.
+	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see com.extremexp.emf.model.workflow.Event
-	 * @see #setEvent(Event)
-	 * @see com.extremexp.emf.model.workflow.WorkflowPackage#getEventNode_Event()
+	 * @see #setName(Event)
+	 * @see com.extremexp.emf.model.workflow.WorkflowPackage#getEventNode_Name()
 	 * @model
 	 * @generated
 	 */
-	Event getEvent();
+	Event getName();
 
 	/**
-	 * Sets the value of the '{@link com.extremexp.emf.model.workflow.EventNode#getEvent <em>Event</em>}' attribute.
+	 * Sets the value of the '{@link com.extremexp.emf.model.workflow.EventNode#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Event</em>' attribute.
+	 * @param value the new value of the '<em>Name</em>' attribute.
 	 * @see com.extremexp.emf.model.workflow.Event
-	 * @see #getEvent()
+	 * @see #getName()
 	 * @generated
 	 */
-	void setEvent(Event value);
+	void setName(Event value);
 
 } // EventNode

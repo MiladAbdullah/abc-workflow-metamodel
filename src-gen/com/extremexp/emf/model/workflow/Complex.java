@@ -11,7 +11,7 @@ package com.extremexp.emf.model.workflow;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link com.extremexp.emf.model.workflow.Complex#getComplexCondition <em>Complex Condition</em>}</li>
+ *   <li>{@link com.extremexp.emf.model.workflow.Complex#isComplexCondition <em>Complex Condition</em>}</li>
  * </ul>
  *
  * @see com.extremexp.emf.model.workflow.WorkflowPackage#getComplex()
@@ -25,20 +25,20 @@ public interface Complex extends Operator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Complex Condition</em>' attribute.
-	 * @see #setComplexCondition(String)
+	 * @see #setComplexCondition(boolean)
 	 * @see com.extremexp.emf.model.workflow.WorkflowPackage#getComplex_ComplexCondition()
 	 * @model
 	 * @generated
 	 */
-	String getComplexCondition();
+	boolean isComplexCondition();
 
 	/**
-	 * Sets the value of the '{@link com.extremexp.emf.model.workflow.Complex#getComplexCondition <em>Complex Condition</em>}' attribute.
+	 * Sets the value of the '{@link com.extremexp.emf.model.workflow.Complex#isComplexCondition <em>Complex Condition</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Complex Condition</em>' attribute.
-	 * @see #getComplexCondition()
+	 * @see #isComplexCondition()
 	 * @generated
 	 */
-	void setComplexCondition(String value);
+	void setComplexCondition(boolean value);
 } // Complex

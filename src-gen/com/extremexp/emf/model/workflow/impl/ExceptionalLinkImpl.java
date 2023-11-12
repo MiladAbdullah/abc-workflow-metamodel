@@ -2,7 +2,6 @@
  */
 package com.extremexp.emf.model.workflow.impl;
 
-import com.extremexp.emf.model.workflow.Event;
 import com.extremexp.emf.model.workflow.ExceptionalLink;
 import com.extremexp.emf.model.workflow.WorkflowPackage;
 
@@ -34,7 +33,7 @@ public class ExceptionalLinkImpl extends LinkImpl implements ExceptionalLink {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Event EVENT_EDEFAULT = Event.START;
+	protected static final Object EVENT_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getEvent() <em>Event</em>}' attribute.
@@ -44,7 +43,7 @@ public class ExceptionalLinkImpl extends LinkImpl implements ExceptionalLink {
 	 * @generated
 	 * @ordered
 	 */
-	protected Event event = EVENT_EDEFAULT;
+	protected Object event = EVENT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -70,7 +69,7 @@ public class ExceptionalLinkImpl extends LinkImpl implements ExceptionalLink {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Event getEvent() {
+	public Object getEvent() {
 		return event;
 	}
 
@@ -79,9 +78,9 @@ public class ExceptionalLinkImpl extends LinkImpl implements ExceptionalLink {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setEvent(Event newEvent) {
-		Event oldEvent = event;
-		event = newEvent == null ? EVENT_EDEFAULT : newEvent;
+	public void setEvent(Object newEvent) {
+		Object oldEvent = event;
+		event = newEvent;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WorkflowPackage.EXCEPTIONAL_LINK__EVENT, oldEvent,
 					event));
@@ -110,7 +109,7 @@ public class ExceptionalLinkImpl extends LinkImpl implements ExceptionalLink {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case WorkflowPackage.EXCEPTIONAL_LINK__EVENT:
-			setEvent((Event) newValue);
+			setEvent(newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -140,7 +139,7 @@ public class ExceptionalLinkImpl extends LinkImpl implements ExceptionalLink {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case WorkflowPackage.EXCEPTIONAL_LINK__EVENT:
-			return event != EVENT_EDEFAULT;
+			return EVENT_EDEFAULT == null ? event != null : !EVENT_EDEFAULT.equals(event);
 		}
 		return super.eIsSet(featureID);
 	}

@@ -2,7 +2,8 @@
  */
 package com.extremexp.emf.model.workflow.impl;
 
-import com.extremexp.emf.model.workflow.ExternalInputData;
+import com.extremexp.emf.model.workflow.Primitive;
+import com.extremexp.emf.model.workflow.PrimitiveType;
 import com.extremexp.emf.model.workflow.WorkflowPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -13,44 +14,44 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>External Input Data</b></em>'.
+ * An implementation of the model object '<em><b>Primitive Type</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link com.extremexp.emf.model.workflow.impl.ExternalInputDataImpl#isEligibilityCondition <em>Eligibility Condition</em>}</li>
+ *   <li>{@link com.extremexp.emf.model.workflow.impl.PrimitiveTypeImpl#getType <em>Type</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ExternalInputDataImpl extends InputDataImpl implements ExternalInputData {
+public class PrimitiveTypeImpl extends ParameterTypeImpl implements PrimitiveType {
 	/**
-	 * The default value of the '{@link #isEligibilityCondition() <em>Eligibility Condition</em>}' attribute.
+	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isEligibilityCondition()
+	 * @see #getType()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean ELIGIBILITY_CONDITION_EDEFAULT = false;
+	protected static final Primitive TYPE_EDEFAULT = Primitive.NUMBER;
 
 	/**
-	 * The cached value of the '{@link #isEligibilityCondition() <em>Eligibility Condition</em>}' attribute.
+	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isEligibilityCondition()
+	 * @see #getType()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean eligibilityCondition = ELIGIBILITY_CONDITION_EDEFAULT;
+	protected Primitive type = TYPE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ExternalInputDataImpl() {
+	protected PrimitiveTypeImpl() {
 		super();
 	}
 
@@ -61,7 +62,7 @@ public class ExternalInputDataImpl extends InputDataImpl implements ExternalInpu
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return WorkflowPackage.Literals.EXTERNAL_INPUT_DATA;
+		return WorkflowPackage.Literals.PRIMITIVE_TYPE;
 	}
 
 	/**
@@ -69,8 +70,8 @@ public class ExternalInputDataImpl extends InputDataImpl implements ExternalInpu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isEligibilityCondition() {
-		return eligibilityCondition;
+	public Primitive getType() {
+		return type;
 	}
 
 	/**
@@ -78,13 +79,11 @@ public class ExternalInputDataImpl extends InputDataImpl implements ExternalInpu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setEligibilityCondition(boolean newEligibilityCondition) {
-		boolean oldEligibilityCondition = eligibilityCondition;
-		eligibilityCondition = newEligibilityCondition;
+	public void setType(Primitive newType) {
+		Primitive oldType = type;
+		type = newType == null ? TYPE_EDEFAULT : newType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					WorkflowPackage.EXTERNAL_INPUT_DATA__ELIGIBILITY_CONDITION, oldEligibilityCondition,
-					eligibilityCondition));
+			eNotify(new ENotificationImpl(this, Notification.SET, WorkflowPackage.PRIMITIVE_TYPE__TYPE, oldType, type));
 	}
 
 	/**
@@ -95,8 +94,8 @@ public class ExternalInputDataImpl extends InputDataImpl implements ExternalInpu
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case WorkflowPackage.EXTERNAL_INPUT_DATA__ELIGIBILITY_CONDITION:
-			return isEligibilityCondition();
+		case WorkflowPackage.PRIMITIVE_TYPE__TYPE:
+			return getType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -109,8 +108,8 @@ public class ExternalInputDataImpl extends InputDataImpl implements ExternalInpu
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case WorkflowPackage.EXTERNAL_INPUT_DATA__ELIGIBILITY_CONDITION:
-			setEligibilityCondition((Boolean) newValue);
+		case WorkflowPackage.PRIMITIVE_TYPE__TYPE:
+			setType((Primitive) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -124,8 +123,8 @@ public class ExternalInputDataImpl extends InputDataImpl implements ExternalInpu
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case WorkflowPackage.EXTERNAL_INPUT_DATA__ELIGIBILITY_CONDITION:
-			setEligibilityCondition(ELIGIBILITY_CONDITION_EDEFAULT);
+		case WorkflowPackage.PRIMITIVE_TYPE__TYPE:
+			setType(TYPE_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -139,8 +138,8 @@ public class ExternalInputDataImpl extends InputDataImpl implements ExternalInpu
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case WorkflowPackage.EXTERNAL_INPUT_DATA__ELIGIBILITY_CONDITION:
-			return eligibilityCondition != ELIGIBILITY_CONDITION_EDEFAULT;
+		case WorkflowPackage.PRIMITIVE_TYPE__TYPE:
+			return type != TYPE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -156,10 +155,10 @@ public class ExternalInputDataImpl extends InputDataImpl implements ExternalInpu
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (eligibilityCondition: ");
-		result.append(eligibilityCondition);
+		result.append(" (type: ");
+		result.append(type);
 		result.append(')');
 		return result.toString();
 	}
 
-} //ExternalInputDataImpl
+} //PrimitiveTypeImpl

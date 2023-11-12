@@ -116,10 +116,10 @@
     <genClasses ecoreClass="workflow.ecore#//InclusiveJoin"/>
     <genClasses ecoreClass="workflow.ecore#//ComplexJoin"/>
     <genClasses ecoreClass="workflow.ecore#//EventNode">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute workflow.ecore#//EventNode/event"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute workflow.ecore#//EventNode/name"/>
     </genClasses>
-    <genClasses ecoreClass="workflow.ecore#//PrimitiveParameter">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute workflow.ecore#//PrimitiveParameter/primitive"/>
+    <genClasses ecoreClass="workflow.ecore#//PrimitiveType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute workflow.ecore#//PrimitiveType/type"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

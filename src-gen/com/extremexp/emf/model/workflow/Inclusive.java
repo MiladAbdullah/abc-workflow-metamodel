@@ -23,7 +23,7 @@ import org.eclipse.emf.common.util.EList;
 public interface Inclusive extends Operator {
 	/**
 	 * Returns the value of the '<em><b>Conditions</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * The list contents are of type {@link java.lang.Boolean}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Conditions</em>' attribute list.
@@ -31,6 +31,6 @@ public interface Inclusive extends Operator {
 	 * @model
 	 * @generated
 	 */
-	EList<String> getConditions();
+	EList<Boolean> getConditions();
 
 } // Inclusive

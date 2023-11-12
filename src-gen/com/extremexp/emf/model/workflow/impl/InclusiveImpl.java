@@ -34,7 +34,7 @@ public class InclusiveImpl extends OperatorImpl implements Inclusive {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<String> conditions;
+	protected EList<Boolean> conditions;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -60,9 +60,9 @@ public class InclusiveImpl extends OperatorImpl implements Inclusive {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getConditions() {
+	public EList<Boolean> getConditions() {
 		if (conditions == null) {
-			conditions = new EDataTypeUniqueEList<String>(String.class, this, WorkflowPackage.INCLUSIVE__CONDITIONS);
+			conditions = new EDataTypeUniqueEList<Boolean>(Boolean.class, this, WorkflowPackage.INCLUSIVE__CONDITIONS);
 		}
 		return conditions;
 	}
@@ -92,7 +92,7 @@ public class InclusiveImpl extends OperatorImpl implements Inclusive {
 		switch (featureID) {
 		case WorkflowPackage.INCLUSIVE__CONDITIONS:
 			getConditions().clear();
-			getConditions().addAll((Collection<? extends String>) newValue);
+			getConditions().addAll((Collection<? extends Boolean>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);

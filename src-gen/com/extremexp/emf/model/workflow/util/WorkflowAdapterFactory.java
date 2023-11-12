@@ -227,8 +227,8 @@ public class WorkflowAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter casePrimitiveParameter(PrimitiveParameter object) {
-			return createPrimitiveParameterAdapter();
+		public Adapter casePrimitiveType(PrimitiveType object) {
+			return createPrimitiveTypeAdapter();
 		}
 
 		@Override
@@ -699,16 +699,16 @@ public class WorkflowAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link com.extremexp.emf.model.workflow.PrimitiveParameter <em>Primitive Parameter</em>}'.
+	 * Creates a new adapter for an object of class '{@link com.extremexp.emf.model.workflow.PrimitiveType <em>Primitive Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see com.extremexp.emf.model.workflow.PrimitiveParameter
+	 * @see com.extremexp.emf.model.workflow.PrimitiveType
 	 * @generated
 	 */
-	public Adapter createPrimitiveParameterAdapter() {
+	public Adapter createPrimitiveTypeAdapter() {
 		return null;
 	}
 

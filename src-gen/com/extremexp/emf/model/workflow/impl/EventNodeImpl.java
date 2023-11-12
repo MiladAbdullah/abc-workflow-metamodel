@@ -20,31 +20,31 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link com.extremexp.emf.model.workflow.impl.EventNodeImpl#getEvent <em>Event</em>}</li>
+ *   <li>{@link com.extremexp.emf.model.workflow.impl.EventNodeImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class EventNodeImpl extends NodeImpl implements EventNode {
 	/**
-	 * The default value of the '{@link #getEvent() <em>Event</em>}' attribute.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getEvent()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Event EVENT_EDEFAULT = Event.START;
+	protected static final Event NAME_EDEFAULT = Event.START;
 
 	/**
-	 * The cached value of the '{@link #getEvent() <em>Event</em>}' attribute.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getEvent()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected Event event = EVENT_EDEFAULT;
+	protected Event name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -70,8 +70,8 @@ public class EventNodeImpl extends NodeImpl implements EventNode {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Event getEvent() {
-		return event;
+	public Event getName() {
+		return name;
 	}
 
 	/**
@@ -79,11 +79,11 @@ public class EventNodeImpl extends NodeImpl implements EventNode {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setEvent(Event newEvent) {
-		Event oldEvent = event;
-		event = newEvent == null ? EVENT_EDEFAULT : newEvent;
+	public void setName(Event newName) {
+		Event oldName = name;
+		name = newName == null ? NAME_EDEFAULT : newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WorkflowPackage.EVENT_NODE__EVENT, oldEvent, event));
+			eNotify(new ENotificationImpl(this, Notification.SET, WorkflowPackage.EVENT_NODE__NAME, oldName, name));
 	}
 
 	/**
@@ -94,8 +94,8 @@ public class EventNodeImpl extends NodeImpl implements EventNode {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case WorkflowPackage.EVENT_NODE__EVENT:
-			return getEvent();
+		case WorkflowPackage.EVENT_NODE__NAME:
+			return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -108,8 +108,8 @@ public class EventNodeImpl extends NodeImpl implements EventNode {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case WorkflowPackage.EVENT_NODE__EVENT:
-			setEvent((Event) newValue);
+		case WorkflowPackage.EVENT_NODE__NAME:
+			setName((Event) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -123,8 +123,8 @@ public class EventNodeImpl extends NodeImpl implements EventNode {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case WorkflowPackage.EVENT_NODE__EVENT:
-			setEvent(EVENT_EDEFAULT);
+		case WorkflowPackage.EVENT_NODE__NAME:
+			setName(NAME_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -138,8 +138,8 @@ public class EventNodeImpl extends NodeImpl implements EventNode {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case WorkflowPackage.EVENT_NODE__EVENT:
-			return event != EVENT_EDEFAULT;
+		case WorkflowPackage.EVENT_NODE__NAME:
+			return name != NAME_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -155,8 +155,8 @@ public class EventNodeImpl extends NodeImpl implements EventNode {
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (event: ");
-		result.append(event);
+		result.append(" (name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

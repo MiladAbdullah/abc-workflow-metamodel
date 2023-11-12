@@ -11,7 +11,7 @@ package com.extremexp.emf.model.workflow;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link com.extremexp.emf.model.workflow.ExternalInputData#getEligibilityCondition <em>Eligibility Condition</em>}</li>
+ *   <li>{@link com.extremexp.emf.model.workflow.ExternalInputData#isEligibilityCondition <em>Eligibility Condition</em>}</li>
  * </ul>
  *
  * @see com.extremexp.emf.model.workflow.WorkflowPackage#getExternalInputData()
@@ -24,21 +24,21 @@ public interface ExternalInputData extends InputData {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Eligibility Condition</em>' attribute.
-	 * @see #setEligibilityCondition(String)
+	 * @see #setEligibilityCondition(boolean)
 	 * @see com.extremexp.emf.model.workflow.WorkflowPackage#getExternalInputData_EligibilityCondition()
 	 * @model
 	 * @generated
 	 */
-	String getEligibilityCondition();
+	boolean isEligibilityCondition();
 
 	/**
-	 * Sets the value of the '{@link com.extremexp.emf.model.workflow.ExternalInputData#getEligibilityCondition <em>Eligibility Condition</em>}' attribute.
+	 * Sets the value of the '{@link com.extremexp.emf.model.workflow.ExternalInputData#isEligibilityCondition <em>Eligibility Condition</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Eligibility Condition</em>' attribute.
-	 * @see #getEligibilityCondition()
+	 * @see #isEligibilityCondition()
 	 * @generated
 	 */
-	void setEligibilityCondition(String value);
+	void setEligibilityCondition(boolean value);
 
 } // ExternalInputData
