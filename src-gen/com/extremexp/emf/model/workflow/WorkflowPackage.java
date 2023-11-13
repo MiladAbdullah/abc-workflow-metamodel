@@ -59,16 +59,6 @@ public interface WorkflowPackage extends EPackage {
 	WorkflowPackage eINSTANCE = com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.WorkflowImpl <em>Workflow</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.extremexp.emf.model.workflow.impl.WorkflowImpl
-	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getWorkflow()
-	 * @generated
-	 */
-	int WORKFLOW = 0;
-
-	/**
 	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.NodeImpl <em>Node</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -95,126 +85,6 @@ public interface WorkflowPackage extends EPackage {
 	 * @ordered
 	 */
 	int NODE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.InputDataImpl <em>Input Data</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.extremexp.emf.model.workflow.impl.InputDataImpl
-	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getInputData()
-	 * @generated
-	 */
-	int INPUT_DATA = 2;
-
-	/**
-	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.ExternalInputDataImpl <em>External Input Data</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.extremexp.emf.model.workflow.impl.ExternalInputDataImpl
-	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getExternalInputData()
-	 * @generated
-	 */
-	int EXTERNAL_INPUT_DATA = 3;
-
-	/**
-	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.IntermediateInputDataImpl <em>Intermediate Input Data</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.extremexp.emf.model.workflow.impl.IntermediateInputDataImpl
-	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getIntermediateInputData()
-	 * @generated
-	 */
-	int INTERMEDIATE_INPUT_DATA = 4;
-
-	/**
-	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.OutputDataImpl <em>Output Data</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.extremexp.emf.model.workflow.impl.OutputDataImpl
-	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getOutputData()
-	 * @generated
-	 */
-	int OUTPUT_DATA = 5;
-
-	/**
-	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.MetricImpl <em>Metric</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.extremexp.emf.model.workflow.impl.MetricImpl
-	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getMetric()
-	 * @generated
-	 */
-	int METRIC = 6;
-
-	/**
-	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.ParameterImpl <em>Parameter</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.extremexp.emf.model.workflow.impl.ParameterImpl
-	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getParameter()
-	 * @generated
-	 */
-	int PARAMETER = 7;
-
-	/**
-	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.DynamicParameterImpl <em>Dynamic Parameter</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.extremexp.emf.model.workflow.impl.DynamicParameterImpl
-	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getDynamicParameter()
-	 * @generated
-	 */
-	int DYNAMIC_PARAMETER = 8;
-
-	/**
-	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.StaticParameterImpl <em>Static Parameter</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.extremexp.emf.model.workflow.impl.StaticParameterImpl
-	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getStaticParameter()
-	 * @generated
-	 */
-	int STATIC_PARAMETER = 9;
-
-	/**
-	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.ParameterTypeImpl <em>Parameter Type</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.extremexp.emf.model.workflow.impl.ParameterTypeImpl
-	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getParameterType()
-	 * @generated
-	 */
-	int PARAMETER_TYPE = 10;
-
-	/**
-	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.ArrayImpl <em>Array</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.extremexp.emf.model.workflow.impl.ArrayImpl
-	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getArray()
-	 * @generated
-	 */
-	int ARRAY = 11;
-
-	/**
-	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.StructureImpl <em>Structure</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.extremexp.emf.model.workflow.impl.StructureImpl
-	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getStructure()
-	 * @generated
-	 */
-	int STRUCTURE = 12;
-
-	/**
-	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.FieldImpl <em>Field</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.extremexp.emf.model.workflow.impl.FieldImpl
-	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getField()
-	 * @generated
-	 */
-	int FIELD = 13;
 
 	/**
 	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.TaskImpl <em>Task</em>}' class.
@@ -342,6 +212,16 @@ public interface WorkflowPackage extends EPackage {
 	 * @ordered
 	 */
 	int TASK_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.WorkflowImpl <em>Workflow</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.extremexp.emf.model.workflow.impl.WorkflowImpl
+	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getWorkflow()
+	 * @generated
+	 */
+	int WORKFLOW = 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -479,6 +359,16 @@ public interface WorkflowPackage extends EPackage {
 	int WORKFLOW_OPERATION_COUNT = TASK_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.InputDataImpl <em>Input Data</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.extremexp.emf.model.workflow.impl.InputDataImpl
+	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getInputData()
+	 * @generated
+	 */
+	int INPUT_DATA = 2;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -504,6 +394,16 @@ public interface WorkflowPackage extends EPackage {
 	 * @ordered
 	 */
 	int INPUT_DATA_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.ExternalInputDataImpl <em>External Input Data</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.extremexp.emf.model.workflow.impl.ExternalInputDataImpl
+	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getExternalInputData()
+	 * @generated
+	 */
+	int EXTERNAL_INPUT_DATA = 3;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -542,6 +442,16 @@ public interface WorkflowPackage extends EPackage {
 	int EXTERNAL_INPUT_DATA_OPERATION_COUNT = INPUT_DATA_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.IntermediateInputDataImpl <em>Intermediate Input Data</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.extremexp.emf.model.workflow.impl.IntermediateInputDataImpl
+	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getIntermediateInputData()
+	 * @generated
+	 */
+	int INTERMEDIATE_INPUT_DATA = 4;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -578,6 +488,16 @@ public interface WorkflowPackage extends EPackage {
 	int INTERMEDIATE_INPUT_DATA_OPERATION_COUNT = INPUT_DATA_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.OutputDataImpl <em>Output Data</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.extremexp.emf.model.workflow.impl.OutputDataImpl
+	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getOutputData()
+	 * @generated
+	 */
+	int OUTPUT_DATA = 5;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -605,6 +525,16 @@ public interface WorkflowPackage extends EPackage {
 	int OUTPUT_DATA_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.MetricImpl <em>Metric</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.extremexp.emf.model.workflow.impl.MetricImpl
+	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getMetric()
+	 * @generated
+	 */
+	int METRIC = 6;
+
+	/**
 	 * The feature id for the '<em><b>Outputdata</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -630,6 +560,16 @@ public interface WorkflowPackage extends EPackage {
 	 * @ordered
 	 */
 	int METRIC_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.ParameterImpl <em>Parameter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.extremexp.emf.model.workflow.impl.ParameterImpl
+	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getParameter()
+	 * @generated
+	 */
+	int PARAMETER = 7;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -666,6 +606,16 @@ public interface WorkflowPackage extends EPackage {
 	 * @ordered
 	 */
 	int PARAMETER_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.DynamicParameterImpl <em>Dynamic Parameter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.extremexp.emf.model.workflow.impl.DynamicParameterImpl
+	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getDynamicParameter()
+	 * @generated
+	 */
+	int DYNAMIC_PARAMETER = 8;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -713,6 +663,16 @@ public interface WorkflowPackage extends EPackage {
 	int DYNAMIC_PARAMETER_OPERATION_COUNT = PARAMETER_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.StaticParameterImpl <em>Static Parameter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.extremexp.emf.model.workflow.impl.StaticParameterImpl
+	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getStaticParameter()
+	 * @generated
+	 */
+	int STATIC_PARAMETER = 9;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -758,6 +718,16 @@ public interface WorkflowPackage extends EPackage {
 	int STATIC_PARAMETER_OPERATION_COUNT = PARAMETER_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.ParameterTypeImpl <em>Parameter Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.extremexp.emf.model.workflow.impl.ParameterTypeImpl
+	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getParameterType()
+	 * @generated
+	 */
+	int PARAMETER_TYPE = 10;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -783,6 +753,16 @@ public interface WorkflowPackage extends EPackage {
 	 * @ordered
 	 */
 	int PARAMETER_TYPE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.ArrayImpl <em>Array</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.extremexp.emf.model.workflow.impl.ArrayImpl
+	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getArray()
+	 * @generated
+	 */
+	int ARRAY = 11;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -830,6 +810,16 @@ public interface WorkflowPackage extends EPackage {
 	int ARRAY_OPERATION_COUNT = PARAMETER_TYPE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.StructureImpl <em>Structure</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.extremexp.emf.model.workflow.impl.StructureImpl
+	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getStructure()
+	 * @generated
+	 */
+	int STRUCTURE = 12;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -864,6 +854,16 @@ public interface WorkflowPackage extends EPackage {
 	 * @ordered
 	 */
 	int STRUCTURE_OPERATION_COUNT = PARAMETER_TYPE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.FieldImpl <em>Field</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.extremexp.emf.model.workflow.impl.FieldImpl
+	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getField()
+	 * @generated
+	 */
+	int FIELD = 13;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.

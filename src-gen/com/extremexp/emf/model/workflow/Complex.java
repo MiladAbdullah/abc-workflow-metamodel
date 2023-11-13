@@ -19,7 +19,6 @@ package com.extremexp.emf.model.workflow;
  * @generated
  */
 public interface Complex extends Operator {
-
 	/**
 	 * Returns the value of the '<em><b>Complex Condition</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -41,4 +40,5 @@ public interface Complex extends Operator {
 	 * @generated
 	 */
 	void setComplexCondition(boolean value);
+
 } // Complex

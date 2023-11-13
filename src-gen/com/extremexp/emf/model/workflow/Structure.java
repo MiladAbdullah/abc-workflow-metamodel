@@ -21,7 +21,6 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface Structure extends ParameterType {
-
 	/**
 	 * Returns the value of the '<em><b>Fields</b></em>' containment reference list.
 	 * The list contents are of type {@link com.extremexp.emf.model.workflow.Field}.
@@ -33,4 +32,5 @@ public interface Structure extends ParameterType {
 	 * @generated
 	 */
 	EList<Field> getFields();
+
 } // Structure

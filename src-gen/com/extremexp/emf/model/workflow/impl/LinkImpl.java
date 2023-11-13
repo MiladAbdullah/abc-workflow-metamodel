@@ -7,9 +7,10 @@ import com.extremexp.emf.model.workflow.Node;
 import com.extremexp.emf.model.workflow.WorkflowPackage;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -37,6 +38,7 @@ public abstract class LinkImpl extends MinimalEObjectImpl.Container implements L
 	 * @ordered
 	 */
 	protected Node output;
+
 	/**
 	 * The cached value of the '{@link #getInput() <em>Input</em>}' reference.
 	 * <!-- begin-user-doc -->

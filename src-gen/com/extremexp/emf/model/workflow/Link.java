@@ -22,7 +22,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Link extends EObject {
-
 	/**
 	 * Returns the value of the '<em><b>Output</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -66,4 +65,5 @@ public interface Link extends EObject {
 	 * @generated
 	 */
 	void setInput(Node value);
+
 } // Link

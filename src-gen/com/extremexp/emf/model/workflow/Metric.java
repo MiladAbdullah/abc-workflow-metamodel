@@ -21,7 +21,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Metric extends EObject {
-
 	/**
 	 * Returns the value of the '<em><b>Outputdata</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -43,4 +42,5 @@ public interface Metric extends EObject {
 	 * @generated
 	 */
 	void setOutputdata(OutputData value);
+
 } // Metric

@@ -19,7 +19,6 @@ package com.extremexp.emf.model.workflow;
  * @generated
  */
 public interface IntermediateInputData extends InputData {
-
 	/**
 	 * Returns the value of the '<em><b>Outputdata</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -41,4 +40,5 @@ public interface IntermediateInputData extends InputData {
 	 * @generated
 	 */
 	void setOutputdata(OutputData value);
+
 } // IntermediateInputData
