@@ -121,5 +121,6 @@
     <genClasses ecoreClass="workflow.ecore#//PrimitiveType">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute workflow.ecore#//PrimitiveType/type"/>
     </genClasses>
+    <nestedGenPackages prefix="NewPackage1" disposableProviderFactory="true" ecorePackage="workflow.ecore#//"/>
   </genPackages>
 </genmodel:GenModel>
