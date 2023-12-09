@@ -5,7 +5,7 @@
     <semanticResources>workflow.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_KrWEYH_4Ee6u6-aKdvAVnQ">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_Krf1YH_4Ee6u6-aKdvAVnQ" name="workflow" repPath="#_KrenQH_4Ee6u6-aKdvAVnQ" changeId="162ca3b6-37a3-47e9-b32a-cd67b13947d5">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_Krf1YH_4Ee6u6-aKdvAVnQ" name="workflow" repPath="#_KrenQH_4Ee6u6-aKdvAVnQ" changeId="3c57d42c-b979-418f-b071-cbcae9e2bf52">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="workflow.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -492,17 +492,17 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_L4o0kIAREe6XhN7kgUdBAQ" type="4001" element="_L4d1f4AREe6XhN7kgUdBAQ" source="_rR8mUH_8Ee6qQMkECJ5lgQ" target="_gz72sH_5Ee6qQMkECJ5lgQ">
           <children xmi:type="notation:Node" xmi:id="_L4o0lIAREe6XhN7kgUdBAQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_L4o0lYAREe6XhN7kgUdBAQ" x="50" y="-90"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_L4o0lYAREe6XhN7kgUdBAQ" x="46" y="-98"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_L4o0loAREe6XhN7kgUdBAQ" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_L4o0l4AREe6XhN7kgUdBAQ" x="55" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_L4o0l4AREe6XhN7kgUdBAQ" x="54" y="10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_L4o0mIAREe6XhN7kgUdBAQ" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_L4o0mYAREe6XhN7kgUdBAQ" x="9" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_L4o0mYAREe6XhN7kgUdBAQ" x="10" y="10"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_L4o0kYAREe6XhN7kgUdBAQ" routing="Rectilinear"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_L4o0koAREe6XhN7kgUdBAQ" fontColor="7490599" fontName=".AppleSystemUIFont" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_L4o0k4AREe6XhN7kgUdBAQ" points="[0, 0, 126, 245]$[0, -245, 126, 0]$[-126, -245, 0, 0]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_L4o0k4AREe6XhN7kgUdBAQ" points="[8, 0, 134, 245]$[8, -245, 134, 0]$[-126, -245, 0, 0]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_L4o0moAREe6XhN7kgUdBAQ" id="(0.07981220657276995,0.0)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_L4o0m4AREe6XhN7kgUdBAQ" id="(1.0,0.47368421052631576)"/>
         </edges>
