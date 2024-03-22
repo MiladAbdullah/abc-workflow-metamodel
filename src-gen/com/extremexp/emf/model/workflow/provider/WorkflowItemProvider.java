@@ -13,7 +13,6 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -177,6 +176,9 @@ public class WorkflowItemProvider extends TaskItemProvider {
 
 		newChildDescriptors.add(createChildParameter(WorkflowPackage.Literals.WORKFLOW__NODE,
 				WorkflowFactory.eINSTANCE.createEventNode()));
+
+		newChildDescriptors.add(createChildParameter(WorkflowPackage.Literals.WORKFLOW__NODE,
+				WorkflowFactory.eINSTANCE.createConfiguredTask()));
 
 		newChildDescriptors.add(createChildParameter(WorkflowPackage.Literals.WORKFLOW__LINK,
 				WorkflowFactory.eINSTANCE.createConditionalLink()));

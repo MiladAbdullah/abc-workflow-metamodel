@@ -258,13 +258,13 @@ public class TaskItemProvider extends NodeItemProvider {
 				WorkflowFactory.eINSTANCE.createOutputData()));
 
 		newChildDescriptors.add(createChildParameter(WorkflowPackage.Literals.TASK__PARAMETERS,
-				WorkflowFactory.eINSTANCE.createParameter()));
-
-		newChildDescriptors.add(createChildParameter(WorkflowPackage.Literals.TASK__PARAMETERS,
 				WorkflowFactory.eINSTANCE.createDynamicParameter()));
 
 		newChildDescriptors.add(createChildParameter(WorkflowPackage.Literals.TASK__PARAMETERS,
 				WorkflowFactory.eINSTANCE.createStaticParameter()));
+
+		newChildDescriptors.add(createChildParameter(WorkflowPackage.Literals.TASK__PARAMETERS,
+				WorkflowFactory.eINSTANCE.createParameterDomain()));
 
 		newChildDescriptors.add(createChildParameter(WorkflowPackage.Literals.TASK__METADATA,
 				WorkflowFactory.eINSTANCE.createMetaData()));

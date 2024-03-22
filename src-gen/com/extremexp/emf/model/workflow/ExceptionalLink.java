@@ -24,12 +24,12 @@ public interface ExceptionalLink extends Link {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Event</em>' attribute.
-	 * @see #setEvent(Object)
+	 * @see #setEvent(String)
 	 * @see com.extremexp.emf.model.workflow.WorkflowPackage#getExceptionalLink_Event()
 	 * @model
 	 * @generated
 	 */
-	Object getEvent();
+	String getEvent();
 
 	/**
 	 * Sets the value of the '{@link com.extremexp.emf.model.workflow.ExceptionalLink#getEvent <em>Event</em>}' attribute.
@@ -39,6 +39,6 @@ public interface ExceptionalLink extends Link {
 	 * @see #getEvent()
 	 * @generated
 	 */
-	void setEvent(Object value);
+	void setEvent(String value);
 
 } // ExceptionalLink

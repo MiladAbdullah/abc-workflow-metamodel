@@ -94,8 +94,7 @@ public class ExceptionalLinkItemProvider extends LinkItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		Object labelValue = ((ExceptionalLink) object).getEvent();
-		String label = labelValue == null ? null : labelValue.toString();
+		String label = ((ExceptionalLink) object).getEvent();
 		return label == null || label.length() == 0 ? getString("_UI_ExceptionalLink_type")
 				: getString("_UI_ExceptionalLink_type") + " " + label;
 	}

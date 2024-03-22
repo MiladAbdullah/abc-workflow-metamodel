@@ -1004,7 +1004,7 @@ public interface WorkflowPackage extends EPackage {
 	int CONDITIONAL_LINK__INPUT = LINK__INPUT;
 
 	/**
-	 * The feature id for the '<em><b>Condition</b></em>' attribute.
+	 * The feature id for the '<em><b>Condition</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1188,13 +1188,13 @@ public interface WorkflowPackage extends EPackage {
 	int GROUP__METADATA = 1;
 
 	/**
-	 * The feature id for the '<em><b>Task</b></em>' reference list.
+	 * The feature id for the '<em><b>Tasks</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP__TASK = 2;
+	int GROUP__TASKS = 2;
 
 	/**
 	 * The feature id for the '<em><b>Ui</b></em>' reference.
@@ -1308,7 +1308,7 @@ public interface WorkflowPackage extends EPackage {
 	int EXCLUSIVE = 24;
 
 	/**
-	 * The feature id for the '<em><b>Condition</b></em>' attribute.
+	 * The feature id for the '<em><b>Condition</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1345,7 +1345,7 @@ public interface WorkflowPackage extends EPackage {
 	int INCLUSIVE = 25;
 
 	/**
-	 * The feature id for the '<em><b>Conditions</b></em>' attribute list.
+	 * The feature id for the '<em><b>Conditions</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1382,13 +1382,13 @@ public interface WorkflowPackage extends EPackage {
 	int COMPLEX = 26;
 
 	/**
-	 * The feature id for the '<em><b>Complex Condition</b></em>' attribute.
+	 * The feature id for the '<em><b>Conditions</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPLEX__COMPLEX_CONDITION = OPERATOR_FEATURE_COUNT + 0;
+	int COMPLEX__CONDITIONS = OPERATOR_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Complex</em>' class.
@@ -1604,6 +1604,490 @@ public interface WorkflowPackage extends EPackage {
 	int PRIMITIVE_TYPE_OPERATION_COUNT = PARAMETER_TYPE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.SpecificationImpl <em>Specification</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.extremexp.emf.model.workflow.impl.SpecificationImpl
+	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getSpecification()
+	 * @generated
+	 */
+	int SPECIFICATION = 33;
+
+	/**
+	 * The feature id for the '<em><b>Groups</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__GROUPS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__NAME = 1;
+
+	/**
+	 * The feature id for the '<em><b>Parametertypes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__PARAMETERTYPES = 2;
+
+	/**
+	 * The feature id for the '<em><b>Workflow</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__WORKFLOW = 3;
+
+	/**
+	 * The feature id for the '<em><b>Deployedworkflow</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__DEPLOYEDWORKFLOW = 4;
+
+	/**
+	 * The feature id for the '<em><b>Condition</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__CONDITION = 5;
+
+	/**
+	 * The feature id for the '<em><b>Experimentspace</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION__EXPERIMENTSPACE = 6;
+
+	/**
+	 * The number of structural features of the '<em>Specification</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION_FEATURE_COUNT = 7;
+
+	/**
+	 * The number of operations of the '<em>Specification</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPECIFICATION_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.DeployedWorkflowImpl <em>Deployed Workflow</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.extremexp.emf.model.workflow.impl.DeployedWorkflowImpl
+	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getDeployedWorkflow()
+	 * @generated
+	 */
+	int DEPLOYED_WORKFLOW = 34;
+
+	/**
+	 * The feature id for the '<em><b>Workflow</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEPLOYED_WORKFLOW__WORKFLOW = 0;
+
+	/**
+	 * The feature id for the '<em><b>Configuredtask</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEPLOYED_WORKFLOW__CONFIGUREDTASK = 1;
+
+	/**
+	 * The number of structural features of the '<em>Deployed Workflow</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEPLOYED_WORKFLOW_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Deployed Workflow</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEPLOYED_WORKFLOW_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.ConfiguredTaskImpl <em>Configured Task</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.extremexp.emf.model.workflow.impl.ConfiguredTaskImpl
+	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getConfiguredTask()
+	 * @generated
+	 */
+	int CONFIGURED_TASK = 35;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONFIGURED_TASK__NAME = TASK__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONFIGURED_TASK__DESCRIPTION = TASK__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Is Abstract</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONFIGURED_TASK__IS_ABSTRACT = TASK__IS_ABSTRACT;
+
+	/**
+	 * The feature id for the '<em><b>Implementation Ref</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONFIGURED_TASK__IMPLEMENTATION_REF = TASK__IMPLEMENTATION_REF;
+
+	/**
+	 * The feature id for the '<em><b>Subworkflow</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONFIGURED_TASK__SUBWORKFLOW = TASK__SUBWORKFLOW;
+
+	/**
+	 * The feature id for the '<em><b>Inputs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONFIGURED_TASK__INPUTS = TASK__INPUTS;
+
+	/**
+	 * The feature id for the '<em><b>Generates</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONFIGURED_TASK__GENERATES = TASK__GENERATES;
+
+	/**
+	 * The feature id for the '<em><b>Outputs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONFIGURED_TASK__OUTPUTS = TASK__OUTPUTS;
+
+	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONFIGURED_TASK__PARAMETERS = TASK__PARAMETERS;
+
+	/**
+	 * The feature id for the '<em><b>Metadata</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONFIGURED_TASK__METADATA = TASK__METADATA;
+
+	/**
+	 * The feature id for the '<em><b>Ui</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONFIGURED_TASK__UI = TASK__UI;
+
+	/**
+	 * The feature id for the '<em><b>Configuration</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONFIGURED_TASK__CONFIGURATION = TASK_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Configured Task</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONFIGURED_TASK_FEATURE_COUNT = TASK_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Configured Task</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONFIGURED_TASK_OPERATION_COUNT = TASK_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.ConditionImpl <em>Condition</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.extremexp.emf.model.workflow.impl.ConditionImpl
+	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getCondition()
+	 * @generated
+	 */
+	int CONDITION = 36;
+
+	/**
+	 * The feature id for the '<em><b>Condition</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION__CONDITION = 0;
+
+	/**
+	 * The feature id for the '<em><b>True</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION__TRUE = 1;
+
+	/**
+	 * The feature id for the '<em><b>False</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION__FALSE = 2;
+
+	/**
+	 * The number of structural features of the '<em>Condition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Condition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.DeployedWorkflowParameterSpaceImpl <em>Deployed Workflow Parameter Space</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.extremexp.emf.model.workflow.impl.DeployedWorkflowParameterSpaceImpl
+	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getDeployedWorkflowParameterSpace()
+	 * @generated
+	 */
+	int DEPLOYED_WORKFLOW_PARAMETER_SPACE = 37;
+
+	/**
+	 * The feature id for the '<em><b>Method</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEPLOYED_WORKFLOW_PARAMETER_SPACE__METHOD = 0;
+
+	/**
+	 * The feature id for the '<em><b>Deployedworkflow</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEPLOYED_WORKFLOW_PARAMETER_SPACE__DEPLOYEDWORKFLOW = 1;
+
+	/**
+	 * The feature id for the '<em><b>Parameterdomain</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEPLOYED_WORKFLOW_PARAMETER_SPACE__PARAMETERDOMAIN = 2;
+
+	/**
+	 * The number of structural features of the '<em>Deployed Workflow Parameter Space</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEPLOYED_WORKFLOW_PARAMETER_SPACE_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Deployed Workflow Parameter Space</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEPLOYED_WORKFLOW_PARAMETER_SPACE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.ExperimentSpaceImpl <em>Experiment Space</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.extremexp.emf.model.workflow.impl.ExperimentSpaceImpl
+	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getExperimentSpace()
+	 * @generated
+	 */
+	int EXPERIMENT_SPACE = 38;
+
+	/**
+	 * The feature id for the '<em><b>Deployedworkflowparameterspace</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPERIMENT_SPACE__DEPLOYEDWORKFLOWPARAMETERSPACE = 0;
+
+	/**
+	 * The number of structural features of the '<em>Experiment Space</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPERIMENT_SPACE_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Experiment Space</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPERIMENT_SPACE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.ParameterDomainImpl <em>Parameter Domain</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.extremexp.emf.model.workflow.impl.ParameterDomainImpl
+	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getParameterDomain()
+	 * @generated
+	 */
+	int PARAMETER_DOMAIN = 39;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_DOMAIN__NAME = STATIC_PARAMETER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_DOMAIN__TYPE = STATIC_PARAMETER__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_DOMAIN__VALUE = STATIC_PARAMETER__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Staticparameter</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_DOMAIN__STATICPARAMETER = STATIC_PARAMETER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Parameter Domain</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_DOMAIN_FEATURE_COUNT = STATIC_PARAMETER_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Parameter Domain</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_DOMAIN_OPERATION_COUNT = STATIC_PARAMETER_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.Event <em>Event</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1611,7 +2095,7 @@ public interface WorkflowPackage extends EPackage {
 	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getEvent()
 	 * @generated
 	 */
-	int EVENT = 33;
+	int EVENT = 40;
 
 	/**
 	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.Primitive <em>Primitive</em>}' enum.
@@ -1621,7 +2105,7 @@ public interface WorkflowPackage extends EPackage {
 	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getPrimitive()
 	 * @generated
 	 */
-	int PRIMITIVE = 34;
+	int PRIMITIVE = 41;
 
 	/**
 	 * The meta object id for the '<em>New Data Type3</em>' data type.
@@ -1631,7 +2115,7 @@ public interface WorkflowPackage extends EPackage {
 	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getNewDataType3()
 	 * @generated
 	 */
-	int NEW_DATA_TYPE3 = 35;
+	int NEW_DATA_TYPE3 = 42;
 
 	/**
 	 * Returns the meta object for class '{@link com.extremexp.emf.model.workflow.Workflow <em>Workflow</em>}'.
@@ -1707,11 +2191,11 @@ public interface WorkflowPackage extends EPackage {
 	EClass getExternalInputData();
 
 	/**
-	 * Returns the meta object for the attribute '{@link com.extremexp.emf.model.workflow.ExternalInputData#isEligibilityCondition <em>Eligibility Condition</em>}'.
+	 * Returns the meta object for the attribute '{@link com.extremexp.emf.model.workflow.ExternalInputData#getEligibilityCondition <em>Eligibility Condition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Eligibility Condition</em>'.
-	 * @see com.extremexp.emf.model.workflow.ExternalInputData#isEligibilityCondition()
+	 * @see com.extremexp.emf.model.workflow.ExternalInputData#getEligibilityCondition()
 	 * @see #getExternalInputData()
 	 * @generated
 	 */
@@ -2144,15 +2628,15 @@ public interface WorkflowPackage extends EPackage {
 	EClass getConditionalLink();
 
 	/**
-	 * Returns the meta object for the attribute '{@link com.extremexp.emf.model.workflow.ConditionalLink#getCondition <em>Condition</em>}'.
+	 * Returns the meta object for the reference '{@link com.extremexp.emf.model.workflow.ConditionalLink#getCondition <em>Condition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Condition</em>'.
+	 * @return the meta object for the reference '<em>Condition</em>'.
 	 * @see com.extremexp.emf.model.workflow.ConditionalLink#getCondition()
 	 * @see #getConditionalLink()
 	 * @generated
 	 */
-	EAttribute getConditionalLink_Condition();
+	EReference getConditionalLink_Condition();
 
 	/**
 	 * Returns the meta object for class '{@link com.extremexp.emf.model.workflow.RegularLink <em>Regular Link</em>}'.
@@ -2228,15 +2712,15 @@ public interface WorkflowPackage extends EPackage {
 	EReference getGroup_Metadata();
 
 	/**
-	 * Returns the meta object for the reference list '{@link com.extremexp.emf.model.workflow.Group#getTask <em>Task</em>}'.
+	 * Returns the meta object for the reference list '{@link com.extremexp.emf.model.workflow.Group#getTasks <em>Tasks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Task</em>'.
-	 * @see com.extremexp.emf.model.workflow.Group#getTask()
+	 * @return the meta object for the reference list '<em>Tasks</em>'.
+	 * @see com.extremexp.emf.model.workflow.Group#getTasks()
 	 * @see #getGroup()
 	 * @generated
 	 */
-	EReference getGroup_Task();
+	EReference getGroup_Tasks();
 
 	/**
 	 * Returns the meta object for the reference '{@link com.extremexp.emf.model.workflow.Group#getUi <em>Ui</em>}'.
@@ -2302,15 +2786,15 @@ public interface WorkflowPackage extends EPackage {
 	EClass getExclusive();
 
 	/**
-	 * Returns the meta object for the attribute '{@link com.extremexp.emf.model.workflow.Exclusive#isCondition <em>Condition</em>}'.
+	 * Returns the meta object for the reference '{@link com.extremexp.emf.model.workflow.Exclusive#getCondition <em>Condition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Condition</em>'.
-	 * @see com.extremexp.emf.model.workflow.Exclusive#isCondition()
+	 * @return the meta object for the reference '<em>Condition</em>'.
+	 * @see com.extremexp.emf.model.workflow.Exclusive#getCondition()
 	 * @see #getExclusive()
 	 * @generated
 	 */
-	EAttribute getExclusive_Condition();
+	EReference getExclusive_Condition();
 
 	/**
 	 * Returns the meta object for class '{@link com.extremexp.emf.model.workflow.Inclusive <em>Inclusive</em>}'.
@@ -2323,15 +2807,15 @@ public interface WorkflowPackage extends EPackage {
 	EClass getInclusive();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link com.extremexp.emf.model.workflow.Inclusive#getConditions <em>Conditions</em>}'.
+	 * Returns the meta object for the reference list '{@link com.extremexp.emf.model.workflow.Inclusive#getConditions <em>Conditions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Conditions</em>'.
+	 * @return the meta object for the reference list '<em>Conditions</em>'.
 	 * @see com.extremexp.emf.model.workflow.Inclusive#getConditions()
 	 * @see #getInclusive()
 	 * @generated
 	 */
-	EAttribute getInclusive_Conditions();
+	EReference getInclusive_Conditions();
 
 	/**
 	 * Returns the meta object for class '{@link com.extremexp.emf.model.workflow.Complex <em>Complex</em>}'.
@@ -2344,15 +2828,15 @@ public interface WorkflowPackage extends EPackage {
 	EClass getComplex();
 
 	/**
-	 * Returns the meta object for the attribute '{@link com.extremexp.emf.model.workflow.Complex#isComplexCondition <em>Complex Condition</em>}'.
+	 * Returns the meta object for the reference list '{@link com.extremexp.emf.model.workflow.Complex#getConditions <em>Conditions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Complex Condition</em>'.
-	 * @see com.extremexp.emf.model.workflow.Complex#isComplexCondition()
+	 * @return the meta object for the reference list '<em>Conditions</em>'.
+	 * @see com.extremexp.emf.model.workflow.Complex#getConditions()
 	 * @see #getComplex()
 	 * @generated
 	 */
-	EAttribute getComplex_ComplexCondition();
+	EReference getComplex_Conditions();
 
 	/**
 	 * Returns the meta object for class '{@link com.extremexp.emf.model.workflow.ParallelJoin <em>Parallel Join</em>}'.
@@ -2435,6 +2919,274 @@ public interface WorkflowPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getPrimitiveType_Type();
+
+	/**
+	 * Returns the meta object for class '{@link com.extremexp.emf.model.workflow.Specification <em>Specification</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Specification</em>'.
+	 * @see com.extremexp.emf.model.workflow.Specification
+	 * @generated
+	 */
+	EClass getSpecification();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link com.extremexp.emf.model.workflow.Specification#getGroups <em>Groups</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Groups</em>'.
+	 * @see com.extremexp.emf.model.workflow.Specification#getGroups()
+	 * @see #getSpecification()
+	 * @generated
+	 */
+	EReference getSpecification_Groups();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.extremexp.emf.model.workflow.Specification#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see com.extremexp.emf.model.workflow.Specification#getName()
+	 * @see #getSpecification()
+	 * @generated
+	 */
+	EAttribute getSpecification_Name();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link com.extremexp.emf.model.workflow.Specification#getParametertypes <em>Parametertypes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Parametertypes</em>'.
+	 * @see com.extremexp.emf.model.workflow.Specification#getParametertypes()
+	 * @see #getSpecification()
+	 * @generated
+	 */
+	EReference getSpecification_Parametertypes();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link com.extremexp.emf.model.workflow.Specification#getWorkflow <em>Workflow</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Workflow</em>'.
+	 * @see com.extremexp.emf.model.workflow.Specification#getWorkflow()
+	 * @see #getSpecification()
+	 * @generated
+	 */
+	EReference getSpecification_Workflow();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link com.extremexp.emf.model.workflow.Specification#getDeployedworkflow <em>Deployedworkflow</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Deployedworkflow</em>'.
+	 * @see com.extremexp.emf.model.workflow.Specification#getDeployedworkflow()
+	 * @see #getSpecification()
+	 * @generated
+	 */
+	EReference getSpecification_Deployedworkflow();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link com.extremexp.emf.model.workflow.Specification#getCondition <em>Condition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Condition</em>'.
+	 * @see com.extremexp.emf.model.workflow.Specification#getCondition()
+	 * @see #getSpecification()
+	 * @generated
+	 */
+	EReference getSpecification_Condition();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link com.extremexp.emf.model.workflow.Specification#getExperimentspace <em>Experimentspace</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Experimentspace</em>'.
+	 * @see com.extremexp.emf.model.workflow.Specification#getExperimentspace()
+	 * @see #getSpecification()
+	 * @generated
+	 */
+	EReference getSpecification_Experimentspace();
+
+	/**
+	 * Returns the meta object for class '{@link com.extremexp.emf.model.workflow.DeployedWorkflow <em>Deployed Workflow</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Deployed Workflow</em>'.
+	 * @see com.extremexp.emf.model.workflow.DeployedWorkflow
+	 * @generated
+	 */
+	EClass getDeployedWorkflow();
+
+	/**
+	 * Returns the meta object for the reference '{@link com.extremexp.emf.model.workflow.DeployedWorkflow#getWorkflow <em>Workflow</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Workflow</em>'.
+	 * @see com.extremexp.emf.model.workflow.DeployedWorkflow#getWorkflow()
+	 * @see #getDeployedWorkflow()
+	 * @generated
+	 */
+	EReference getDeployedWorkflow_Workflow();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link com.extremexp.emf.model.workflow.DeployedWorkflow#getConfiguredtask <em>Configuredtask</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Configuredtask</em>'.
+	 * @see com.extremexp.emf.model.workflow.DeployedWorkflow#getConfiguredtask()
+	 * @see #getDeployedWorkflow()
+	 * @generated
+	 */
+	EReference getDeployedWorkflow_Configuredtask();
+
+	/**
+	 * Returns the meta object for class '{@link com.extremexp.emf.model.workflow.ConfiguredTask <em>Configured Task</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Configured Task</em>'.
+	 * @see com.extremexp.emf.model.workflow.ConfiguredTask
+	 * @generated
+	 */
+	EClass getConfiguredTask();
+
+	/**
+	 * Returns the meta object for the reference '{@link com.extremexp.emf.model.workflow.ConfiguredTask#getConfiguration <em>Configuration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Configuration</em>'.
+	 * @see com.extremexp.emf.model.workflow.ConfiguredTask#getConfiguration()
+	 * @see #getConfiguredTask()
+	 * @generated
+	 */
+	EReference getConfiguredTask_Configuration();
+
+	/**
+	 * Returns the meta object for class '{@link com.extremexp.emf.model.workflow.Condition <em>Condition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Condition</em>'.
+	 * @see com.extremexp.emf.model.workflow.Condition
+	 * @generated
+	 */
+	EClass getCondition();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.extremexp.emf.model.workflow.Condition#getCondition <em>Condition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Condition</em>'.
+	 * @see com.extremexp.emf.model.workflow.Condition#getCondition()
+	 * @see #getCondition()
+	 * @generated
+	 */
+	EAttribute getCondition_Condition();
+
+	/**
+	 * Returns the meta object for the reference '{@link com.extremexp.emf.model.workflow.Condition#getTrue <em>True</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>True</em>'.
+	 * @see com.extremexp.emf.model.workflow.Condition#getTrue()
+	 * @see #getCondition()
+	 * @generated
+	 */
+	EReference getCondition_True();
+
+	/**
+	 * Returns the meta object for the reference '{@link com.extremexp.emf.model.workflow.Condition#getFalse <em>False</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>False</em>'.
+	 * @see com.extremexp.emf.model.workflow.Condition#getFalse()
+	 * @see #getCondition()
+	 * @generated
+	 */
+	EReference getCondition_False();
+
+	/**
+	 * Returns the meta object for class '{@link com.extremexp.emf.model.workflow.DeployedWorkflowParameterSpace <em>Deployed Workflow Parameter Space</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Deployed Workflow Parameter Space</em>'.
+	 * @see com.extremexp.emf.model.workflow.DeployedWorkflowParameterSpace
+	 * @generated
+	 */
+	EClass getDeployedWorkflowParameterSpace();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.extremexp.emf.model.workflow.DeployedWorkflowParameterSpace#getMethod <em>Method</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Method</em>'.
+	 * @see com.extremexp.emf.model.workflow.DeployedWorkflowParameterSpace#getMethod()
+	 * @see #getDeployedWorkflowParameterSpace()
+	 * @generated
+	 */
+	EAttribute getDeployedWorkflowParameterSpace_Method();
+
+	/**
+	 * Returns the meta object for the reference '{@link com.extremexp.emf.model.workflow.DeployedWorkflowParameterSpace#getDeployedworkflow <em>Deployedworkflow</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Deployedworkflow</em>'.
+	 * @see com.extremexp.emf.model.workflow.DeployedWorkflowParameterSpace#getDeployedworkflow()
+	 * @see #getDeployedWorkflowParameterSpace()
+	 * @generated
+	 */
+	EReference getDeployedWorkflowParameterSpace_Deployedworkflow();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link com.extremexp.emf.model.workflow.DeployedWorkflowParameterSpace#getParameterdomain <em>Parameterdomain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Parameterdomain</em>'.
+	 * @see com.extremexp.emf.model.workflow.DeployedWorkflowParameterSpace#getParameterdomain()
+	 * @see #getDeployedWorkflowParameterSpace()
+	 * @generated
+	 */
+	EReference getDeployedWorkflowParameterSpace_Parameterdomain();
+
+	/**
+	 * Returns the meta object for class '{@link com.extremexp.emf.model.workflow.ExperimentSpace <em>Experiment Space</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Experiment Space</em>'.
+	 * @see com.extremexp.emf.model.workflow.ExperimentSpace
+	 * @generated
+	 */
+	EClass getExperimentSpace();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link com.extremexp.emf.model.workflow.ExperimentSpace#getDeployedworkflowparameterspace <em>Deployedworkflowparameterspace</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Deployedworkflowparameterspace</em>'.
+	 * @see com.extremexp.emf.model.workflow.ExperimentSpace#getDeployedworkflowparameterspace()
+	 * @see #getExperimentSpace()
+	 * @generated
+	 */
+	EReference getExperimentSpace_Deployedworkflowparameterspace();
+
+	/**
+	 * Returns the meta object for class '{@link com.extremexp.emf.model.workflow.ParameterDomain <em>Parameter Domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Parameter Domain</em>'.
+	 * @see com.extremexp.emf.model.workflow.ParameterDomain
+	 * @generated
+	 */
+	EClass getParameterDomain();
+
+	/**
+	 * Returns the meta object for the reference '{@link com.extremexp.emf.model.workflow.ParameterDomain#getStaticparameter <em>Staticparameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Staticparameter</em>'.
+	 * @see com.extremexp.emf.model.workflow.ParameterDomain#getStaticparameter()
+	 * @see #getParameterDomain()
+	 * @generated
+	 */
+	EReference getParameterDomain_Staticparameter();
 
 	/**
 	 * Returns the meta object for enum '{@link com.extremexp.emf.model.workflow.Event <em>Event</em>}'.
@@ -2911,12 +3663,12 @@ public interface WorkflowPackage extends EPackage {
 		EClass CONDITIONAL_LINK = eINSTANCE.getConditionalLink();
 
 		/**
-		 * The meta object literal for the '<em><b>Condition</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Condition</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CONDITIONAL_LINK__CONDITION = eINSTANCE.getConditionalLink_Condition();
+		EReference CONDITIONAL_LINK__CONDITION = eINSTANCE.getConditionalLink_Condition();
 
 		/**
 		 * The meta object literal for the '{@link com.extremexp.emf.model.workflow.impl.RegularLinkImpl <em>Regular Link</em>}' class.
@@ -2983,12 +3735,12 @@ public interface WorkflowPackage extends EPackage {
 		EReference GROUP__METADATA = eINSTANCE.getGroup_Metadata();
 
 		/**
-		 * The meta object literal for the '<em><b>Task</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Tasks</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GROUP__TASK = eINSTANCE.getGroup_Task();
+		EReference GROUP__TASKS = eINSTANCE.getGroup_Tasks();
 
 		/**
 		 * The meta object literal for the '<em><b>Ui</b></em>' reference feature.
@@ -3045,12 +3797,12 @@ public interface WorkflowPackage extends EPackage {
 		EClass EXCLUSIVE = eINSTANCE.getExclusive();
 
 		/**
-		 * The meta object literal for the '<em><b>Condition</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Condition</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EXCLUSIVE__CONDITION = eINSTANCE.getExclusive_Condition();
+		EReference EXCLUSIVE__CONDITION = eINSTANCE.getExclusive_Condition();
 
 		/**
 		 * The meta object literal for the '{@link com.extremexp.emf.model.workflow.impl.InclusiveImpl <em>Inclusive</em>}' class.
@@ -3063,12 +3815,12 @@ public interface WorkflowPackage extends EPackage {
 		EClass INCLUSIVE = eINSTANCE.getInclusive();
 
 		/**
-		 * The meta object literal for the '<em><b>Conditions</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>Conditions</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute INCLUSIVE__CONDITIONS = eINSTANCE.getInclusive_Conditions();
+		EReference INCLUSIVE__CONDITIONS = eINSTANCE.getInclusive_Conditions();
 
 		/**
 		 * The meta object literal for the '{@link com.extremexp.emf.model.workflow.impl.ComplexImpl <em>Complex</em>}' class.
@@ -3081,12 +3833,12 @@ public interface WorkflowPackage extends EPackage {
 		EClass COMPLEX = eINSTANCE.getComplex();
 
 		/**
-		 * The meta object literal for the '<em><b>Complex Condition</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Conditions</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute COMPLEX__COMPLEX_CONDITION = eINSTANCE.getComplex_ComplexCondition();
+		EReference COMPLEX__CONDITIONS = eINSTANCE.getComplex_Conditions();
 
 		/**
 		 * The meta object literal for the '{@link com.extremexp.emf.model.workflow.impl.ParallelJoinImpl <em>Parallel Join</em>}' class.
@@ -3163,6 +3915,223 @@ public interface WorkflowPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute PRIMITIVE_TYPE__TYPE = eINSTANCE.getPrimitiveType_Type();
+
+		/**
+		 * The meta object literal for the '{@link com.extremexp.emf.model.workflow.impl.SpecificationImpl <em>Specification</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.extremexp.emf.model.workflow.impl.SpecificationImpl
+		 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getSpecification()
+		 * @generated
+		 */
+		EClass SPECIFICATION = eINSTANCE.getSpecification();
+
+		/**
+		 * The meta object literal for the '<em><b>Groups</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SPECIFICATION__GROUPS = eINSTANCE.getSpecification_Groups();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SPECIFICATION__NAME = eINSTANCE.getSpecification_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Parametertypes</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SPECIFICATION__PARAMETERTYPES = eINSTANCE.getSpecification_Parametertypes();
+
+		/**
+		 * The meta object literal for the '<em><b>Workflow</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SPECIFICATION__WORKFLOW = eINSTANCE.getSpecification_Workflow();
+
+		/**
+		 * The meta object literal for the '<em><b>Deployedworkflow</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SPECIFICATION__DEPLOYEDWORKFLOW = eINSTANCE.getSpecification_Deployedworkflow();
+
+		/**
+		 * The meta object literal for the '<em><b>Condition</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SPECIFICATION__CONDITION = eINSTANCE.getSpecification_Condition();
+
+		/**
+		 * The meta object literal for the '<em><b>Experimentspace</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SPECIFICATION__EXPERIMENTSPACE = eINSTANCE.getSpecification_Experimentspace();
+
+		/**
+		 * The meta object literal for the '{@link com.extremexp.emf.model.workflow.impl.DeployedWorkflowImpl <em>Deployed Workflow</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.extremexp.emf.model.workflow.impl.DeployedWorkflowImpl
+		 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getDeployedWorkflow()
+		 * @generated
+		 */
+		EClass DEPLOYED_WORKFLOW = eINSTANCE.getDeployedWorkflow();
+
+		/**
+		 * The meta object literal for the '<em><b>Workflow</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DEPLOYED_WORKFLOW__WORKFLOW = eINSTANCE.getDeployedWorkflow_Workflow();
+
+		/**
+		 * The meta object literal for the '<em><b>Configuredtask</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DEPLOYED_WORKFLOW__CONFIGUREDTASK = eINSTANCE.getDeployedWorkflow_Configuredtask();
+
+		/**
+		 * The meta object literal for the '{@link com.extremexp.emf.model.workflow.impl.ConfiguredTaskImpl <em>Configured Task</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.extremexp.emf.model.workflow.impl.ConfiguredTaskImpl
+		 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getConfiguredTask()
+		 * @generated
+		 */
+		EClass CONFIGURED_TASK = eINSTANCE.getConfiguredTask();
+
+		/**
+		 * The meta object literal for the '<em><b>Configuration</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONFIGURED_TASK__CONFIGURATION = eINSTANCE.getConfiguredTask_Configuration();
+
+		/**
+		 * The meta object literal for the '{@link com.extremexp.emf.model.workflow.impl.ConditionImpl <em>Condition</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.extremexp.emf.model.workflow.impl.ConditionImpl
+		 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getCondition()
+		 * @generated
+		 */
+		EClass CONDITION = eINSTANCE.getCondition();
+
+		/**
+		 * The meta object literal for the '<em><b>Condition</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONDITION__CONDITION = eINSTANCE.getCondition_Condition();
+
+		/**
+		 * The meta object literal for the '<em><b>True</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONDITION__TRUE = eINSTANCE.getCondition_True();
+
+		/**
+		 * The meta object literal for the '<em><b>False</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONDITION__FALSE = eINSTANCE.getCondition_False();
+
+		/**
+		 * The meta object literal for the '{@link com.extremexp.emf.model.workflow.impl.DeployedWorkflowParameterSpaceImpl <em>Deployed Workflow Parameter Space</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.extremexp.emf.model.workflow.impl.DeployedWorkflowParameterSpaceImpl
+		 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getDeployedWorkflowParameterSpace()
+		 * @generated
+		 */
+		EClass DEPLOYED_WORKFLOW_PARAMETER_SPACE = eINSTANCE.getDeployedWorkflowParameterSpace();
+
+		/**
+		 * The meta object literal for the '<em><b>Method</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DEPLOYED_WORKFLOW_PARAMETER_SPACE__METHOD = eINSTANCE.getDeployedWorkflowParameterSpace_Method();
+
+		/**
+		 * The meta object literal for the '<em><b>Deployedworkflow</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DEPLOYED_WORKFLOW_PARAMETER_SPACE__DEPLOYEDWORKFLOW = eINSTANCE
+				.getDeployedWorkflowParameterSpace_Deployedworkflow();
+
+		/**
+		 * The meta object literal for the '<em><b>Parameterdomain</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DEPLOYED_WORKFLOW_PARAMETER_SPACE__PARAMETERDOMAIN = eINSTANCE
+				.getDeployedWorkflowParameterSpace_Parameterdomain();
+
+		/**
+		 * The meta object literal for the '{@link com.extremexp.emf.model.workflow.impl.ExperimentSpaceImpl <em>Experiment Space</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.extremexp.emf.model.workflow.impl.ExperimentSpaceImpl
+		 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getExperimentSpace()
+		 * @generated
+		 */
+		EClass EXPERIMENT_SPACE = eINSTANCE.getExperimentSpace();
+
+		/**
+		 * The meta object literal for the '<em><b>Deployedworkflowparameterspace</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXPERIMENT_SPACE__DEPLOYEDWORKFLOWPARAMETERSPACE = eINSTANCE
+				.getExperimentSpace_Deployedworkflowparameterspace();
+
+		/**
+		 * The meta object literal for the '{@link com.extremexp.emf.model.workflow.impl.ParameterDomainImpl <em>Parameter Domain</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.extremexp.emf.model.workflow.impl.ParameterDomainImpl
+		 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getParameterDomain()
+		 * @generated
+		 */
+		EClass PARAMETER_DOMAIN = eINSTANCE.getParameterDomain();
+
+		/**
+		 * The meta object literal for the '<em><b>Staticparameter</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PARAMETER_DOMAIN__STATICPARAMETER = eINSTANCE.getParameterDomain_Staticparameter();
 
 		/**
 		 * The meta object literal for the '{@link com.extremexp.emf.model.workflow.Event <em>Event</em>}' enum.

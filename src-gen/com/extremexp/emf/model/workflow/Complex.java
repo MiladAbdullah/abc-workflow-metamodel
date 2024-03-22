@@ -2,6 +2,8 @@
  */
 package com.extremexp.emf.model.workflow;
 
+import org.eclipse.emf.common.util.EList;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Complex</b></em>'.
@@ -11,7 +13,7 @@ package com.extremexp.emf.model.workflow;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link com.extremexp.emf.model.workflow.Complex#isComplexCondition <em>Complex Condition</em>}</li>
+ *   <li>{@link com.extremexp.emf.model.workflow.Complex#getConditions <em>Conditions</em>}</li>
  * </ul>
  *
  * @see com.extremexp.emf.model.workflow.WorkflowPackage#getComplex()
@@ -20,25 +22,15 @@ package com.extremexp.emf.model.workflow;
  */
 public interface Complex extends Operator {
 	/**
-	 * Returns the value of the '<em><b>Complex Condition</b></em>' attribute.
+	 * Returns the value of the '<em><b>Conditions</b></em>' reference list.
+	 * The list contents are of type {@link com.extremexp.emf.model.workflow.Condition}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Complex Condition</em>' attribute.
-	 * @see #setComplexCondition(boolean)
-	 * @see com.extremexp.emf.model.workflow.WorkflowPackage#getComplex_ComplexCondition()
+	 * @return the value of the '<em>Conditions</em>' reference list.
+	 * @see com.extremexp.emf.model.workflow.WorkflowPackage#getComplex_Conditions()
 	 * @model
 	 * @generated
 	 */
-	boolean isComplexCondition();
-
-	/**
-	 * Sets the value of the '{@link com.extremexp.emf.model.workflow.Complex#isComplexCondition <em>Complex Condition</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Complex Condition</em>' attribute.
-	 * @see #isComplexCondition()
-	 * @generated
-	 */
-	void setComplexCondition(boolean value);
+	EList<Condition> getConditions();
 
 } // Complex

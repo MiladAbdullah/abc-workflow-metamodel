@@ -20,25 +20,25 @@ package com.extremexp.emf.model.workflow;
  */
 public interface ConditionalLink extends Link {
 	/**
-	 * Returns the value of the '<em><b>Condition</b></em>' attribute.
+	 * Returns the value of the '<em><b>Condition</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Condition</em>' attribute.
-	 * @see #setCondition(String)
+	 * @return the value of the '<em>Condition</em>' reference.
+	 * @see #setCondition(Condition)
 	 * @see com.extremexp.emf.model.workflow.WorkflowPackage#getConditionalLink_Condition()
 	 * @model
 	 * @generated
 	 */
-	String getCondition();
+	Condition getCondition();
 
 	/**
-	 * Sets the value of the '{@link com.extremexp.emf.model.workflow.ConditionalLink#getCondition <em>Condition</em>}' attribute.
+	 * Sets the value of the '{@link com.extremexp.emf.model.workflow.ConditionalLink#getCondition <em>Condition</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Condition</em>' attribute.
+	 * @param value the new value of the '<em>Condition</em>' reference.
 	 * @see #getCondition()
 	 * @generated
 	 */
-	void setCondition(String value);
+	void setCondition(Condition value);
 
 } // ConditionalLink

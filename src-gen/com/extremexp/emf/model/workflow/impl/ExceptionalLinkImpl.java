@@ -33,7 +33,7 @@ public class ExceptionalLinkImpl extends LinkImpl implements ExceptionalLink {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Object EVENT_EDEFAULT = null;
+	protected static final String EVENT_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getEvent() <em>Event</em>}' attribute.
@@ -43,7 +43,7 @@ public class ExceptionalLinkImpl extends LinkImpl implements ExceptionalLink {
 	 * @generated
 	 * @ordered
 	 */
-	protected Object event = EVENT_EDEFAULT;
+	protected String event = EVENT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,7 +69,7 @@ public class ExceptionalLinkImpl extends LinkImpl implements ExceptionalLink {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getEvent() {
+	public String getEvent() {
 		return event;
 	}
 
@@ -78,8 +78,8 @@ public class ExceptionalLinkImpl extends LinkImpl implements ExceptionalLink {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setEvent(Object newEvent) {
-		Object oldEvent = event;
+	public void setEvent(String newEvent) {
+		String oldEvent = event;
 		event = newEvent;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WorkflowPackage.EXCEPTIONAL_LINK__EVENT, oldEvent,
@@ -109,7 +109,7 @@ public class ExceptionalLinkImpl extends LinkImpl implements ExceptionalLink {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case WorkflowPackage.EXCEPTIONAL_LINK__EVENT:
-			setEvent(newValue);
+			setEvent((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);

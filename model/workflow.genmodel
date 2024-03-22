@@ -84,7 +84,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference workflow.ecore#//Link/input"/>
     </genClasses>
     <genClasses ecoreClass="workflow.ecore#//ConditionalLink">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute workflow.ecore#//ConditionalLink/condition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EReference workflow.ecore#//ConditionalLink/condition"/>
     </genClasses>
     <genClasses ecoreClass="workflow.ecore#//RegularLink"/>
     <genClasses ecoreClass="workflow.ecore#//ExceptionalLink">
@@ -94,7 +94,7 @@
     <genClasses ecoreClass="workflow.ecore#//Group">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute workflow.ecore#//Group/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference workflow.ecore#//Group/metadata"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference workflow.ecore#//Group/task"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference workflow.ecore#//Group/tasks"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference workflow.ecore#//Group/ui"/>
     </genClasses>
     <genClasses ecoreClass="workflow.ecore#//MetaData">
@@ -103,13 +103,13 @@
     </genClasses>
     <genClasses ecoreClass="workflow.ecore#//Parallel"/>
     <genClasses ecoreClass="workflow.ecore#//Exclusive">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute workflow.ecore#//Exclusive/condition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference workflow.ecore#//Exclusive/condition"/>
     </genClasses>
     <genClasses ecoreClass="workflow.ecore#//Inclusive">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute workflow.ecore#//Inclusive/conditions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference workflow.ecore#//Inclusive/conditions"/>
     </genClasses>
     <genClasses ecoreClass="workflow.ecore#//Complex">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute workflow.ecore#//Complex/complexCondition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference workflow.ecore#//Complex/conditions"/>
     </genClasses>
     <genClasses ecoreClass="workflow.ecore#//ParallelJoin"/>
     <genClasses ecoreClass="workflow.ecore#//ExclusiveJoin"/>
@@ -120,6 +120,38 @@
     </genClasses>
     <genClasses ecoreClass="workflow.ecore#//PrimitiveType">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute workflow.ecore#//PrimitiveType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="workflow.ecore#//Specification">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference workflow.ecore#//Specification/groups"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute workflow.ecore#//Specification/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference workflow.ecore#//Specification/parametertypes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference workflow.ecore#//Specification/workflow"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference workflow.ecore#//Specification/deployedworkflow"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference workflow.ecore#//Specification/condition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference workflow.ecore#//Specification/experimentspace"/>
+    </genClasses>
+    <genClasses ecoreClass="workflow.ecore#//DeployedWorkflow">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference workflow.ecore#//DeployedWorkflow/workflow"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference workflow.ecore#//DeployedWorkflow/configuredtask"/>
+    </genClasses>
+    <genClasses ecoreClass="workflow.ecore#//ConfiguredTask">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference workflow.ecore#//ConfiguredTask/configuration"/>
+    </genClasses>
+    <genClasses ecoreClass="workflow.ecore#//Condition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute workflow.ecore#//Condition/condition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference workflow.ecore#//Condition/true"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference workflow.ecore#//Condition/false"/>
+    </genClasses>
+    <genClasses ecoreClass="workflow.ecore#//DeployedWorkflowParameterSpace">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute workflow.ecore#//DeployedWorkflowParameterSpace/method"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference workflow.ecore#//DeployedWorkflowParameterSpace/deployedworkflow"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference workflow.ecore#//DeployedWorkflowParameterSpace/parameterdomain"/>
+    </genClasses>
+    <genClasses ecoreClass="workflow.ecore#//ExperimentSpace">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference workflow.ecore#//ExperimentSpace/deployedworkflowparameterspace"/>
+    </genClasses>
+    <genClasses ecoreClass="workflow.ecore#//ParameterDomain">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference workflow.ecore#//ParameterDomain/staticparameter"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

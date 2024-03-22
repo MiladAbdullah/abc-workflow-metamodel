@@ -2,6 +2,7 @@
  */
 package com.extremexp.emf.model.workflow.impl;
 
+import com.extremexp.emf.model.workflow.Condition;
 import com.extremexp.emf.model.workflow.Exclusive;
 import com.extremexp.emf.model.workflow.WorkflowPackage;
 
@@ -9,6 +10,7 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -19,31 +21,21 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link com.extremexp.emf.model.workflow.impl.ExclusiveImpl#isCondition <em>Condition</em>}</li>
+ *   <li>{@link com.extremexp.emf.model.workflow.impl.ExclusiveImpl#getCondition <em>Condition</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ExclusiveImpl extends OperatorImpl implements Exclusive {
 	/**
-	 * The default value of the '{@link #isCondition() <em>Condition</em>}' attribute.
+	 * The cached value of the '{@link #getCondition() <em>Condition</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isCondition()
+	 * @see #getCondition()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean CONDITION_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isCondition() <em>Condition</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isCondition()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean condition = CONDITION_EDEFAULT;
+	protected Condition condition;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,7 +61,16 @@ public class ExclusiveImpl extends OperatorImpl implements Exclusive {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isCondition() {
+	public Condition getCondition() {
+		if (condition != null && condition.eIsProxy()) {
+			InternalEObject oldCondition = (InternalEObject) condition;
+			condition = (Condition) eResolveProxy(oldCondition);
+			if (condition != oldCondition) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WorkflowPackage.EXCLUSIVE__CONDITION,
+							oldCondition, condition));
+			}
+		}
 		return condition;
 	}
 
@@ -78,8 +79,17 @@ public class ExclusiveImpl extends OperatorImpl implements Exclusive {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCondition(boolean newCondition) {
-		boolean oldCondition = condition;
+	public Condition basicGetCondition() {
+		return condition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCondition(Condition newCondition) {
+		Condition oldCondition = condition;
 		condition = newCondition;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WorkflowPackage.EXCLUSIVE__CONDITION, oldCondition,
@@ -95,7 +105,9 @@ public class ExclusiveImpl extends OperatorImpl implements Exclusive {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case WorkflowPackage.EXCLUSIVE__CONDITION:
-			return isCondition();
+			if (resolve)
+				return getCondition();
+			return basicGetCondition();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -109,7 +121,7 @@ public class ExclusiveImpl extends OperatorImpl implements Exclusive {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case WorkflowPackage.EXCLUSIVE__CONDITION:
-			setCondition((Boolean) newValue);
+			setCondition((Condition) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -124,7 +136,7 @@ public class ExclusiveImpl extends OperatorImpl implements Exclusive {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 		case WorkflowPackage.EXCLUSIVE__CONDITION:
-			setCondition(CONDITION_EDEFAULT);
+			setCondition((Condition) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -139,26 +151,9 @@ public class ExclusiveImpl extends OperatorImpl implements Exclusive {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case WorkflowPackage.EXCLUSIVE__CONDITION:
-			return condition != CONDITION_EDEFAULT;
+			return condition != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (condition: ");
-		result.append(condition);
-		result.append(')');
-		return result.toString();
 	}
 
 } //ExclusiveImpl

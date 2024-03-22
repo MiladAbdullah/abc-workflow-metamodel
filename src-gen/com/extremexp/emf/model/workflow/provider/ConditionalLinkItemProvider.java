@@ -13,7 +13,6 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
@@ -61,8 +60,7 @@ public class ConditionalLinkItemProvider extends LinkItemProvider {
 						getResourceLocator(), getString("_UI_ConditionalLink_condition_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_ConditionalLink_condition_feature",
 								"_UI_ConditionalLink_type"),
-						WorkflowPackage.Literals.CONDITIONAL_LINK__CONDITION, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+						WorkflowPackage.Literals.CONDITIONAL_LINK__CONDITION, true, false, false, null, null, null));
 	}
 
 	/**
@@ -94,9 +92,7 @@ public class ConditionalLinkItemProvider extends LinkItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ConditionalLink) object).getCondition();
-		return label == null || label.length() == 0 ? getString("_UI_ConditionalLink_type")
-				: getString("_UI_ConditionalLink_type") + " " + label;
+		return getString("_UI_ConditionalLink_type");
 	}
 
 	/**

@@ -19,31 +19,31 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link com.extremexp.emf.model.workflow.impl.ExternalInputDataImpl#isEligibilityCondition <em>Eligibility Condition</em>}</li>
+ *   <li>{@link com.extremexp.emf.model.workflow.impl.ExternalInputDataImpl#getEligibilityCondition <em>Eligibility Condition</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ExternalInputDataImpl extends InputDataImpl implements ExternalInputData {
 	/**
-	 * The default value of the '{@link #isEligibilityCondition() <em>Eligibility Condition</em>}' attribute.
+	 * The default value of the '{@link #getEligibilityCondition() <em>Eligibility Condition</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isEligibilityCondition()
+	 * @see #getEligibilityCondition()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean ELIGIBILITY_CONDITION_EDEFAULT = false;
+	protected static final String ELIGIBILITY_CONDITION_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #isEligibilityCondition() <em>Eligibility Condition</em>}' attribute.
+	 * The cached value of the '{@link #getEligibilityCondition() <em>Eligibility Condition</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isEligibilityCondition()
+	 * @see #getEligibilityCondition()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean eligibilityCondition = ELIGIBILITY_CONDITION_EDEFAULT;
+	protected String eligibilityCondition = ELIGIBILITY_CONDITION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,7 +69,7 @@ public class ExternalInputDataImpl extends InputDataImpl implements ExternalInpu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isEligibilityCondition() {
+	public String getEligibilityCondition() {
 		return eligibilityCondition;
 	}
 
@@ -78,8 +78,8 @@ public class ExternalInputDataImpl extends InputDataImpl implements ExternalInpu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setEligibilityCondition(boolean newEligibilityCondition) {
-		boolean oldEligibilityCondition = eligibilityCondition;
+	public void setEligibilityCondition(String newEligibilityCondition) {
+		String oldEligibilityCondition = eligibilityCondition;
 		eligibilityCondition = newEligibilityCondition;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
@@ -96,7 +96,7 @@ public class ExternalInputDataImpl extends InputDataImpl implements ExternalInpu
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case WorkflowPackage.EXTERNAL_INPUT_DATA__ELIGIBILITY_CONDITION:
-			return isEligibilityCondition();
+			return getEligibilityCondition();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -110,7 +110,7 @@ public class ExternalInputDataImpl extends InputDataImpl implements ExternalInpu
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case WorkflowPackage.EXTERNAL_INPUT_DATA__ELIGIBILITY_CONDITION:
-			setEligibilityCondition((Boolean) newValue);
+			setEligibilityCondition((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -140,7 +140,8 @@ public class ExternalInputDataImpl extends InputDataImpl implements ExternalInpu
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case WorkflowPackage.EXTERNAL_INPUT_DATA__ELIGIBILITY_CONDITION:
-			return eligibilityCondition != ELIGIBILITY_CONDITION_EDEFAULT;
+			return ELIGIBILITY_CONDITION_EDEFAULT == null ? eligibilityCondition != null
+					: !ELIGIBILITY_CONDITION_EDEFAULT.equals(eligibilityCondition);
 		}
 		return super.eIsSet(featureID);
 	}

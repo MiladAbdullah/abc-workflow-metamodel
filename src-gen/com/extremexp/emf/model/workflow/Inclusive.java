@@ -22,15 +22,15 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Inclusive extends Operator {
 	/**
-	 * Returns the value of the '<em><b>Conditions</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.Boolean}.
+	 * Returns the value of the '<em><b>Conditions</b></em>' reference list.
+	 * The list contents are of type {@link com.extremexp.emf.model.workflow.Condition}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Conditions</em>' attribute list.
+	 * @return the value of the '<em>Conditions</em>' reference list.
 	 * @see com.extremexp.emf.model.workflow.WorkflowPackage#getInclusive_Conditions()
 	 * @model
 	 * @generated
 	 */
-	EList<Boolean> getConditions();
+	EList<Condition> getConditions();
 
 } // Inclusive

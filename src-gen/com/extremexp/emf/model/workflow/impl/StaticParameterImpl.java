@@ -33,7 +33,7 @@ public class StaticParameterImpl extends ParameterImpl implements StaticParamete
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double VALUE_EDEFAULT = 0.0;
+	protected static final Object VALUE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -43,7 +43,7 @@ public class StaticParameterImpl extends ParameterImpl implements StaticParamete
 	 * @generated
 	 * @ordered
 	 */
-	protected double value = VALUE_EDEFAULT;
+	protected Object value = VALUE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,7 +69,7 @@ public class StaticParameterImpl extends ParameterImpl implements StaticParamete
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getValue() {
+	public Object getValue() {
 		return value;
 	}
 
@@ -78,8 +78,8 @@ public class StaticParameterImpl extends ParameterImpl implements StaticParamete
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(double newValue) {
-		double oldValue = value;
+	public void setValue(Object newValue) {
+		Object oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WorkflowPackage.STATIC_PARAMETER__VALUE, oldValue,
@@ -109,7 +109,7 @@ public class StaticParameterImpl extends ParameterImpl implements StaticParamete
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case WorkflowPackage.STATIC_PARAMETER__VALUE:
-			setValue((Double) newValue);
+			setValue(newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -139,7 +139,7 @@ public class StaticParameterImpl extends ParameterImpl implements StaticParamete
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case WorkflowPackage.STATIC_PARAMETER__VALUE:
-			return value != VALUE_EDEFAULT;
+			return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 		}
 		return super.eIsSet(featureID);
 	}

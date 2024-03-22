@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see com.extremexp.emf.model.workflow.WorkflowPackage#getParameter()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface Parameter extends EObject {

@@ -3,13 +3,13 @@
 package com.extremexp.emf.model.workflow.impl;
 
 import com.extremexp.emf.model.workflow.Complex;
+import com.extremexp.emf.model.workflow.Condition;
 import com.extremexp.emf.model.workflow.WorkflowPackage;
 
-import org.eclipse.emf.common.notify.Notification;
-
+import java.util.Collection;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,31 +19,21 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link com.extremexp.emf.model.workflow.impl.ComplexImpl#isComplexCondition <em>Complex Condition</em>}</li>
+ *   <li>{@link com.extremexp.emf.model.workflow.impl.ComplexImpl#getConditions <em>Conditions</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ComplexImpl extends OperatorImpl implements Complex {
 	/**
-	 * The default value of the '{@link #isComplexCondition() <em>Complex Condition</em>}' attribute.
+	 * The cached value of the '{@link #getConditions() <em>Conditions</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isComplexCondition()
+	 * @see #getConditions()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean COMPLEX_CONDITION_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isComplexCondition() <em>Complex Condition</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isComplexCondition()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean complexCondition = COMPLEX_CONDITION_EDEFAULT;
+	protected EList<Condition> conditions;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,21 +59,12 @@ public class ComplexImpl extends OperatorImpl implements Complex {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isComplexCondition() {
-		return complexCondition;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setComplexCondition(boolean newComplexCondition) {
-		boolean oldComplexCondition = complexCondition;
-		complexCondition = newComplexCondition;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WorkflowPackage.COMPLEX__COMPLEX_CONDITION,
-					oldComplexCondition, complexCondition));
+	public EList<Condition> getConditions() {
+		if (conditions == null) {
+			conditions = new EObjectResolvingEList<Condition>(Condition.class, this,
+					WorkflowPackage.COMPLEX__CONDITIONS);
+		}
+		return conditions;
 	}
 
 	/**
@@ -94,8 +75,8 @@ public class ComplexImpl extends OperatorImpl implements Complex {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case WorkflowPackage.COMPLEX__COMPLEX_CONDITION:
-			return isComplexCondition();
+		case WorkflowPackage.COMPLEX__CONDITIONS:
+			return getConditions();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -105,11 +86,13 @@ public class ComplexImpl extends OperatorImpl implements Complex {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case WorkflowPackage.COMPLEX__COMPLEX_CONDITION:
-			setComplexCondition((Boolean) newValue);
+		case WorkflowPackage.COMPLEX__CONDITIONS:
+			getConditions().clear();
+			getConditions().addAll((Collection<? extends Condition>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -123,8 +106,8 @@ public class ComplexImpl extends OperatorImpl implements Complex {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case WorkflowPackage.COMPLEX__COMPLEX_CONDITION:
-			setComplexCondition(COMPLEX_CONDITION_EDEFAULT);
+		case WorkflowPackage.COMPLEX__CONDITIONS:
+			getConditions().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -138,27 +121,10 @@ public class ComplexImpl extends OperatorImpl implements Complex {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case WorkflowPackage.COMPLEX__COMPLEX_CONDITION:
-			return complexCondition != COMPLEX_CONDITION_EDEFAULT;
+		case WorkflowPackage.COMPLEX__CONDITIONS:
+			return conditions != null && !conditions.isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (complexCondition: ");
-		result.append(complexCondition);
-		result.append(')');
-		return result.toString();
 	}
 
 } //ComplexImpl

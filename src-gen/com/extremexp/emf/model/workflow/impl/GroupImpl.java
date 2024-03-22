@@ -35,7 +35,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link com.extremexp.emf.model.workflow.impl.GroupImpl#getName <em>Name</em>}</li>
  *   <li>{@link com.extremexp.emf.model.workflow.impl.GroupImpl#getMetadata <em>Metadata</em>}</li>
- *   <li>{@link com.extremexp.emf.model.workflow.impl.GroupImpl#getTask <em>Task</em>}</li>
+ *   <li>{@link com.extremexp.emf.model.workflow.impl.GroupImpl#getTasks <em>Tasks</em>}</li>
  *   <li>{@link com.extremexp.emf.model.workflow.impl.GroupImpl#getUi <em>Ui</em>}</li>
  * </ul>
  *
@@ -73,14 +73,14 @@ public class GroupImpl extends MinimalEObjectImpl.Container implements Group {
 	protected EList<MetaData> metadata;
 
 	/**
-	 * The cached value of the '{@link #getTask() <em>Task</em>}' reference list.
+	 * The cached value of the '{@link #getTasks() <em>Tasks</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTask()
+	 * @see #getTasks()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Task> task;
+	protected EList<Task> tasks;
 
 	/**
 	 * The cached value of the '{@link #getUi() <em>Ui</em>}' reference.
@@ -149,11 +149,11 @@ public class GroupImpl extends MinimalEObjectImpl.Container implements Group {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Task> getTask() {
-		if (task == null) {
-			task = new EObjectResolvingEList<Task>(Task.class, this, WorkflowPackage.GROUP__TASK);
+	public EList<Task> getTasks() {
+		if (tasks == null) {
+			tasks = new EObjectResolvingEList<Task>(Task.class, this, WorkflowPackage.GROUP__TASKS);
 		}
-		return task;
+		return tasks;
 	}
 
 	/**
@@ -220,8 +220,8 @@ public class GroupImpl extends MinimalEObjectImpl.Container implements Group {
 			return getName();
 		case WorkflowPackage.GROUP__METADATA:
 			return getMetadata();
-		case WorkflowPackage.GROUP__TASK:
-			return getTask();
+		case WorkflowPackage.GROUP__TASKS:
+			return getTasks();
 		case WorkflowPackage.GROUP__UI:
 			if (resolve)
 				return getUi();
@@ -246,9 +246,9 @@ public class GroupImpl extends MinimalEObjectImpl.Container implements Group {
 			getMetadata().clear();
 			getMetadata().addAll((Collection<? extends MetaData>) newValue);
 			return;
-		case WorkflowPackage.GROUP__TASK:
-			getTask().clear();
-			getTask().addAll((Collection<? extends Task>) newValue);
+		case WorkflowPackage.GROUP__TASKS:
+			getTasks().clear();
+			getTasks().addAll((Collection<? extends Task>) newValue);
 			return;
 		case WorkflowPackage.GROUP__UI:
 			setUi((UI) newValue);
@@ -271,8 +271,8 @@ public class GroupImpl extends MinimalEObjectImpl.Container implements Group {
 		case WorkflowPackage.GROUP__METADATA:
 			getMetadata().clear();
 			return;
-		case WorkflowPackage.GROUP__TASK:
-			getTask().clear();
+		case WorkflowPackage.GROUP__TASKS:
+			getTasks().clear();
 			return;
 		case WorkflowPackage.GROUP__UI:
 			setUi((UI) null);
@@ -293,8 +293,8 @@ public class GroupImpl extends MinimalEObjectImpl.Container implements Group {
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case WorkflowPackage.GROUP__METADATA:
 			return metadata != null && !metadata.isEmpty();
-		case WorkflowPackage.GROUP__TASK:
-			return task != null && !task.isEmpty();
+		case WorkflowPackage.GROUP__TASKS:
+			return tasks != null && !tasks.isEmpty();
 		case WorkflowPackage.GROUP__UI:
 			return ui != null;
 		}

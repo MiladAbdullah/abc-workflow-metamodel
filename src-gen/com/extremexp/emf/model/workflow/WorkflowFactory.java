@@ -67,15 +67,6 @@ public interface WorkflowFactory extends EFactory {
 	Metric createMetric();
 
 	/**
-	 * Returns a new object of class '<em>Parameter</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Parameter</em>'.
-	 * @generated
-	 */
-	Parameter createParameter();
-
-	/**
 	 * Returns a new object of class '<em>Dynamic Parameter</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -272,6 +263,69 @@ public interface WorkflowFactory extends EFactory {
 	 * @generated
 	 */
 	PrimitiveType createPrimitiveType();
+
+	/**
+	 * Returns a new object of class '<em>Specification</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Specification</em>'.
+	 * @generated
+	 */
+	Specification createSpecification();
+
+	/**
+	 * Returns a new object of class '<em>Deployed Workflow</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Deployed Workflow</em>'.
+	 * @generated
+	 */
+	DeployedWorkflow createDeployedWorkflow();
+
+	/**
+	 * Returns a new object of class '<em>Configured Task</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Configured Task</em>'.
+	 * @generated
+	 */
+	ConfiguredTask createConfiguredTask();
+
+	/**
+	 * Returns a new object of class '<em>Condition</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Condition</em>'.
+	 * @generated
+	 */
+	Condition createCondition();
+
+	/**
+	 * Returns a new object of class '<em>Deployed Workflow Parameter Space</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Deployed Workflow Parameter Space</em>'.
+	 * @generated
+	 */
+	DeployedWorkflowParameterSpace createDeployedWorkflowParameterSpace();
+
+	/**
+	 * Returns a new object of class '<em>Experiment Space</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Experiment Space</em>'.
+	 * @generated
+	 */
+	ExperimentSpace createExperimentSpace();
+
+	/**
+	 * Returns a new object of class '<em>Parameter Domain</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Parameter Domain</em>'.
+	 * @generated
+	 */
+	ParameterDomain createParameterDomain();
 
 	/**
 	 * Returns the package supported by this factory.

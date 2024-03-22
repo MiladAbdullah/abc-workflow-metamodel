@@ -188,29 +188,6 @@ public class WorkflowItemProviderAdapterFactory extends WorkflowAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.extremexp.emf.model.workflow.Parameter} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ParameterItemProvider parameterItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.extremexp.emf.model.workflow.Parameter}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createParameterAdapter() {
-		if (parameterItemProvider == null) {
-			parameterItemProvider = new ParameterItemProvider(this);
-		}
-
-		return parameterItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link com.extremexp.emf.model.workflow.DynamicParameter} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -717,6 +694,167 @@ public class WorkflowItemProviderAdapterFactory extends WorkflowAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link com.extremexp.emf.model.workflow.Specification} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SpecificationItemProvider specificationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.extremexp.emf.model.workflow.Specification}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSpecificationAdapter() {
+		if (specificationItemProvider == null) {
+			specificationItemProvider = new SpecificationItemProvider(this);
+		}
+
+		return specificationItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.extremexp.emf.model.workflow.DeployedWorkflow} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DeployedWorkflowItemProvider deployedWorkflowItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.extremexp.emf.model.workflow.DeployedWorkflow}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDeployedWorkflowAdapter() {
+		if (deployedWorkflowItemProvider == null) {
+			deployedWorkflowItemProvider = new DeployedWorkflowItemProvider(this);
+		}
+
+		return deployedWorkflowItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.extremexp.emf.model.workflow.ConfiguredTask} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ConfiguredTaskItemProvider configuredTaskItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.extremexp.emf.model.workflow.ConfiguredTask}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createConfiguredTaskAdapter() {
+		if (configuredTaskItemProvider == null) {
+			configuredTaskItemProvider = new ConfiguredTaskItemProvider(this);
+		}
+
+		return configuredTaskItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.extremexp.emf.model.workflow.Condition} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ConditionItemProvider conditionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.extremexp.emf.model.workflow.Condition}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createConditionAdapter() {
+		if (conditionItemProvider == null) {
+			conditionItemProvider = new ConditionItemProvider(this);
+		}
+
+		return conditionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.extremexp.emf.model.workflow.DeployedWorkflowParameterSpace} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DeployedWorkflowParameterSpaceItemProvider deployedWorkflowParameterSpaceItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.extremexp.emf.model.workflow.DeployedWorkflowParameterSpace}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDeployedWorkflowParameterSpaceAdapter() {
+		if (deployedWorkflowParameterSpaceItemProvider == null) {
+			deployedWorkflowParameterSpaceItemProvider = new DeployedWorkflowParameterSpaceItemProvider(this);
+		}
+
+		return deployedWorkflowParameterSpaceItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.extremexp.emf.model.workflow.ExperimentSpace} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ExperimentSpaceItemProvider experimentSpaceItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.extremexp.emf.model.workflow.ExperimentSpace}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createExperimentSpaceAdapter() {
+		if (experimentSpaceItemProvider == null) {
+			experimentSpaceItemProvider = new ExperimentSpaceItemProvider(this);
+		}
+
+		return experimentSpaceItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link com.extremexp.emf.model.workflow.ParameterDomain} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ParameterDomainItemProvider parameterDomainItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.extremexp.emf.model.workflow.ParameterDomain}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createParameterDomainAdapter() {
+		if (parameterDomainItemProvider == null) {
+			parameterDomainItemProvider = new ParameterDomainItemProvider(this);
+		}
+
+		return parameterDomainItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -825,8 +963,6 @@ public class WorkflowItemProviderAdapterFactory extends WorkflowAdapterFactory
 			outputDataItemProvider.dispose();
 		if (metricItemProvider != null)
 			metricItemProvider.dispose();
-		if (parameterItemProvider != null)
-			parameterItemProvider.dispose();
 		if (dynamicParameterItemProvider != null)
 			dynamicParameterItemProvider.dispose();
 		if (staticParameterItemProvider != null)
@@ -871,6 +1007,20 @@ public class WorkflowItemProviderAdapterFactory extends WorkflowAdapterFactory
 			eventNodeItemProvider.dispose();
 		if (primitiveTypeItemProvider != null)
 			primitiveTypeItemProvider.dispose();
+		if (specificationItemProvider != null)
+			specificationItemProvider.dispose();
+		if (deployedWorkflowItemProvider != null)
+			deployedWorkflowItemProvider.dispose();
+		if (configuredTaskItemProvider != null)
+			configuredTaskItemProvider.dispose();
+		if (conditionItemProvider != null)
+			conditionItemProvider.dispose();
+		if (deployedWorkflowParameterSpaceItemProvider != null)
+			deployedWorkflowParameterSpaceItemProvider.dispose();
+		if (experimentSpaceItemProvider != null)
+			experimentSpaceItemProvider.dispose();
+		if (parameterDomainItemProvider != null)
+			parameterDomainItemProvider.dispose();
 	}
 
 }

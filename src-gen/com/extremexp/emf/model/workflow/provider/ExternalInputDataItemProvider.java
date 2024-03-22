@@ -62,7 +62,7 @@ public class ExternalInputDataItemProvider extends InputDataItemProvider {
 						getString("_UI_PropertyDescriptor_description",
 								"_UI_ExternalInputData_eligibilityCondition_feature", "_UI_ExternalInputData_type"),
 						WorkflowPackage.Literals.EXTERNAL_INPUT_DATA__ELIGIBILITY_CONDITION, true, false, false,
-						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**

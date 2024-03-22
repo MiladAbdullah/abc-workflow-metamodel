@@ -2,7 +2,6 @@
  */
 package com.extremexp.emf.model.workflow.provider;
 
-import com.extremexp.emf.model.workflow.Complex;
 import com.extremexp.emf.model.workflow.WorkflowPackage;
 
 import java.util.Collection;
@@ -13,8 +12,6 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link com.extremexp.emf.model.workflow.Complex} object.
@@ -44,25 +41,24 @@ public class ComplexItemProvider extends OperatorItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addComplexConditionPropertyDescriptor(object);
+			addConditionsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Complex Condition feature.
+	 * This adds a property descriptor for the Conditions feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addComplexConditionPropertyDescriptor(Object object) {
+	protected void addConditionsPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Complex_complexCondition_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Complex_complexCondition_feature",
+						getResourceLocator(), getString("_UI_Complex_conditions_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Complex_conditions_feature",
 								"_UI_Complex_type"),
-						WorkflowPackage.Literals.COMPLEX__COMPLEX_CONDITION, true, false, false,
-						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+						WorkflowPackage.Literals.COMPLEX__CONDITIONS, true, false, true, null, null, null));
 	}
 
 	/**
@@ -94,8 +90,7 @@ public class ComplexItemProvider extends OperatorItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		Complex complex = (Complex) object;
-		return getString("_UI_Complex_type") + " " + complex.isComplexCondition();
+		return getString("_UI_Complex_type");
 	}
 
 	/**
@@ -108,12 +103,6 @@ public class ComplexItemProvider extends OperatorItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(Complex.class)) {
-		case WorkflowPackage.COMPLEX__COMPLEX_CONDITION:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
-		}
 		super.notifyChanged(notification);
 	}
 

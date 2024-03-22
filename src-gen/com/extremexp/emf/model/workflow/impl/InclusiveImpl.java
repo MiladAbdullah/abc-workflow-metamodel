@@ -2,6 +2,7 @@
  */
 package com.extremexp.emf.model.workflow.impl;
 
+import com.extremexp.emf.model.workflow.Condition;
 import com.extremexp.emf.model.workflow.Inclusive;
 import com.extremexp.emf.model.workflow.WorkflowPackage;
 
@@ -10,8 +11,7 @@ import java.util.Collection;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,14 +28,14 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
  */
 public class InclusiveImpl extends OperatorImpl implements Inclusive {
 	/**
-	 * The cached value of the '{@link #getConditions() <em>Conditions</em>}' attribute list.
+	 * The cached value of the '{@link #getConditions() <em>Conditions</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getConditions()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Boolean> conditions;
+	protected EList<Condition> conditions;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -61,9 +61,10 @@ public class InclusiveImpl extends OperatorImpl implements Inclusive {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Boolean> getConditions() {
+	public EList<Condition> getConditions() {
 		if (conditions == null) {
-			conditions = new EDataTypeUniqueEList<Boolean>(Boolean.class, this, WorkflowPackage.INCLUSIVE__CONDITIONS);
+			conditions = new EObjectResolvingEList<Condition>(Condition.class, this,
+					WorkflowPackage.INCLUSIVE__CONDITIONS);
 		}
 		return conditions;
 	}
@@ -93,7 +94,7 @@ public class InclusiveImpl extends OperatorImpl implements Inclusive {
 		switch (featureID) {
 		case WorkflowPackage.INCLUSIVE__CONDITIONS:
 			getConditions().clear();
-			getConditions().addAll((Collection<? extends Boolean>) newValue);
+			getConditions().addAll((Collection<? extends Condition>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -126,23 +127,6 @@ public class InclusiveImpl extends OperatorImpl implements Inclusive {
 			return conditions != null && !conditions.isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (conditions: ");
-		result.append(conditions);
-		result.append(')');
-		return result.toString();
 	}
 
 } //InclusiveImpl

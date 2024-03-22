@@ -2,6 +2,7 @@
  */
 package com.extremexp.emf.model.workflow.impl;
 
+import com.extremexp.emf.model.workflow.Condition;
 import com.extremexp.emf.model.workflow.ConditionalLink;
 import com.extremexp.emf.model.workflow.WorkflowPackage;
 
@@ -9,6 +10,7 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -26,24 +28,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class ConditionalLinkImpl extends LinkImpl implements ConditionalLink {
 	/**
-	 * The default value of the '{@link #getCondition() <em>Condition</em>}' attribute.
+	 * The cached value of the '{@link #getCondition() <em>Condition</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getCondition()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CONDITION_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getCondition() <em>Condition</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCondition()
-	 * @generated
-	 * @ordered
-	 */
-	protected String condition = CONDITION_EDEFAULT;
+	protected Condition condition;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,7 +61,16 @@ public class ConditionalLinkImpl extends LinkImpl implements ConditionalLink {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getCondition() {
+	public Condition getCondition() {
+		if (condition != null && condition.eIsProxy()) {
+			InternalEObject oldCondition = (InternalEObject) condition;
+			condition = (Condition) eResolveProxy(oldCondition);
+			if (condition != oldCondition) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+							WorkflowPackage.CONDITIONAL_LINK__CONDITION, oldCondition, condition));
+			}
+		}
 		return condition;
 	}
 
@@ -78,8 +79,17 @@ public class ConditionalLinkImpl extends LinkImpl implements ConditionalLink {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCondition(String newCondition) {
-		String oldCondition = condition;
+	public Condition basicGetCondition() {
+		return condition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCondition(Condition newCondition) {
+		Condition oldCondition = condition;
 		condition = newCondition;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WorkflowPackage.CONDITIONAL_LINK__CONDITION,
@@ -95,7 +105,9 @@ public class ConditionalLinkImpl extends LinkImpl implements ConditionalLink {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case WorkflowPackage.CONDITIONAL_LINK__CONDITION:
-			return getCondition();
+			if (resolve)
+				return getCondition();
+			return basicGetCondition();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -109,7 +121,7 @@ public class ConditionalLinkImpl extends LinkImpl implements ConditionalLink {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case WorkflowPackage.CONDITIONAL_LINK__CONDITION:
-			setCondition((String) newValue);
+			setCondition((Condition) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -124,7 +136,7 @@ public class ConditionalLinkImpl extends LinkImpl implements ConditionalLink {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 		case WorkflowPackage.CONDITIONAL_LINK__CONDITION:
-			setCondition(CONDITION_EDEFAULT);
+			setCondition((Condition) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -139,26 +151,9 @@ public class ConditionalLinkImpl extends LinkImpl implements ConditionalLink {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case WorkflowPackage.CONDITIONAL_LINK__CONDITION:
-			return CONDITION_EDEFAULT == null ? condition != null : !CONDITION_EDEFAULT.equals(condition);
+			return condition != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (condition: ");
-		result.append(condition);
-		result.append(')');
-		return result.toString();
 	}
 
 } //ConditionalLinkImpl

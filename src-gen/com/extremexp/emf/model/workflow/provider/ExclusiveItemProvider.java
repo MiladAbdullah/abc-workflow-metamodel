@@ -2,7 +2,6 @@
  */
 package com.extremexp.emf.model.workflow.provider;
 
-import com.extremexp.emf.model.workflow.Exclusive;
 import com.extremexp.emf.model.workflow.WorkflowPackage;
 
 import java.util.Collection;
@@ -13,8 +12,6 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link com.extremexp.emf.model.workflow.Exclusive} object.
@@ -61,8 +58,7 @@ public class ExclusiveItemProvider extends OperatorItemProvider {
 						getResourceLocator(), getString("_UI_Exclusive_condition_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_Exclusive_condition_feature",
 								"_UI_Exclusive_type"),
-						WorkflowPackage.Literals.EXCLUSIVE__CONDITION, true, false, false,
-						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+						WorkflowPackage.Literals.EXCLUSIVE__CONDITION, true, false, true, null, null, null));
 	}
 
 	/**
@@ -94,8 +90,7 @@ public class ExclusiveItemProvider extends OperatorItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		Exclusive exclusive = (Exclusive) object;
-		return getString("_UI_Exclusive_type") + " " + exclusive.isCondition();
+		return getString("_UI_Exclusive_type");
 	}
 
 	/**
@@ -108,12 +103,6 @@ public class ExclusiveItemProvider extends OperatorItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(Exclusive.class)) {
-		case WorkflowPackage.EXCLUSIVE__CONDITION:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
-		}
 		super.notifyChanged(notification);
 	}
 

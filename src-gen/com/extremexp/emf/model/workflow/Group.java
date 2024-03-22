@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link com.extremexp.emf.model.workflow.Group#getName <em>Name</em>}</li>
  *   <li>{@link com.extremexp.emf.model.workflow.Group#getMetadata <em>Metadata</em>}</li>
- *   <li>{@link com.extremexp.emf.model.workflow.Group#getTask <em>Task</em>}</li>
+ *   <li>{@link com.extremexp.emf.model.workflow.Group#getTasks <em>Tasks</em>}</li>
  *   <li>{@link com.extremexp.emf.model.workflow.Group#getUi <em>Ui</em>}</li>
  * </ul>
  *
@@ -61,16 +61,16 @@ public interface Group extends EObject {
 	EList<MetaData> getMetadata();
 
 	/**
-	 * Returns the value of the '<em><b>Task</b></em>' reference list.
+	 * Returns the value of the '<em><b>Tasks</b></em>' reference list.
 	 * The list contents are of type {@link com.extremexp.emf.model.workflow.Task}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Task</em>' reference list.
-	 * @see com.extremexp.emf.model.workflow.WorkflowPackage#getGroup_Task()
+	 * @return the value of the '<em>Tasks</em>' reference list.
+	 * @see com.extremexp.emf.model.workflow.WorkflowPackage#getGroup_Tasks()
 	 * @model
 	 * @generated
 	 */
-	EList<Task> getTask();
+	EList<Task> getTasks();
 
 	/**
 	 * Returns the value of the '<em><b>Ui</b></em>' reference.

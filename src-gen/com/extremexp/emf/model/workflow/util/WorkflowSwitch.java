@@ -359,6 +359,63 @@ public class WorkflowSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case WorkflowPackage.SPECIFICATION: {
+			Specification specification = (Specification) theEObject;
+			T result = caseSpecification(specification);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case WorkflowPackage.DEPLOYED_WORKFLOW: {
+			DeployedWorkflow deployedWorkflow = (DeployedWorkflow) theEObject;
+			T result = caseDeployedWorkflow(deployedWorkflow);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case WorkflowPackage.CONFIGURED_TASK: {
+			ConfiguredTask configuredTask = (ConfiguredTask) theEObject;
+			T result = caseConfiguredTask(configuredTask);
+			if (result == null)
+				result = caseTask(configuredTask);
+			if (result == null)
+				result = caseNode(configuredTask);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case WorkflowPackage.CONDITION: {
+			Condition condition = (Condition) theEObject;
+			T result = caseCondition(condition);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case WorkflowPackage.DEPLOYED_WORKFLOW_PARAMETER_SPACE: {
+			DeployedWorkflowParameterSpace deployedWorkflowParameterSpace = (DeployedWorkflowParameterSpace) theEObject;
+			T result = caseDeployedWorkflowParameterSpace(deployedWorkflowParameterSpace);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case WorkflowPackage.EXPERIMENT_SPACE: {
+			ExperimentSpace experimentSpace = (ExperimentSpace) theEObject;
+			T result = caseExperimentSpace(experimentSpace);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case WorkflowPackage.PARAMETER_DOMAIN: {
+			ParameterDomain parameterDomain = (ParameterDomain) theEObject;
+			T result = caseParameterDomain(parameterDomain);
+			if (result == null)
+				result = caseStaticParameter(parameterDomain);
+			if (result == null)
+				result = caseParameter(parameterDomain);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -856,6 +913,111 @@ public class WorkflowSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePrimitiveType(PrimitiveType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Specification</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Specification</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSpecification(Specification object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Deployed Workflow</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Deployed Workflow</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDeployedWorkflow(DeployedWorkflow object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Configured Task</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Configured Task</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseConfiguredTask(ConfiguredTask object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Condition</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Condition</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCondition(Condition object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Deployed Workflow Parameter Space</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Deployed Workflow Parameter Space</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDeployedWorkflowParameterSpace(DeployedWorkflowParameterSpace object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Experiment Space</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Experiment Space</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseExperimentSpace(ExperimentSpace object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Parameter Domain</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Parameter Domain</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseParameterDomain(ParameterDomain object) {
 		return null;
 	}
 

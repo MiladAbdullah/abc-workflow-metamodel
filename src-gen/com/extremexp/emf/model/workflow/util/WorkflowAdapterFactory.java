@@ -232,6 +232,41 @@ public class WorkflowAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseSpecification(Specification object) {
+			return createSpecificationAdapter();
+		}
+
+		@Override
+		public Adapter caseDeployedWorkflow(DeployedWorkflow object) {
+			return createDeployedWorkflowAdapter();
+		}
+
+		@Override
+		public Adapter caseConfiguredTask(ConfiguredTask object) {
+			return createConfiguredTaskAdapter();
+		}
+
+		@Override
+		public Adapter caseCondition(Condition object) {
+			return createConditionAdapter();
+		}
+
+		@Override
+		public Adapter caseDeployedWorkflowParameterSpace(DeployedWorkflowParameterSpace object) {
+			return createDeployedWorkflowParameterSpaceAdapter();
+		}
+
+		@Override
+		public Adapter caseExperimentSpace(ExperimentSpace object) {
+			return createExperimentSpaceAdapter();
+		}
+
+		@Override
+		public Adapter caseParameterDomain(ParameterDomain object) {
+			return createParameterDomainAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -709,6 +744,104 @@ public class WorkflowAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPrimitiveTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.extremexp.emf.model.workflow.Specification <em>Specification</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.extremexp.emf.model.workflow.Specification
+	 * @generated
+	 */
+	public Adapter createSpecificationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.extremexp.emf.model.workflow.DeployedWorkflow <em>Deployed Workflow</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.extremexp.emf.model.workflow.DeployedWorkflow
+	 * @generated
+	 */
+	public Adapter createDeployedWorkflowAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.extremexp.emf.model.workflow.ConfiguredTask <em>Configured Task</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.extremexp.emf.model.workflow.ConfiguredTask
+	 * @generated
+	 */
+	public Adapter createConfiguredTaskAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.extremexp.emf.model.workflow.Condition <em>Condition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.extremexp.emf.model.workflow.Condition
+	 * @generated
+	 */
+	public Adapter createConditionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.extremexp.emf.model.workflow.DeployedWorkflowParameterSpace <em>Deployed Workflow Parameter Space</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.extremexp.emf.model.workflow.DeployedWorkflowParameterSpace
+	 * @generated
+	 */
+	public Adapter createDeployedWorkflowParameterSpaceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.extremexp.emf.model.workflow.ExperimentSpace <em>Experiment Space</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.extremexp.emf.model.workflow.ExperimentSpace
+	 * @generated
+	 */
+	public Adapter createExperimentSpaceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.extremexp.emf.model.workflow.ParameterDomain <em>Parameter Domain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.extremexp.emf.model.workflow.ParameterDomain
+	 * @generated
+	 */
+	public Adapter createParameterDomainAdapter() {
 		return null;
 	}
 

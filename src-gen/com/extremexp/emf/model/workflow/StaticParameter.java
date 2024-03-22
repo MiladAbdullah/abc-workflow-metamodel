@@ -24,12 +24,12 @@ public interface StaticParameter extends Parameter {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
-	 * @see #setValue(double)
+	 * @see #setValue(Object)
 	 * @see com.extremexp.emf.model.workflow.WorkflowPackage#getStaticParameter_Value()
-	 * @model
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.AnySimpleType"
 	 * @generated
 	 */
-	double getValue();
+	Object getValue();
 
 	/**
 	 * Sets the value of the '{@link com.extremexp.emf.model.workflow.StaticParameter#getValue <em>Value</em>}' attribute.
@@ -39,6 +39,6 @@ public interface StaticParameter extends Parameter {
 	 * @see #getValue()
 	 * @generated
 	 */
-	void setValue(double value);
+	void setValue(Object value);
 
 } // StaticParameter

@@ -67,8 +67,6 @@ public class WorkflowFactoryImpl extends EFactoryImpl implements WorkflowFactory
 			return createOutputData();
 		case WorkflowPackage.METRIC:
 			return createMetric();
-		case WorkflowPackage.PARAMETER:
-			return createParameter();
 		case WorkflowPackage.DYNAMIC_PARAMETER:
 			return createDynamicParameter();
 		case WorkflowPackage.STATIC_PARAMETER:
@@ -113,6 +111,20 @@ public class WorkflowFactoryImpl extends EFactoryImpl implements WorkflowFactory
 			return createEventNode();
 		case WorkflowPackage.PRIMITIVE_TYPE:
 			return createPrimitiveType();
+		case WorkflowPackage.SPECIFICATION:
+			return createSpecification();
+		case WorkflowPackage.DEPLOYED_WORKFLOW:
+			return createDeployedWorkflow();
+		case WorkflowPackage.CONFIGURED_TASK:
+			return createConfiguredTask();
+		case WorkflowPackage.CONDITION:
+			return createCondition();
+		case WorkflowPackage.DEPLOYED_WORKFLOW_PARAMETER_SPACE:
+			return createDeployedWorkflowParameterSpace();
+		case WorkflowPackage.EXPERIMENT_SPACE:
+			return createExperimentSpace();
+		case WorkflowPackage.PARAMETER_DOMAIN:
+			return createParameterDomain();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -204,16 +216,6 @@ public class WorkflowFactoryImpl extends EFactoryImpl implements WorkflowFactory
 	public Metric createMetric() {
 		MetricImpl metric = new MetricImpl();
 		return metric;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Parameter createParameter() {
-		ParameterImpl parameter = new ParameterImpl();
-		return parameter;
 	}
 
 	/**
@@ -434,6 +436,76 @@ public class WorkflowFactoryImpl extends EFactoryImpl implements WorkflowFactory
 	public PrimitiveType createPrimitiveType() {
 		PrimitiveTypeImpl primitiveType = new PrimitiveTypeImpl();
 		return primitiveType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Specification createSpecification() {
+		SpecificationImpl specification = new SpecificationImpl();
+		return specification;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DeployedWorkflow createDeployedWorkflow() {
+		DeployedWorkflowImpl deployedWorkflow = new DeployedWorkflowImpl();
+		return deployedWorkflow;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ConfiguredTask createConfiguredTask() {
+		ConfiguredTaskImpl configuredTask = new ConfiguredTaskImpl();
+		return configuredTask;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Condition createCondition() {
+		ConditionImpl condition = new ConditionImpl();
+		return condition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DeployedWorkflowParameterSpace createDeployedWorkflowParameterSpace() {
+		DeployedWorkflowParameterSpaceImpl deployedWorkflowParameterSpace = new DeployedWorkflowParameterSpaceImpl();
+		return deployedWorkflowParameterSpace;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ExperimentSpace createExperimentSpace() {
+		ExperimentSpaceImpl experimentSpace = new ExperimentSpaceImpl();
+		return experimentSpace;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ParameterDomain createParameterDomain() {
+		ParameterDomainImpl parameterDomain = new ParameterDomainImpl();
+		return parameterDomain;
 	}
 
 	/**

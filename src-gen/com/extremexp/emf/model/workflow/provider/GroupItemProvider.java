@@ -57,7 +57,7 @@ public class GroupItemProvider extends ItemProviderAdapter implements IEditingDo
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addTaskPropertyDescriptor(object);
+			addTasksPropertyDescriptor(object);
 			addUiPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -79,17 +79,17 @@ public class GroupItemProvider extends ItemProviderAdapter implements IEditingDo
 	}
 
 	/**
-	 * This adds a property descriptor for the Task feature.
+	 * This adds a property descriptor for the Tasks feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addTaskPropertyDescriptor(Object object) {
+	protected void addTasksPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Group_task_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Group_task_feature", "_UI_Group_type"),
-						WorkflowPackage.Literals.GROUP__TASK, true, false, true, null, null, null));
+						getResourceLocator(), getString("_UI_Group_tasks_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Group_tasks_feature", "_UI_Group_type"),
+						WorkflowPackage.Literals.GROUP__TASKS, true, false, true, null, null, null));
 	}
 
 	/**

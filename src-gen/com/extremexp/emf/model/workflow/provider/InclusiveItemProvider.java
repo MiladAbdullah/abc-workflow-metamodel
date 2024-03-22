@@ -2,7 +2,6 @@
  */
 package com.extremexp.emf.model.workflow.provider;
 
-import com.extremexp.emf.model.workflow.Inclusive;
 import com.extremexp.emf.model.workflow.WorkflowPackage;
 
 import java.util.Collection;
@@ -13,8 +12,6 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link com.extremexp.emf.model.workflow.Inclusive} object.
@@ -61,8 +58,7 @@ public class InclusiveItemProvider extends OperatorItemProvider {
 						getResourceLocator(), getString("_UI_Inclusive_conditions_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_Inclusive_conditions_feature",
 								"_UI_Inclusive_type"),
-						WorkflowPackage.Literals.INCLUSIVE__CONDITIONS, true, false, false,
-						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+						WorkflowPackage.Literals.INCLUSIVE__CONDITIONS, true, false, true, null, null, null));
 	}
 
 	/**
@@ -107,12 +103,6 @@ public class InclusiveItemProvider extends OperatorItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(Inclusive.class)) {
-		case WorkflowPackage.INCLUSIVE__CONDITIONS:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
-		}
 		super.notifyChanged(notification);
 	}
 

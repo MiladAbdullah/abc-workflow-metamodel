@@ -62,7 +62,7 @@ public class StaticParameterItemProvider extends ParameterItemProvider {
 						getString("_UI_PropertyDescriptor_description", "_UI_StaticParameter_value_feature",
 								"_UI_StaticParameter_type"),
 						WorkflowPackage.Literals.STATIC_PARAMETER__VALUE, true, false, false,
-						ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
