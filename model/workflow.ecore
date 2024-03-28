@@ -76,15 +76,15 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="metadata" upperBound="-1"
         eType="#//MetaData" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ui" eType="#//UI"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="conditions" upperBound="-1"
+        eType="#//Condition"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Operator" abstract="true" eSuperTypes="#//Node"/>
   <eClassifiers xsi:type="ecore:EClass" name="Link" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="output" eType="#//Node"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="input" eType="#//Node"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ConditionalLink" eSuperTypes="#//Link">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="condition" eType="#//Condition"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConditionalLink" eSuperTypes="#//Link"/>
   <eClassifiers xsi:type="ecore:EClass" name="RegularLink" eSuperTypes="#//Link"/>
   <eClassifiers xsi:type="ecore:EClass" name="ExceptionalLink" eSuperTypes="#//Link">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="event" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -104,15 +104,16 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Parallel" eSuperTypes="#//Operator"/>
   <eClassifiers xsi:type="ecore:EClass" name="Exclusive" eSuperTypes="#//Operator">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="condition" eType="#//Condition"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="condition" lowerBound="1"
+        eType="#//Condition"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Inclusive" eSuperTypes="#//Operator">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="conditions" upperBound="-1"
-        eType="#//Condition"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="conditions" lowerBound="1"
+        upperBound="-1" eType="#//Condition"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Complex" eSuperTypes="#//Operator">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="conditions" upperBound="-1"
-        eType="#//Condition"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="conditions" lowerBound="1"
+        upperBound="-1" eType="#//Condition"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ParallelJoin" eSuperTypes="#//Operator"/>
   <eClassifiers xsi:type="ecore:EClass" name="ExclusiveJoin" eSuperTypes="#//Operator"/>
@@ -150,8 +151,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Condition">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="condition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="true" eType="#//Node"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="false" eType="#//Node"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="true" lowerBound="1" eType="#//Node"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="false" lowerBound="1" eType="#//Node"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DeployedWorkflowParameterSpace">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="method" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

@@ -823,6 +823,15 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getTask_Conditions() {
+		return (EReference) taskEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getOperator() {
 		return operatorEClass;
 	}
@@ -861,15 +870,6 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 	 */
 	public EClass getConditionalLink() {
 		return conditionalLinkEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getConditionalLink_Condition() {
-		return (EReference) conditionalLinkEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1453,6 +1453,7 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 		createEReference(taskEClass, TASK__PARAMETERS);
 		createEReference(taskEClass, TASK__METADATA);
 		createEReference(taskEClass, TASK__UI);
+		createEReference(taskEClass, TASK__CONDITIONS);
 
 		operatorEClass = createEClass(OPERATOR);
 
@@ -1461,7 +1462,6 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 		createEReference(linkEClass, LINK__INPUT);
 
 		conditionalLinkEClass = createEClass(CONDITIONAL_LINK);
-		createEReference(conditionalLinkEClass, CONDITIONAL_LINK__CONDITION);
 
 		regularLinkEClass = createEClass(REGULAR_LINK);
 
@@ -1717,6 +1717,9 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 				IS_ORDERED);
 		initEReference(getTask_Ui(), this.getUI(), null, "ui", null, 0, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTask_Conditions(), this.getCondition(), null, "conditions", null, 0, -1, Task.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(operatorEClass, Operator.class, "Operator", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1730,9 +1733,6 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 
 		initEClass(conditionalLinkEClass, ConditionalLink.class, "ConditionalLink", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getConditionalLink_Condition(), this.getCondition(), null, "condition", null, 0, 1,
-				ConditionalLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(regularLinkEClass, RegularLink.class, "RegularLink", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1770,18 +1770,18 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 
 		initEClass(exclusiveEClass, Exclusive.class, "Exclusive", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getExclusive_Condition(), this.getCondition(), null, "condition", null, 0, 1, Exclusive.class,
+		initEReference(getExclusive_Condition(), this.getCondition(), null, "condition", null, 1, 1, Exclusive.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(inclusiveEClass, Inclusive.class, "Inclusive", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getInclusive_Conditions(), this.getCondition(), null, "conditions", null, 0, -1, Inclusive.class,
+		initEReference(getInclusive_Conditions(), this.getCondition(), null, "conditions", null, 1, -1, Inclusive.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(complexEClass, Complex.class, "Complex", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getComplex_Conditions(), this.getCondition(), null, "conditions", null, 0, -1, Complex.class,
+		initEReference(getComplex_Conditions(), this.getCondition(), null, "conditions", null, 1, -1, Complex.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1849,10 +1849,10 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCondition_Condition(), ecorePackage.getEString(), "condition", null, 0, 1, Condition.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCondition_True(), this.getNode(), null, "true", null, 0, 1, Condition.class, !IS_TRANSIENT,
+		initEReference(getCondition_True(), this.getNode(), null, "true", null, 1, 1, Condition.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
-		initEReference(getCondition_False(), this.getNode(), null, "false", null, 0, 1, Condition.class, !IS_TRANSIENT,
+		initEReference(getCondition_False(), this.getNode(), null, "false", null, 1, 1, Condition.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 

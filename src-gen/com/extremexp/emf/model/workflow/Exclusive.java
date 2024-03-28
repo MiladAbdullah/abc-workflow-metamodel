@@ -26,7 +26,7 @@ public interface Exclusive extends Operator {
 	 * @return the value of the '<em>Condition</em>' reference.
 	 * @see #setCondition(Condition)
 	 * @see com.extremexp.emf.model.workflow.WorkflowPackage#getExclusive_Condition()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	Condition getCondition();

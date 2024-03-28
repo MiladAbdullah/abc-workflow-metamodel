@@ -52,7 +52,7 @@ public interface Condition extends EObject {
 	 * @return the value of the '<em>True</em>' reference.
 	 * @see #setTrue(Node)
 	 * @see com.extremexp.emf.model.workflow.WorkflowPackage#getCondition_True()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	Node getTrue();
@@ -74,7 +74,7 @@ public interface Condition extends EObject {
 	 * @return the value of the '<em>False</em>' reference.
 	 * @see #setFalse(Node)
 	 * @see com.extremexp.emf.model.workflow.WorkflowPackage#getCondition_False()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	Node getFalse();

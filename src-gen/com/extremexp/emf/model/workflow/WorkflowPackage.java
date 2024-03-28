@@ -196,13 +196,22 @@ public interface WorkflowPackage extends EPackage {
 	int TASK__UI = NODE_FEATURE_COUNT + 10;
 
 	/**
+	 * The feature id for the '<em><b>Conditions</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK__CONDITIONS = NODE_FEATURE_COUNT + 11;
+
+	/**
 	 * The number of structural features of the '<em>Task</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_FEATURE_COUNT = NODE_FEATURE_COUNT + 11;
+	int TASK_FEATURE_COUNT = NODE_FEATURE_COUNT + 12;
 
 	/**
 	 * The number of operations of the '<em>Task</em>' class.
@@ -321,6 +330,15 @@ public interface WorkflowPackage extends EPackage {
 	 * @ordered
 	 */
 	int WORKFLOW__UI = TASK__UI;
+
+	/**
+	 * The feature id for the '<em><b>Conditions</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORKFLOW__CONDITIONS = TASK__CONDITIONS;
 
 	/**
 	 * The feature id for the '<em><b>Node</b></em>' containment reference list.
@@ -1004,22 +1022,13 @@ public interface WorkflowPackage extends EPackage {
 	int CONDITIONAL_LINK__INPUT = LINK__INPUT;
 
 	/**
-	 * The feature id for the '<em><b>Condition</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONDITIONAL_LINK__CONDITION = LINK_FEATURE_COUNT + 0;
-
-	/**
 	 * The number of structural features of the '<em>Conditional Link</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONDITIONAL_LINK_FEATURE_COUNT = LINK_FEATURE_COUNT + 1;
+	int CONDITIONAL_LINK_FEATURE_COUNT = LINK_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Conditional Link</em>' class.
@@ -1850,6 +1859,15 @@ public interface WorkflowPackage extends EPackage {
 	int CONFIGURED_TASK__UI = TASK__UI;
 
 	/**
+	 * The feature id for the '<em><b>Conditions</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONFIGURED_TASK__CONDITIONS = TASK__CONDITIONS;
+
+	/**
 	 * The feature id for the '<em><b>Configuration</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2576,6 +2594,17 @@ public interface WorkflowPackage extends EPackage {
 	EReference getTask_Ui();
 
 	/**
+	 * Returns the meta object for the reference list '{@link com.extremexp.emf.model.workflow.Task#getConditions <em>Conditions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Conditions</em>'.
+	 * @see com.extremexp.emf.model.workflow.Task#getConditions()
+	 * @see #getTask()
+	 * @generated
+	 */
+	EReference getTask_Conditions();
+
+	/**
 	 * Returns the meta object for class '{@link com.extremexp.emf.model.workflow.Operator <em>Operator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2626,17 +2655,6 @@ public interface WorkflowPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getConditionalLink();
-
-	/**
-	 * Returns the meta object for the reference '{@link com.extremexp.emf.model.workflow.ConditionalLink#getCondition <em>Condition</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Condition</em>'.
-	 * @see com.extremexp.emf.model.workflow.ConditionalLink#getCondition()
-	 * @see #getConditionalLink()
-	 * @generated
-	 */
-	EReference getConditionalLink_Condition();
 
 	/**
 	 * Returns the meta object for class '{@link com.extremexp.emf.model.workflow.RegularLink <em>Regular Link</em>}'.
@@ -3617,6 +3635,14 @@ public interface WorkflowPackage extends EPackage {
 		EReference TASK__UI = eINSTANCE.getTask_Ui();
 
 		/**
+		 * The meta object literal for the '<em><b>Conditions</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TASK__CONDITIONS = eINSTANCE.getTask_Conditions();
+
+		/**
 		 * The meta object literal for the '{@link com.extremexp.emf.model.workflow.impl.OperatorImpl <em>Operator</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3661,14 +3687,6 @@ public interface WorkflowPackage extends EPackage {
 		 * @generated
 		 */
 		EClass CONDITIONAL_LINK = eINSTANCE.getConditionalLink();
-
-		/**
-		 * The meta object literal for the '<em><b>Condition</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONDITIONAL_LINK__CONDITION = eINSTANCE.getConditionalLink_Condition();
 
 		/**
 		 * The meta object literal for the '{@link com.extremexp.emf.model.workflow.impl.RegularLinkImpl <em>Regular Link</em>}' class.

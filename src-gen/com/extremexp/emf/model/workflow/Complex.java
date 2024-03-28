@@ -28,7 +28,7 @@ public interface Complex extends Operator {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Conditions</em>' reference list.
 	 * @see com.extremexp.emf.model.workflow.WorkflowPackage#getComplex_Conditions()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	EList<Condition> getConditions();

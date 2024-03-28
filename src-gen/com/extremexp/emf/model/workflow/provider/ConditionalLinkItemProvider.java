@@ -2,18 +2,12 @@
  */
 package com.extremexp.emf.model.workflow.provider;
 
-import com.extremexp.emf.model.workflow.ConditionalLink;
-import com.extremexp.emf.model.workflow.WorkflowPackage;
-
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link com.extremexp.emf.model.workflow.ConditionalLink} object.
@@ -43,24 +37,8 @@ public class ConditionalLinkItemProvider extends LinkItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addConditionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Condition feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addConditionPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_ConditionalLink_condition_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_ConditionalLink_condition_feature",
-								"_UI_ConditionalLink_type"),
-						WorkflowPackage.Literals.CONDITIONAL_LINK__CONDITION, true, false, false, null, null, null));
 	}
 
 	/**
@@ -105,12 +83,6 @@ public class ConditionalLinkItemProvider extends LinkItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(ConditionalLink.class)) {
-		case WorkflowPackage.CONDITIONAL_LINK__CONDITION:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
-		}
 		super.notifyChanged(notification);
 	}
 

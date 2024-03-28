@@ -77,15 +77,14 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference workflow.ecore#//Task/parameters"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference workflow.ecore#//Task/metadata"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference workflow.ecore#//Task/ui"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference workflow.ecore#//Task/conditions"/>
     </genClasses>
     <genClasses ecoreClass="workflow.ecore#//Operator"/>
     <genClasses ecoreClass="workflow.ecore#//Link">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference workflow.ecore#//Link/output"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference workflow.ecore#//Link/input"/>
     </genClasses>
-    <genClasses ecoreClass="workflow.ecore#//ConditionalLink">
-      <genFeatures createChild="false" ecoreFeature="ecore:EReference workflow.ecore#//ConditionalLink/condition"/>
-    </genClasses>
+    <genClasses ecoreClass="workflow.ecore#//ConditionalLink"/>
     <genClasses ecoreClass="workflow.ecore#//RegularLink"/>
     <genClasses ecoreClass="workflow.ecore#//ExceptionalLink">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute workflow.ecore#//ExceptionalLink/event"/>

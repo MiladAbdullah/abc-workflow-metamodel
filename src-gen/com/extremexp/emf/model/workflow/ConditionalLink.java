@@ -7,38 +7,11 @@ package com.extremexp.emf.model.workflow;
  * A representation of the model object '<em><b>Conditional Link</b></em>'.
  * <!-- end-user-doc -->
  *
- * <p>
- * The following features are supported:
- * </p>
- * <ul>
- *   <li>{@link com.extremexp.emf.model.workflow.ConditionalLink#getCondition <em>Condition</em>}</li>
- * </ul>
  *
  * @see com.extremexp.emf.model.workflow.WorkflowPackage#getConditionalLink()
  * @model
  * @generated
  */
 public interface ConditionalLink extends Link {
-	/**
-	 * Returns the value of the '<em><b>Condition</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Condition</em>' reference.
-	 * @see #setCondition(Condition)
-	 * @see com.extremexp.emf.model.workflow.WorkflowPackage#getConditionalLink_Condition()
-	 * @model
-	 * @generated
-	 */
-	Condition getCondition();
-
-	/**
-	 * Sets the value of the '{@link com.extremexp.emf.model.workflow.ConditionalLink#getCondition <em>Condition</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Condition</em>' reference.
-	 * @see #getCondition()
-	 * @generated
-	 */
-	void setCondition(Condition value);
 
 } // ConditionalLink
