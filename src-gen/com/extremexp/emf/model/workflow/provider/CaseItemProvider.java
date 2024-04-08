@@ -2,8 +2,7 @@
  */
 package com.extremexp.emf.model.workflow.provider;
 
-import com.extremexp.emf.model.workflow.Condition;
-import com.extremexp.emf.model.workflow.WorkflowFactory;
+import com.extremexp.emf.model.workflow.Case;
 import com.extremexp.emf.model.workflow.WorkflowPackage;
 
 import java.util.Collection;
@@ -14,7 +13,6 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -27,12 +25,12 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link com.extremexp.emf.model.workflow.Condition} object.
+ * This is the item provider adapter for a {@link com.extremexp.emf.model.workflow.Case} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ConditionItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
+public class CaseItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
 		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -40,7 +38,7 @@ public class ConditionItemProvider extends ItemProviderAdapter implements IEditi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ConditionItemProvider(AdapterFactory adapterFactory) {
+	public CaseItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -55,66 +53,50 @@ public class ConditionItemProvider extends ItemProviderAdapter implements IEditi
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
+			addCasePropertyDescriptor(object);
+			addTargetPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Name feature.
+	 * This adds a property descriptor for the Case feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNamePropertyDescriptor(Object object) {
+	protected void addCasePropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Condition_name_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Condition_name_feature",
-								"_UI_Condition_type"),
-						WorkflowPackage.Literals.CONDITION__NAME, true, false, false,
+						getResourceLocator(), getString("_UI_Case_case_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Case_case_feature", "_UI_Case_type"),
+						WorkflowPackage.Literals.CASE__CASE, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * This adds a property descriptor for the Target feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(WorkflowPackage.Literals.CONDITION__CASES);
-		}
-		return childrenFeatures;
+	protected void addTargetPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Case_target_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Case_target_feature", "_UI_Case_type"),
+						WorkflowPackage.Literals.CASE__TARGET, true, false, true, null, null, null));
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
-
-		return super.getChildFeature(object, child);
-	}
-
-	/**
-	 * This returns Condition.gif.
+	 * This returns Case.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Condition"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Case"));
 	}
 
 	/**
@@ -135,9 +117,9 @@ public class ConditionItemProvider extends ItemProviderAdapter implements IEditi
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Condition) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_Condition_type")
-				: getString("_UI_Condition_type") + " " + label;
+		String label = ((Case) object).getCase();
+		return label == null || label.length() == 0 ? getString("_UI_Case_type")
+				: getString("_UI_Case_type") + " " + label;
 	}
 
 	/**
@@ -151,12 +133,9 @@ public class ConditionItemProvider extends ItemProviderAdapter implements IEditi
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Condition.class)) {
-		case WorkflowPackage.CONDITION__NAME:
+		switch (notification.getFeatureID(Case.class)) {
+		case WorkflowPackage.CASE__CASE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
-		case WorkflowPackage.CONDITION__CASES:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -172,9 +151,6 @@ public class ConditionItemProvider extends ItemProviderAdapter implements IEditi
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add(createChildParameter(WorkflowPackage.Literals.CONDITION__CASES,
-				WorkflowFactory.eINSTANCE.createCase()));
 	}
 
 	/**

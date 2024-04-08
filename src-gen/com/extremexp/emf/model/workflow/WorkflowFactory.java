@@ -328,6 +328,15 @@ public interface WorkflowFactory extends EFactory {
 	ParameterDomain createParameterDomain();
 
 	/**
+	 * Returns a new object of class '<em>Case</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Case</em>'.
+	 * @generated
+	 */
+	Case createCase();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -2,17 +2,22 @@
  */
 package com.extremexp.emf.model.workflow.impl;
 
+import com.extremexp.emf.model.workflow.Case;
 import com.extremexp.emf.model.workflow.Condition;
-import com.extremexp.emf.model.workflow.Node;
 import com.extremexp.emf.model.workflow.WorkflowPackage;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,53 +27,42 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link com.extremexp.emf.model.workflow.impl.ConditionImpl#getCondition <em>Condition</em>}</li>
- *   <li>{@link com.extremexp.emf.model.workflow.impl.ConditionImpl#getTrue <em>True</em>}</li>
- *   <li>{@link com.extremexp.emf.model.workflow.impl.ConditionImpl#getFalse <em>False</em>}</li>
+ *   <li>{@link com.extremexp.emf.model.workflow.impl.ConditionImpl#getName <em>Name</em>}</li>
+ *   <li>{@link com.extremexp.emf.model.workflow.impl.ConditionImpl#getCases <em>Cases</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ConditionImpl extends MinimalEObjectImpl.Container implements Condition {
 	/**
-	 * The default value of the '{@link #getCondition() <em>Condition</em>}' attribute.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCondition()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CONDITION_EDEFAULT = null;
+	protected static final String NAME_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getCondition() <em>Condition</em>}' attribute.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCondition()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String condition = CONDITION_EDEFAULT;
+	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getTrue() <em>True</em>}' reference.
+	 * The cached value of the '{@link #getCases() <em>Cases</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTrue()
+	 * @see #getCases()
 	 * @generated
 	 * @ordered
 	 */
-	protected Node true_;
-
-	/**
-	 * The cached value of the '{@link #getFalse() <em>False</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFalse()
-	 * @generated
-	 * @ordered
-	 */
-	protected Node false_;
+	protected EList<Case> cases;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -94,8 +88,8 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getCondition() {
-		return condition;
+	public String getName() {
+		return name;
 	}
 
 	/**
@@ -103,12 +97,11 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCondition(String newCondition) {
-		String oldCondition = condition;
-		condition = newCondition;
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WorkflowPackage.CONDITION__CONDITION, oldCondition,
-					condition));
+			eNotify(new ENotificationImpl(this, Notification.SET, WorkflowPackage.CONDITION__NAME, oldName, name));
 	}
 
 	/**
@@ -116,17 +109,11 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Node getTrue() {
-		if (true_ != null && true_.eIsProxy()) {
-			InternalEObject oldTrue = (InternalEObject) true_;
-			true_ = (Node) eResolveProxy(oldTrue);
-			if (true_ != oldTrue) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WorkflowPackage.CONDITION__TRUE, oldTrue,
-							true_));
-			}
+	public EList<Case> getCases() {
+		if (cases == null) {
+			cases = new EObjectContainmentEList<Case>(Case.class, this, WorkflowPackage.CONDITION__CASES);
 		}
-		return true_;
+		return cases;
 	}
 
 	/**
@@ -134,59 +121,13 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Node basicGetTrue() {
-		return true_;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTrue(Node newTrue) {
-		Node oldTrue = true_;
-		true_ = newTrue;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WorkflowPackage.CONDITION__TRUE, oldTrue, true_));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Node getFalse() {
-		if (false_ != null && false_.eIsProxy()) {
-			InternalEObject oldFalse = (InternalEObject) false_;
-			false_ = (Node) eResolveProxy(oldFalse);
-			if (false_ != oldFalse) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WorkflowPackage.CONDITION__FALSE,
-							oldFalse, false_));
-			}
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case WorkflowPackage.CONDITION__CASES:
+			return ((InternalEList<?>) getCases()).basicRemove(otherEnd, msgs);
 		}
-		return false_;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Node basicGetFalse() {
-		return false_;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFalse(Node newFalse) {
-		Node oldFalse = false_;
-		false_ = newFalse;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WorkflowPackage.CONDITION__FALSE, oldFalse, false_));
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -197,16 +138,10 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case WorkflowPackage.CONDITION__CONDITION:
-			return getCondition();
-		case WorkflowPackage.CONDITION__TRUE:
-			if (resolve)
-				return getTrue();
-			return basicGetTrue();
-		case WorkflowPackage.CONDITION__FALSE:
-			if (resolve)
-				return getFalse();
-			return basicGetFalse();
+		case WorkflowPackage.CONDITION__NAME:
+			return getName();
+		case WorkflowPackage.CONDITION__CASES:
+			return getCases();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -216,17 +151,16 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case WorkflowPackage.CONDITION__CONDITION:
-			setCondition((String) newValue);
+		case WorkflowPackage.CONDITION__NAME:
+			setName((String) newValue);
 			return;
-		case WorkflowPackage.CONDITION__TRUE:
-			setTrue((Node) newValue);
-			return;
-		case WorkflowPackage.CONDITION__FALSE:
-			setFalse((Node) newValue);
+		case WorkflowPackage.CONDITION__CASES:
+			getCases().clear();
+			getCases().addAll((Collection<? extends Case>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -240,14 +174,11 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case WorkflowPackage.CONDITION__CONDITION:
-			setCondition(CONDITION_EDEFAULT);
+		case WorkflowPackage.CONDITION__NAME:
+			setName(NAME_EDEFAULT);
 			return;
-		case WorkflowPackage.CONDITION__TRUE:
-			setTrue((Node) null);
-			return;
-		case WorkflowPackage.CONDITION__FALSE:
-			setFalse((Node) null);
+		case WorkflowPackage.CONDITION__CASES:
+			getCases().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -261,12 +192,10 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case WorkflowPackage.CONDITION__CONDITION:
-			return CONDITION_EDEFAULT == null ? condition != null : !CONDITION_EDEFAULT.equals(condition);
-		case WorkflowPackage.CONDITION__TRUE:
-			return true_ != null;
-		case WorkflowPackage.CONDITION__FALSE:
-			return false_ != null;
+		case WorkflowPackage.CONDITION__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case WorkflowPackage.CONDITION__CASES:
+			return cases != null && !cases.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -282,8 +211,8 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (condition: ");
-		result.append(condition);
+		result.append(" (name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

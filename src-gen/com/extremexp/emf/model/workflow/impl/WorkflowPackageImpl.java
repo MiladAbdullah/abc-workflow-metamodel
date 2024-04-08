@@ -3,6 +3,7 @@
 package com.extremexp.emf.model.workflow.impl;
 
 import com.extremexp.emf.model.workflow.Array;
+import com.extremexp.emf.model.workflow.Case;
 import com.extremexp.emf.model.workflow.Complex;
 import com.extremexp.emf.model.workflow.ComplexJoin;
 import com.extremexp.emf.model.workflow.Condition;
@@ -342,6 +343,13 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 	 * @generated
 	 */
 	private EClass parameterDomainEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass caseEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1246,7 +1254,7 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCondition_Condition() {
+	public EAttribute getCondition_Name() {
 		return (EAttribute) conditionEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1255,17 +1263,8 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCondition_True() {
+	public EReference getCondition_Cases() {
 		return (EReference) conditionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getCondition_False() {
-		return (EReference) conditionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1338,6 +1337,33 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 	 */
 	public EReference getParameterDomain_Staticparameter() {
 		return (EReference) parameterDomainEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCase() {
+		return caseEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCase_Case() {
+		return (EAttribute) caseEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCase_Target() {
+		return (EReference) caseEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1522,9 +1548,8 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 		createEReference(configuredTaskEClass, CONFIGURED_TASK__CONFIGURATION);
 
 		conditionEClass = createEClass(CONDITION);
-		createEAttribute(conditionEClass, CONDITION__CONDITION);
-		createEReference(conditionEClass, CONDITION__TRUE);
-		createEReference(conditionEClass, CONDITION__FALSE);
+		createEAttribute(conditionEClass, CONDITION__NAME);
+		createEReference(conditionEClass, CONDITION__CASES);
 
 		deployedWorkflowParameterSpaceEClass = createEClass(DEPLOYED_WORKFLOW_PARAMETER_SPACE);
 		createEAttribute(deployedWorkflowParameterSpaceEClass, DEPLOYED_WORKFLOW_PARAMETER_SPACE__METHOD);
@@ -1536,6 +1561,10 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 
 		parameterDomainEClass = createEClass(PARAMETER_DOMAIN);
 		createEReference(parameterDomainEClass, PARAMETER_DOMAIN__STATICPARAMETER);
+
+		caseEClass = createEClass(CASE);
+		createEAttribute(caseEClass, CASE__CASE);
+		createEReference(caseEClass, CASE__TARGET);
 
 		// Create enums
 		eventEEnum = createEEnum(EVENT);
@@ -1847,13 +1876,10 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 
 		initEClass(conditionEClass, Condition.class, "Condition", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCondition_Condition(), ecorePackage.getEString(), "condition", null, 0, 1, Condition.class,
+		initEAttribute(getCondition_Name(), ecorePackage.getEString(), "name", null, 0, 1, Condition.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCondition_True(), this.getNode(), null, "true", null, 1, 1, Condition.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEReference(getCondition_False(), this.getNode(), null, "false", null, 1, 1, Condition.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+		initEReference(getCondition_Cases(), this.getCase(), null, "cases", null, 1, -1, Condition.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 
 		initEClass(deployedWorkflowParameterSpaceEClass, DeployedWorkflowParameterSpace.class,
@@ -1879,6 +1905,13 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 		initEReference(getParameterDomain_Staticparameter(), this.getStaticParameter(), null, "staticparameter", null,
 				0, 1, ParameterDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(caseEClass, Case.class, "Case", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCase_Case(), ecorePackage.getEString(), "case", null, 0, 1, Case.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCase_Target(), this.getNode(), null, "target", null, 1, 1, Case.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(eventEEnum, Event.class, "Event");

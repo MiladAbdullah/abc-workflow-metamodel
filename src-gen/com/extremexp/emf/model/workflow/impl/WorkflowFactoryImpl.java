@@ -125,6 +125,8 @@ public class WorkflowFactoryImpl extends EFactoryImpl implements WorkflowFactory
 			return createExperimentSpace();
 		case WorkflowPackage.PARAMETER_DOMAIN:
 			return createParameterDomain();
+		case WorkflowPackage.CASE:
+			return createCase();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -506,6 +508,16 @@ public class WorkflowFactoryImpl extends EFactoryImpl implements WorkflowFactory
 	public ParameterDomain createParameterDomain() {
 		ParameterDomainImpl parameterDomain = new ParameterDomainImpl();
 		return parameterDomain;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Case createCase() {
+		CaseImpl case_ = new CaseImpl();
+		return case_;
 	}
 
 	/**

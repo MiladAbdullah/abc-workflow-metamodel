@@ -855,6 +855,29 @@ public class WorkflowItemProviderAdapterFactory extends WorkflowAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link com.extremexp.emf.model.workflow.Case} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CaseItemProvider caseItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link com.extremexp.emf.model.workflow.Case}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCaseAdapter() {
+		if (caseItemProvider == null) {
+			caseItemProvider = new CaseItemProvider(this);
+		}
+
+		return caseItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1021,6 +1044,8 @@ public class WorkflowItemProviderAdapterFactory extends WorkflowAdapterFactory
 			experimentSpaceItemProvider.dispose();
 		if (parameterDomainItemProvider != null)
 			parameterDomainItemProvider.dispose();
+		if (caseItemProvider != null)
+			caseItemProvider.dispose();
 	}
 
 }

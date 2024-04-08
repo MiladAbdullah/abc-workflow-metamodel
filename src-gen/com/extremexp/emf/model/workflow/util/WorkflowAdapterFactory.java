@@ -267,6 +267,11 @@ public class WorkflowAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseCase(Case object) {
+			return createCaseAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -842,6 +847,20 @@ public class WorkflowAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createParameterDomainAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link com.extremexp.emf.model.workflow.Case <em>Case</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.extremexp.emf.model.workflow.Case
+	 * @generated
+	 */
+	public Adapter createCaseAdapter() {
 		return null;
 	}
 

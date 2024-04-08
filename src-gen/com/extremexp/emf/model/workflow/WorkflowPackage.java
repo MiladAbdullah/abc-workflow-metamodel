@@ -1905,31 +1905,22 @@ public interface WorkflowPackage extends EPackage {
 	int CONDITION = 36;
 
 	/**
-	 * The feature id for the '<em><b>Condition</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONDITION__CONDITION = 0;
+	int CONDITION__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>True</b></em>' reference.
+	 * The feature id for the '<em><b>Cases</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONDITION__TRUE = 1;
-
-	/**
-	 * The feature id for the '<em><b>False</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONDITION__FALSE = 2;
+	int CONDITION__CASES = 1;
 
 	/**
 	 * The number of structural features of the '<em>Condition</em>' class.
@@ -1938,7 +1929,7 @@ public interface WorkflowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONDITION_FEATURE_COUNT = 3;
+	int CONDITION_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Condition</em>' class.
@@ -2106,6 +2097,52 @@ public interface WorkflowPackage extends EPackage {
 	int PARAMETER_DOMAIN_OPERATION_COUNT = STATIC_PARAMETER_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.CaseImpl <em>Case</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.extremexp.emf.model.workflow.impl.CaseImpl
+	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getCase()
+	 * @generated
+	 */
+	int CASE = 40;
+
+	/**
+	 * The feature id for the '<em><b>Case</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASE__CASE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Target</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASE__TARGET = 1;
+
+	/**
+	 * The number of structural features of the '<em>Case</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASE_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Case</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CASE_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.Event <em>Event</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2113,7 +2150,7 @@ public interface WorkflowPackage extends EPackage {
 	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getEvent()
 	 * @generated
 	 */
-	int EVENT = 40;
+	int EVENT = 41;
 
 	/**
 	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.Primitive <em>Primitive</em>}' enum.
@@ -2123,7 +2160,7 @@ public interface WorkflowPackage extends EPackage {
 	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getPrimitive()
 	 * @generated
 	 */
-	int PRIMITIVE = 41;
+	int PRIMITIVE = 42;
 
 	/**
 	 * The meta object id for the '<em>New Data Type3</em>' data type.
@@ -2133,7 +2170,7 @@ public interface WorkflowPackage extends EPackage {
 	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getNewDataType3()
 	 * @generated
 	 */
-	int NEW_DATA_TYPE3 = 42;
+	int NEW_DATA_TYPE3 = 43;
 
 	/**
 	 * Returns the meta object for class '{@link com.extremexp.emf.model.workflow.Workflow <em>Workflow</em>}'.
@@ -3089,37 +3126,26 @@ public interface WorkflowPackage extends EPackage {
 	EClass getCondition();
 
 	/**
-	 * Returns the meta object for the attribute '{@link com.extremexp.emf.model.workflow.Condition#getCondition <em>Condition</em>}'.
+	 * Returns the meta object for the attribute '{@link com.extremexp.emf.model.workflow.Condition#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Condition</em>'.
-	 * @see com.extremexp.emf.model.workflow.Condition#getCondition()
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see com.extremexp.emf.model.workflow.Condition#getName()
 	 * @see #getCondition()
 	 * @generated
 	 */
-	EAttribute getCondition_Condition();
+	EAttribute getCondition_Name();
 
 	/**
-	 * Returns the meta object for the reference '{@link com.extremexp.emf.model.workflow.Condition#getTrue <em>True</em>}'.
+	 * Returns the meta object for the containment reference list '{@link com.extremexp.emf.model.workflow.Condition#getCases <em>Cases</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>True</em>'.
-	 * @see com.extremexp.emf.model.workflow.Condition#getTrue()
+	 * @return the meta object for the containment reference list '<em>Cases</em>'.
+	 * @see com.extremexp.emf.model.workflow.Condition#getCases()
 	 * @see #getCondition()
 	 * @generated
 	 */
-	EReference getCondition_True();
-
-	/**
-	 * Returns the meta object for the reference '{@link com.extremexp.emf.model.workflow.Condition#getFalse <em>False</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>False</em>'.
-	 * @see com.extremexp.emf.model.workflow.Condition#getFalse()
-	 * @see #getCondition()
-	 * @generated
-	 */
-	EReference getCondition_False();
+	EReference getCondition_Cases();
 
 	/**
 	 * Returns the meta object for class '{@link com.extremexp.emf.model.workflow.DeployedWorkflowParameterSpace <em>Deployed Workflow Parameter Space</em>}'.
@@ -3205,6 +3231,38 @@ public interface WorkflowPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getParameterDomain_Staticparameter();
+
+	/**
+	 * Returns the meta object for class '{@link com.extremexp.emf.model.workflow.Case <em>Case</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Case</em>'.
+	 * @see com.extremexp.emf.model.workflow.Case
+	 * @generated
+	 */
+	EClass getCase();
+
+	/**
+	 * Returns the meta object for the attribute '{@link com.extremexp.emf.model.workflow.Case#getCase <em>Case</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Case</em>'.
+	 * @see com.extremexp.emf.model.workflow.Case#getCase()
+	 * @see #getCase()
+	 * @generated
+	 */
+	EAttribute getCase_Case();
+
+	/**
+	 * Returns the meta object for the reference '{@link com.extremexp.emf.model.workflow.Case#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Target</em>'.
+	 * @see com.extremexp.emf.model.workflow.Case#getTarget()
+	 * @see #getCase()
+	 * @generated
+	 */
+	EReference getCase_Target();
 
 	/**
 	 * Returns the meta object for enum '{@link com.extremexp.emf.model.workflow.Event <em>Event</em>}'.
@@ -4055,28 +4113,20 @@ public interface WorkflowPackage extends EPackage {
 		EClass CONDITION = eINSTANCE.getCondition();
 
 		/**
-		 * The meta object literal for the '<em><b>Condition</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CONDITION__CONDITION = eINSTANCE.getCondition_Condition();
+		EAttribute CONDITION__NAME = eINSTANCE.getCondition_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>True</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Cases</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONDITION__TRUE = eINSTANCE.getCondition_True();
-
-		/**
-		 * The meta object literal for the '<em><b>False</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONDITION__FALSE = eINSTANCE.getCondition_False();
+		EReference CONDITION__CASES = eINSTANCE.getCondition_Cases();
 
 		/**
 		 * The meta object literal for the '{@link com.extremexp.emf.model.workflow.impl.DeployedWorkflowParameterSpaceImpl <em>Deployed Workflow Parameter Space</em>}' class.
@@ -4150,6 +4200,32 @@ public interface WorkflowPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PARAMETER_DOMAIN__STATICPARAMETER = eINSTANCE.getParameterDomain_Staticparameter();
+
+		/**
+		 * The meta object literal for the '{@link com.extremexp.emf.model.workflow.impl.CaseImpl <em>Case</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.extremexp.emf.model.workflow.impl.CaseImpl
+		 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getCase()
+		 * @generated
+		 */
+		EClass CASE = eINSTANCE.getCase();
+
+		/**
+		 * The meta object literal for the '<em><b>Case</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CASE__CASE = eINSTANCE.getCase_Case();
+
+		/**
+		 * The meta object literal for the '<em><b>Target</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CASE__TARGET = eINSTANCE.getCase_Target();
 
 		/**
 		 * The meta object literal for the '{@link com.extremexp.emf.model.workflow.Event <em>Event</em>}' enum.

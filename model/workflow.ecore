@@ -150,9 +150,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="configuration" eType="#//Task"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Condition">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="condition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="true" lowerBound="1" eType="#//Node"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="false" lowerBound="1" eType="#//Node"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cases" lowerBound="1" upperBound="-1"
+        eType="#//Case" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DeployedWorkflowParameterSpace">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="method" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -166,5 +166,10 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ParameterDomain" eSuperTypes="#//StaticParameter">
     <eStructuralFeatures xsi:type="ecore:EReference" name="staticparameter" eType="#//StaticParameter"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Case">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="case" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//Node"/>
   </eClassifiers>
 </ecore:EPackage>
