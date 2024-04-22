@@ -20,22 +20,22 @@ package com.extremexp.emf.model.workflow;
  */
 public interface Exclusive extends Operator {
 	/**
-	 * Returns the value of the '<em><b>Condition</b></em>' reference.
+	 * Returns the value of the '<em><b>Condition</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Condition</em>' reference.
+	 * @return the value of the '<em>Condition</em>' containment reference.
 	 * @see #setCondition(Condition)
 	 * @see com.extremexp.emf.model.workflow.WorkflowPackage#getExclusive_Condition()
-	 * @model required="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	Condition getCondition();
 
 	/**
-	 * Sets the value of the '{@link com.extremexp.emf.model.workflow.Exclusive#getCondition <em>Condition</em>}' reference.
+	 * Sets the value of the '{@link com.extremexp.emf.model.workflow.Exclusive#getCondition <em>Condition</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Condition</em>' reference.
+	 * @param value the new value of the '<em>Condition</em>' containment reference.
 	 * @see #getCondition()
 	 * @generated
 	 */

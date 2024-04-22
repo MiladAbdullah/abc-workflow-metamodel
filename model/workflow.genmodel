@@ -77,7 +77,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference workflow.ecore#//Task/parameters"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference workflow.ecore#//Task/metadata"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference workflow.ecore#//Task/ui"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference workflow.ecore#//Task/conditions"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference workflow.ecore#//Task/conditions"/>
     </genClasses>
     <genClasses ecoreClass="workflow.ecore#//Operator"/>
     <genClasses ecoreClass="workflow.ecore#//Link">
@@ -102,13 +102,13 @@
     </genClasses>
     <genClasses ecoreClass="workflow.ecore#//Parallel"/>
     <genClasses ecoreClass="workflow.ecore#//Exclusive">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference workflow.ecore#//Exclusive/condition"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference workflow.ecore#//Exclusive/condition"/>
     </genClasses>
     <genClasses ecoreClass="workflow.ecore#//Inclusive">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference workflow.ecore#//Inclusive/conditions"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference workflow.ecore#//Inclusive/conditions"/>
     </genClasses>
     <genClasses ecoreClass="workflow.ecore#//Complex">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference workflow.ecore#//Complex/conditions"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference workflow.ecore#//Complex/conditions"/>
     </genClasses>
     <genClasses ecoreClass="workflow.ecore#//ParallelJoin"/>
     <genClasses ecoreClass="workflow.ecore#//ExclusiveJoin"/>
@@ -126,7 +126,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference workflow.ecore#//Specification/parametertypes"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference workflow.ecore#//Specification/workflow"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference workflow.ecore#//Specification/deployedworkflow"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference workflow.ecore#//Specification/condition"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference workflow.ecore#//Specification/experimentspace"/>
     </genClasses>
     <genClasses ecoreClass="workflow.ecore#//DeployedWorkflow">

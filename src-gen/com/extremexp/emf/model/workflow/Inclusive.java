@@ -22,13 +22,13 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Inclusive extends Operator {
 	/**
-	 * Returns the value of the '<em><b>Conditions</b></em>' reference list.
+	 * Returns the value of the '<em><b>Conditions</b></em>' containment reference list.
 	 * The list contents are of type {@link com.extremexp.emf.model.workflow.Condition}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Conditions</em>' reference list.
+	 * @return the value of the '<em>Conditions</em>' containment reference list.
 	 * @see com.extremexp.emf.model.workflow.WorkflowPackage#getInclusive_Conditions()
-	 * @model required="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<Condition> getConditions();

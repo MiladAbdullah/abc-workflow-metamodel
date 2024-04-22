@@ -20,7 +20,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.extremexp.emf.model.workflow.Specification#getParametertypes <em>Parametertypes</em>}</li>
  *   <li>{@link com.extremexp.emf.model.workflow.Specification#getWorkflow <em>Workflow</em>}</li>
  *   <li>{@link com.extremexp.emf.model.workflow.Specification#getDeployedworkflow <em>Deployedworkflow</em>}</li>
- *   <li>{@link com.extremexp.emf.model.workflow.Specification#getCondition <em>Condition</em>}</li>
  *   <li>{@link com.extremexp.emf.model.workflow.Specification#getExperimentspace <em>Experimentspace</em>}</li>
  * </ul>
  *
@@ -108,18 +107,6 @@ public interface Specification extends EObject {
 	 * @generated
 	 */
 	EList<DeployedWorkflow> getDeployedworkflow();
-
-	/**
-	 * Returns the value of the '<em><b>Condition</b></em>' containment reference list.
-	 * The list contents are of type {@link com.extremexp.emf.model.workflow.Condition}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Condition</em>' containment reference list.
-	 * @see com.extremexp.emf.model.workflow.WorkflowPackage#getSpecification_Condition()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Condition> getCondition();
 
 	/**
 	 * Returns the value of the '<em><b>Experimentspace</b></em>' containment reference.

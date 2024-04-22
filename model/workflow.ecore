@@ -77,7 +77,7 @@
         eType="#//MetaData" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ui" eType="#//UI"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="conditions" upperBound="-1"
-        eType="#//Condition"/>
+        eType="#//Condition" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Operator" abstract="true" eSuperTypes="#//Node"/>
   <eClassifiers xsi:type="ecore:EClass" name="Link" abstract="true">
@@ -105,15 +105,15 @@
   <eClassifiers xsi:type="ecore:EClass" name="Parallel" eSuperTypes="#//Operator"/>
   <eClassifiers xsi:type="ecore:EClass" name="Exclusive" eSuperTypes="#//Operator">
     <eStructuralFeatures xsi:type="ecore:EReference" name="condition" lowerBound="1"
-        eType="#//Condition"/>
+        eType="#//Condition" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Inclusive" eSuperTypes="#//Operator">
     <eStructuralFeatures xsi:type="ecore:EReference" name="conditions" lowerBound="1"
-        upperBound="-1" eType="#//Condition"/>
+        upperBound="-1" eType="#//Condition" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Complex" eSuperTypes="#//Operator">
     <eStructuralFeatures xsi:type="ecore:EReference" name="conditions" lowerBound="1"
-        upperBound="-1" eType="#//Condition"/>
+        upperBound="-1" eType="#//Condition" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ParallelJoin" eSuperTypes="#//Operator"/>
   <eClassifiers xsi:type="ecore:EClass" name="ExclusiveJoin" eSuperTypes="#//Operator"/>
@@ -136,8 +136,6 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="deployedworkflow" upperBound="-1"
         eType="#//DeployedWorkflow" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="condition" upperBound="-1"
-        eType="#//Condition" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="experimentspace" eType="#//ExperimentSpace"
         containment="true"/>
   </eClassifiers>

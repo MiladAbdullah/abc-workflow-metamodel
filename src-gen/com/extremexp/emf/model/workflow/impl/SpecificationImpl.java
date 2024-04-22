@@ -2,7 +2,6 @@
  */
 package com.extremexp.emf.model.workflow.impl;
 
-import com.extremexp.emf.model.workflow.Condition;
 import com.extremexp.emf.model.workflow.DeployedWorkflow;
 import com.extremexp.emf.model.workflow.ExperimentSpace;
 import com.extremexp.emf.model.workflow.Group;
@@ -40,7 +39,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.extremexp.emf.model.workflow.impl.SpecificationImpl#getParametertypes <em>Parametertypes</em>}</li>
  *   <li>{@link com.extremexp.emf.model.workflow.impl.SpecificationImpl#getWorkflow <em>Workflow</em>}</li>
  *   <li>{@link com.extremexp.emf.model.workflow.impl.SpecificationImpl#getDeployedworkflow <em>Deployedworkflow</em>}</li>
- *   <li>{@link com.extremexp.emf.model.workflow.impl.SpecificationImpl#getCondition <em>Condition</em>}</li>
  *   <li>{@link com.extremexp.emf.model.workflow.impl.SpecificationImpl#getExperimentspace <em>Experimentspace</em>}</li>
  * </ul>
  *
@@ -106,16 +104,6 @@ public class SpecificationImpl extends MinimalEObjectImpl.Container implements S
 	 * @ordered
 	 */
 	protected EList<DeployedWorkflow> deployedworkflow;
-
-	/**
-	 * The cached value of the '{@link #getCondition() <em>Condition</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCondition()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Condition> condition;
 
 	/**
 	 * The cached value of the '{@link #getExperimentspace() <em>Experimentspace</em>}' containment reference.
@@ -260,19 +248,6 @@ public class SpecificationImpl extends MinimalEObjectImpl.Container implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Condition> getCondition() {
-		if (condition == null) {
-			condition = new EObjectContainmentEList<Condition>(Condition.class, this,
-					WorkflowPackage.SPECIFICATION__CONDITION);
-		}
-		return condition;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public ExperimentSpace getExperimentspace() {
 		return experimentspace;
 	}
@@ -334,8 +309,6 @@ public class SpecificationImpl extends MinimalEObjectImpl.Container implements S
 			return basicSetWorkflow(null, msgs);
 		case WorkflowPackage.SPECIFICATION__DEPLOYEDWORKFLOW:
 			return ((InternalEList<?>) getDeployedworkflow()).basicRemove(otherEnd, msgs);
-		case WorkflowPackage.SPECIFICATION__CONDITION:
-			return ((InternalEList<?>) getCondition()).basicRemove(otherEnd, msgs);
 		case WorkflowPackage.SPECIFICATION__EXPERIMENTSPACE:
 			return basicSetExperimentspace(null, msgs);
 		}
@@ -360,8 +333,6 @@ public class SpecificationImpl extends MinimalEObjectImpl.Container implements S
 			return getWorkflow();
 		case WorkflowPackage.SPECIFICATION__DEPLOYEDWORKFLOW:
 			return getDeployedworkflow();
-		case WorkflowPackage.SPECIFICATION__CONDITION:
-			return getCondition();
 		case WorkflowPackage.SPECIFICATION__EXPERIMENTSPACE:
 			return getExperimentspace();
 		}
@@ -395,10 +366,6 @@ public class SpecificationImpl extends MinimalEObjectImpl.Container implements S
 			getDeployedworkflow().clear();
 			getDeployedworkflow().addAll((Collection<? extends DeployedWorkflow>) newValue);
 			return;
-		case WorkflowPackage.SPECIFICATION__CONDITION:
-			getCondition().clear();
-			getCondition().addAll((Collection<? extends Condition>) newValue);
-			return;
 		case WorkflowPackage.SPECIFICATION__EXPERIMENTSPACE:
 			setExperimentspace((ExperimentSpace) newValue);
 			return;
@@ -429,9 +396,6 @@ public class SpecificationImpl extends MinimalEObjectImpl.Container implements S
 		case WorkflowPackage.SPECIFICATION__DEPLOYEDWORKFLOW:
 			getDeployedworkflow().clear();
 			return;
-		case WorkflowPackage.SPECIFICATION__CONDITION:
-			getCondition().clear();
-			return;
 		case WorkflowPackage.SPECIFICATION__EXPERIMENTSPACE:
 			setExperimentspace((ExperimentSpace) null);
 			return;
@@ -457,8 +421,6 @@ public class SpecificationImpl extends MinimalEObjectImpl.Container implements S
 			return workflow != null;
 		case WorkflowPackage.SPECIFICATION__DEPLOYEDWORKFLOW:
 			return deployedworkflow != null && !deployedworkflow.isEmpty();
-		case WorkflowPackage.SPECIFICATION__CONDITION:
-			return condition != null && !condition.isEmpty();
 		case WorkflowPackage.SPECIFICATION__EXPERIMENTSPACE:
 			return experimentspace != null;
 		}

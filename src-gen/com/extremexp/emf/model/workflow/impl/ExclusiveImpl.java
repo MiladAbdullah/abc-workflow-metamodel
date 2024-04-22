@@ -8,6 +8,7 @@ import com.extremexp.emf.model.workflow.WorkflowPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.InternalEObject;
@@ -28,7 +29,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class ExclusiveImpl extends OperatorImpl implements Exclusive {
 	/**
-	 * The cached value of the '{@link #getCondition() <em>Condition</em>}' reference.
+	 * The cached value of the '{@link #getCondition() <em>Condition</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getCondition()
@@ -62,15 +63,6 @@ public class ExclusiveImpl extends OperatorImpl implements Exclusive {
 	 * @generated
 	 */
 	public Condition getCondition() {
-		if (condition != null && condition.eIsProxy()) {
-			InternalEObject oldCondition = (InternalEObject) condition;
-			condition = (Condition) eResolveProxy(oldCondition);
-			if (condition != oldCondition) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WorkflowPackage.EXCLUSIVE__CONDITION,
-							oldCondition, condition));
-			}
-		}
 		return condition;
 	}
 
@@ -79,8 +71,18 @@ public class ExclusiveImpl extends OperatorImpl implements Exclusive {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Condition basicGetCondition() {
-		return condition;
+	public NotificationChain basicSetCondition(Condition newCondition, NotificationChain msgs) {
+		Condition oldCondition = condition;
+		condition = newCondition;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					WorkflowPackage.EXCLUSIVE__CONDITION, oldCondition, newCondition);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -89,11 +91,34 @@ public class ExclusiveImpl extends OperatorImpl implements Exclusive {
 	 * @generated
 	 */
 	public void setCondition(Condition newCondition) {
-		Condition oldCondition = condition;
-		condition = newCondition;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WorkflowPackage.EXCLUSIVE__CONDITION, oldCondition,
-					condition));
+		if (newCondition != condition) {
+			NotificationChain msgs = null;
+			if (condition != null)
+				msgs = ((InternalEObject) condition).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - WorkflowPackage.EXCLUSIVE__CONDITION, null, msgs);
+			if (newCondition != null)
+				msgs = ((InternalEObject) newCondition).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - WorkflowPackage.EXCLUSIVE__CONDITION, null, msgs);
+			msgs = basicSetCondition(newCondition, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, WorkflowPackage.EXCLUSIVE__CONDITION, newCondition,
+					newCondition));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case WorkflowPackage.EXCLUSIVE__CONDITION:
+			return basicSetCondition(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -105,9 +130,7 @@ public class ExclusiveImpl extends OperatorImpl implements Exclusive {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case WorkflowPackage.EXCLUSIVE__CONDITION:
-			if (resolve)
-				return getCondition();
-			return basicGetCondition();
+			return getCondition();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}

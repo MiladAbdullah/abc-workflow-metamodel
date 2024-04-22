@@ -26,7 +26,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -205,7 +204,7 @@ public class TaskImpl extends NodeImpl implements Task {
 	protected UI ui;
 
 	/**
-	 * The cached value of the '{@link #getConditions() <em>Conditions</em>}' reference list.
+	 * The cached value of the '{@link #getConditions() <em>Conditions</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getConditions()
@@ -476,7 +475,8 @@ public class TaskImpl extends NodeImpl implements Task {
 	 */
 	public EList<Condition> getConditions() {
 		if (conditions == null) {
-			conditions = new EObjectResolvingEList<Condition>(Condition.class, this, WorkflowPackage.TASK__CONDITIONS);
+			conditions = new EObjectContainmentEList<Condition>(Condition.class, this,
+					WorkflowPackage.TASK__CONDITIONS);
 		}
 		return conditions;
 	}
@@ -501,6 +501,8 @@ public class TaskImpl extends NodeImpl implements Task {
 			return ((InternalEList<?>) getParameters()).basicRemove(otherEnd, msgs);
 		case WorkflowPackage.TASK__METADATA:
 			return ((InternalEList<?>) getMetadata()).basicRemove(otherEnd, msgs);
+		case WorkflowPackage.TASK__CONDITIONS:
+			return ((InternalEList<?>) getConditions()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}

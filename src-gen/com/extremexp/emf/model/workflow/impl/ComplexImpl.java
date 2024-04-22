@@ -7,9 +7,12 @@ import com.extremexp.emf.model.workflow.Condition;
 import com.extremexp.emf.model.workflow.WorkflowPackage;
 
 import java.util.Collection;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,7 +29,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  */
 public class ComplexImpl extends OperatorImpl implements Complex {
 	/**
-	 * The cached value of the '{@link #getConditions() <em>Conditions</em>}' reference list.
+	 * The cached value of the '{@link #getConditions() <em>Conditions</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getConditions()
@@ -61,10 +64,24 @@ public class ComplexImpl extends OperatorImpl implements Complex {
 	 */
 	public EList<Condition> getConditions() {
 		if (conditions == null) {
-			conditions = new EObjectResolvingEList<Condition>(Condition.class, this,
+			conditions = new EObjectContainmentEList<Condition>(Condition.class, this,
 					WorkflowPackage.COMPLEX__CONDITIONS);
 		}
 		return conditions;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case WorkflowPackage.COMPLEX__CONDITIONS:
+			return ((InternalEList<?>) getConditions()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

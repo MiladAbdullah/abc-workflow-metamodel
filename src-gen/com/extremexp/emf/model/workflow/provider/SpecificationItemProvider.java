@@ -93,7 +93,6 @@ public class SpecificationItemProvider extends ItemProviderAdapter implements IE
 			childrenFeatures.add(WorkflowPackage.Literals.SPECIFICATION__PARAMETERTYPES);
 			childrenFeatures.add(WorkflowPackage.Literals.SPECIFICATION__WORKFLOW);
 			childrenFeatures.add(WorkflowPackage.Literals.SPECIFICATION__DEPLOYEDWORKFLOW);
-			childrenFeatures.add(WorkflowPackage.Literals.SPECIFICATION__CONDITION);
 			childrenFeatures.add(WorkflowPackage.Literals.SPECIFICATION__EXPERIMENTSPACE);
 		}
 		return childrenFeatures;
@@ -165,7 +164,6 @@ public class SpecificationItemProvider extends ItemProviderAdapter implements IE
 		case WorkflowPackage.SPECIFICATION__PARAMETERTYPES:
 		case WorkflowPackage.SPECIFICATION__WORKFLOW:
 		case WorkflowPackage.SPECIFICATION__DEPLOYEDWORKFLOW:
-		case WorkflowPackage.SPECIFICATION__CONDITION:
 		case WorkflowPackage.SPECIFICATION__EXPERIMENTSPACE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
@@ -201,9 +199,6 @@ public class SpecificationItemProvider extends ItemProviderAdapter implements IE
 
 		newChildDescriptors.add(createChildParameter(WorkflowPackage.Literals.SPECIFICATION__DEPLOYEDWORKFLOW,
 				WorkflowFactory.eINSTANCE.createDeployedWorkflow()));
-
-		newChildDescriptors.add(createChildParameter(WorkflowPackage.Literals.SPECIFICATION__CONDITION,
-				WorkflowFactory.eINSTANCE.createCondition()));
 
 		newChildDescriptors.add(createChildParameter(WorkflowPackage.Literals.SPECIFICATION__EXPERIMENTSPACE,
 				WorkflowFactory.eINSTANCE.createExperimentSpace()));

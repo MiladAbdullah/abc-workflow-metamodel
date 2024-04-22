@@ -165,6 +165,7 @@ public class TaskItemProvider extends NodeItemProvider {
 			childrenFeatures.add(WorkflowPackage.Literals.TASK__OUTPUTS);
 			childrenFeatures.add(WorkflowPackage.Literals.TASK__PARAMETERS);
 			childrenFeatures.add(WorkflowPackage.Literals.TASK__METADATA);
+			childrenFeatures.add(WorkflowPackage.Literals.TASK__CONDITIONS);
 		}
 		return childrenFeatures;
 	}
@@ -240,6 +241,7 @@ public class TaskItemProvider extends NodeItemProvider {
 		case WorkflowPackage.TASK__OUTPUTS:
 		case WorkflowPackage.TASK__PARAMETERS:
 		case WorkflowPackage.TASK__METADATA:
+		case WorkflowPackage.TASK__CONDITIONS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -283,6 +285,9 @@ public class TaskItemProvider extends NodeItemProvider {
 
 		newChildDescriptors.add(createChildParameter(WorkflowPackage.Literals.TASK__METADATA,
 				WorkflowFactory.eINSTANCE.createMetaData()));
+
+		newChildDescriptors.add(createChildParameter(WorkflowPackage.Literals.TASK__CONDITIONS,
+				WorkflowFactory.eINSTANCE.createCondition()));
 	}
 
 }

@@ -196,7 +196,7 @@ public interface WorkflowPackage extends EPackage {
 	int TASK__UI = NODE_FEATURE_COUNT + 10;
 
 	/**
-	 * The feature id for the '<em><b>Conditions</b></em>' reference list.
+	 * The feature id for the '<em><b>Conditions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -332,7 +332,7 @@ public interface WorkflowPackage extends EPackage {
 	int WORKFLOW__UI = TASK__UI;
 
 	/**
-	 * The feature id for the '<em><b>Conditions</b></em>' reference list.
+	 * The feature id for the '<em><b>Conditions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1317,7 +1317,7 @@ public interface WorkflowPackage extends EPackage {
 	int EXCLUSIVE = 24;
 
 	/**
-	 * The feature id for the '<em><b>Condition</b></em>' reference.
+	 * The feature id for the '<em><b>Condition</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1354,7 +1354,7 @@ public interface WorkflowPackage extends EPackage {
 	int INCLUSIVE = 25;
 
 	/**
-	 * The feature id for the '<em><b>Conditions</b></em>' reference list.
+	 * The feature id for the '<em><b>Conditions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1391,7 +1391,7 @@ public interface WorkflowPackage extends EPackage {
 	int COMPLEX = 26;
 
 	/**
-	 * The feature id for the '<em><b>Conditions</b></em>' reference list.
+	 * The feature id for the '<em><b>Conditions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1668,22 +1668,13 @@ public interface WorkflowPackage extends EPackage {
 	int SPECIFICATION__DEPLOYEDWORKFLOW = 4;
 
 	/**
-	 * The feature id for the '<em><b>Condition</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPECIFICATION__CONDITION = 5;
-
-	/**
 	 * The feature id for the '<em><b>Experimentspace</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION__EXPERIMENTSPACE = 6;
+	int SPECIFICATION__EXPERIMENTSPACE = 5;
 
 	/**
 	 * The number of structural features of the '<em>Specification</em>' class.
@@ -1692,7 +1683,7 @@ public interface WorkflowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPECIFICATION_FEATURE_COUNT = 7;
+	int SPECIFICATION_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Specification</em>' class.
@@ -1859,7 +1850,7 @@ public interface WorkflowPackage extends EPackage {
 	int CONFIGURED_TASK__UI = TASK__UI;
 
 	/**
-	 * The feature id for the '<em><b>Conditions</b></em>' reference list.
+	 * The feature id for the '<em><b>Conditions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2631,10 +2622,10 @@ public interface WorkflowPackage extends EPackage {
 	EReference getTask_Ui();
 
 	/**
-	 * Returns the meta object for the reference list '{@link com.extremexp.emf.model.workflow.Task#getConditions <em>Conditions</em>}'.
+	 * Returns the meta object for the containment reference list '{@link com.extremexp.emf.model.workflow.Task#getConditions <em>Conditions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Conditions</em>'.
+	 * @return the meta object for the containment reference list '<em>Conditions</em>'.
 	 * @see com.extremexp.emf.model.workflow.Task#getConditions()
 	 * @see #getTask()
 	 * @generated
@@ -2841,10 +2832,10 @@ public interface WorkflowPackage extends EPackage {
 	EClass getExclusive();
 
 	/**
-	 * Returns the meta object for the reference '{@link com.extremexp.emf.model.workflow.Exclusive#getCondition <em>Condition</em>}'.
+	 * Returns the meta object for the containment reference '{@link com.extremexp.emf.model.workflow.Exclusive#getCondition <em>Condition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Condition</em>'.
+	 * @return the meta object for the containment reference '<em>Condition</em>'.
 	 * @see com.extremexp.emf.model.workflow.Exclusive#getCondition()
 	 * @see #getExclusive()
 	 * @generated
@@ -2862,10 +2853,10 @@ public interface WorkflowPackage extends EPackage {
 	EClass getInclusive();
 
 	/**
-	 * Returns the meta object for the reference list '{@link com.extremexp.emf.model.workflow.Inclusive#getConditions <em>Conditions</em>}'.
+	 * Returns the meta object for the containment reference list '{@link com.extremexp.emf.model.workflow.Inclusive#getConditions <em>Conditions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Conditions</em>'.
+	 * @return the meta object for the containment reference list '<em>Conditions</em>'.
 	 * @see com.extremexp.emf.model.workflow.Inclusive#getConditions()
 	 * @see #getInclusive()
 	 * @generated
@@ -2883,10 +2874,10 @@ public interface WorkflowPackage extends EPackage {
 	EClass getComplex();
 
 	/**
-	 * Returns the meta object for the reference list '{@link com.extremexp.emf.model.workflow.Complex#getConditions <em>Conditions</em>}'.
+	 * Returns the meta object for the containment reference list '{@link com.extremexp.emf.model.workflow.Complex#getConditions <em>Conditions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Conditions</em>'.
+	 * @return the meta object for the containment reference list '<em>Conditions</em>'.
 	 * @see com.extremexp.emf.model.workflow.Complex#getConditions()
 	 * @see #getComplex()
 	 * @generated
@@ -3039,17 +3030,6 @@ public interface WorkflowPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSpecification_Deployedworkflow();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link com.extremexp.emf.model.workflow.Specification#getCondition <em>Condition</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Condition</em>'.
-	 * @see com.extremexp.emf.model.workflow.Specification#getCondition()
-	 * @see #getSpecification()
-	 * @generated
-	 */
-	EReference getSpecification_Condition();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link com.extremexp.emf.model.workflow.Specification#getExperimentspace <em>Experimentspace</em>}'.
@@ -3693,7 +3673,7 @@ public interface WorkflowPackage extends EPackage {
 		EReference TASK__UI = eINSTANCE.getTask_Ui();
 
 		/**
-		 * The meta object literal for the '<em><b>Conditions</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Conditions</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -3873,7 +3853,7 @@ public interface WorkflowPackage extends EPackage {
 		EClass EXCLUSIVE = eINSTANCE.getExclusive();
 
 		/**
-		 * The meta object literal for the '<em><b>Condition</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Condition</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -3891,7 +3871,7 @@ public interface WorkflowPackage extends EPackage {
 		EClass INCLUSIVE = eINSTANCE.getInclusive();
 
 		/**
-		 * The meta object literal for the '<em><b>Conditions</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Conditions</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -3909,7 +3889,7 @@ public interface WorkflowPackage extends EPackage {
 		EClass COMPLEX = eINSTANCE.getComplex();
 
 		/**
-		 * The meta object literal for the '<em><b>Conditions</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Conditions</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -4041,14 +4021,6 @@ public interface WorkflowPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SPECIFICATION__DEPLOYEDWORKFLOW = eINSTANCE.getSpecification_Deployedworkflow();
-
-		/**
-		 * The meta object literal for the '<em><b>Condition</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SPECIFICATION__CONDITION = eINSTANCE.getSpecification_Condition();
 
 		/**
 		 * The meta object literal for the '<em><b>Experimentspace</b></em>' containment reference feature.

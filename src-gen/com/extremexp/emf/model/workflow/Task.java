@@ -225,13 +225,13 @@ public interface Task extends Node {
 	void setUi(UI value);
 
 	/**
-	 * Returns the value of the '<em><b>Conditions</b></em>' reference list.
+	 * Returns the value of the '<em><b>Conditions</b></em>' containment reference list.
 	 * The list contents are of type {@link com.extremexp.emf.model.workflow.Condition}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Conditions</em>' reference list.
+	 * @return the value of the '<em>Conditions</em>' containment reference list.
 	 * @see com.extremexp.emf.model.workflow.WorkflowPackage#getTask_Conditions()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Condition> getConditions();
