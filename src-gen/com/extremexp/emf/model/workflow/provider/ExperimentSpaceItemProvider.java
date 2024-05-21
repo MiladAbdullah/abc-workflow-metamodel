@@ -16,6 +16,7 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -54,8 +55,24 @@ public class ExperimentSpaceItemProvider extends ItemProviderAdapter implements 
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addDeployedworkflowPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Deployedworkflow feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDeployedworkflowPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_ExperimentSpace_deployedworkflow_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_ExperimentSpace_deployedworkflow_feature",
+						"_UI_ExperimentSpace_type"),
+				WorkflowPackage.Literals.EXPERIMENT_SPACE__DEPLOYEDWORKFLOW, true, false, true, null, null, null));
 	}
 
 	/**
@@ -70,7 +87,7 @@ public class ExperimentSpaceItemProvider extends ItemProviderAdapter implements 
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(WorkflowPackage.Literals.EXPERIMENT_SPACE__DEPLOYEDWORKFLOWPARAMETERSPACE);
+			childrenFeatures.add(WorkflowPackage.Literals.EXPERIMENT_SPACE__PARAMETERDOMAIN);
 		}
 		return childrenFeatures;
 	}
@@ -132,7 +149,7 @@ public class ExperimentSpaceItemProvider extends ItemProviderAdapter implements 
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ExperimentSpace.class)) {
-		case WorkflowPackage.EXPERIMENT_SPACE__DEPLOYEDWORKFLOWPARAMETERSPACE:
+		case WorkflowPackage.EXPERIMENT_SPACE__PARAMETERDOMAIN:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -150,9 +167,8 @@ public class ExperimentSpaceItemProvider extends ItemProviderAdapter implements 
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors
-				.add(createChildParameter(WorkflowPackage.Literals.EXPERIMENT_SPACE__DEPLOYEDWORKFLOWPARAMETERSPACE,
-						WorkflowFactory.eINSTANCE.createDeployedWorkflowParameterSpace()));
+		newChildDescriptors.add(createChildParameter(WorkflowPackage.Literals.EXPERIMENT_SPACE__PARAMETERDOMAIN,
+				WorkflowFactory.eINSTANCE.createParameterDomain()));
 	}
 
 	/**

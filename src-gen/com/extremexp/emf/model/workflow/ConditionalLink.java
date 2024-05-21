@@ -13,5 +13,4 @@ package com.extremexp.emf.model.workflow;
  * @generated
  */
 public interface ConditionalLink extends Link {
-
 } // ConditionalLink

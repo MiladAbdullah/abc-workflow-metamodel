@@ -786,29 +786,6 @@ public class WorkflowItemProviderAdapterFactory extends WorkflowAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.extremexp.emf.model.workflow.DeployedWorkflowParameterSpace} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DeployedWorkflowParameterSpaceItemProvider deployedWorkflowParameterSpaceItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.extremexp.emf.model.workflow.DeployedWorkflowParameterSpace}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDeployedWorkflowParameterSpaceAdapter() {
-		if (deployedWorkflowParameterSpaceItemProvider == null) {
-			deployedWorkflowParameterSpaceItemProvider = new DeployedWorkflowParameterSpaceItemProvider(this);
-		}
-
-		return deployedWorkflowParameterSpaceItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link com.extremexp.emf.model.workflow.ExperimentSpace} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1038,8 +1015,6 @@ public class WorkflowItemProviderAdapterFactory extends WorkflowAdapterFactory
 			configuredTaskItemProvider.dispose();
 		if (conditionItemProvider != null)
 			conditionItemProvider.dispose();
-		if (deployedWorkflowParameterSpaceItemProvider != null)
-			deployedWorkflowParameterSpaceItemProvider.dispose();
 		if (experimentSpaceItemProvider != null)
 			experimentSpaceItemProvider.dispose();
 		if (parameterDomainItemProvider != null)

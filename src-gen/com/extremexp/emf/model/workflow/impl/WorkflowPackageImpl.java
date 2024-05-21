@@ -10,7 +10,6 @@ import com.extremexp.emf.model.workflow.Condition;
 import com.extremexp.emf.model.workflow.ConditionalLink;
 import com.extremexp.emf.model.workflow.ConfiguredTask;
 import com.extremexp.emf.model.workflow.DeployedWorkflow;
-import com.extremexp.emf.model.workflow.DeployedWorkflowParameterSpace;
 import com.extremexp.emf.model.workflow.DynamicParameter;
 import com.extremexp.emf.model.workflow.Event;
 import com.extremexp.emf.model.workflow.EventNode;
@@ -55,6 +54,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+
 import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 
 /**
@@ -322,13 +322,6 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 	 * @generated
 	 */
 	private EClass conditionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass deployedWorkflowParameterSpaceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -831,15 +824,6 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTask_Conditions() {
-		return (EReference) taskEClass.getEStructuralFeatures().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getOperator() {
 		return operatorEClass;
 	}
@@ -1263,42 +1247,6 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getDeployedWorkflowParameterSpace() {
-		return deployedWorkflowParameterSpaceEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getDeployedWorkflowParameterSpace_Method() {
-		return (EAttribute) deployedWorkflowParameterSpaceEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getDeployedWorkflowParameterSpace_Deployedworkflow() {
-		return (EReference) deployedWorkflowParameterSpaceEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getDeployedWorkflowParameterSpace_Parameterdomain() {
-		return (EReference) deployedWorkflowParameterSpaceEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getExperimentSpace() {
 		return experimentSpaceEClass;
 	}
@@ -1308,8 +1256,17 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getExperimentSpace_Deployedworkflowparameterspace() {
+	public EReference getExperimentSpace_Deployedworkflow() {
 		return (EReference) experimentSpaceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getExperimentSpace_Parameterdomain() {
+		return (EReference) experimentSpaceEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1470,7 +1427,6 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 		createEReference(taskEClass, TASK__PARAMETERS);
 		createEReference(taskEClass, TASK__METADATA);
 		createEReference(taskEClass, TASK__UI);
-		createEReference(taskEClass, TASK__CONDITIONS);
 
 		operatorEClass = createEClass(OPERATOR);
 
@@ -1541,13 +1497,9 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 		createEAttribute(conditionEClass, CONDITION__NAME);
 		createEReference(conditionEClass, CONDITION__CASES);
 
-		deployedWorkflowParameterSpaceEClass = createEClass(DEPLOYED_WORKFLOW_PARAMETER_SPACE);
-		createEAttribute(deployedWorkflowParameterSpaceEClass, DEPLOYED_WORKFLOW_PARAMETER_SPACE__METHOD);
-		createEReference(deployedWorkflowParameterSpaceEClass, DEPLOYED_WORKFLOW_PARAMETER_SPACE__DEPLOYEDWORKFLOW);
-		createEReference(deployedWorkflowParameterSpaceEClass, DEPLOYED_WORKFLOW_PARAMETER_SPACE__PARAMETERDOMAIN);
-
 		experimentSpaceEClass = createEClass(EXPERIMENT_SPACE);
-		createEReference(experimentSpaceEClass, EXPERIMENT_SPACE__DEPLOYEDWORKFLOWPARAMETERSPACE);
+		createEReference(experimentSpaceEClass, EXPERIMENT_SPACE__DEPLOYEDWORKFLOW);
+		createEReference(experimentSpaceEClass, EXPERIMENT_SPACE__PARAMETERDOMAIN);
 
 		parameterDomainEClass = createEClass(PARAMETER_DOMAIN);
 		createEReference(parameterDomainEClass, PARAMETER_DOMAIN__STATICPARAMETER);
@@ -1736,9 +1688,6 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 				IS_ORDERED);
 		initEReference(getTask_Ui(), this.getUI(), null, "ui", null, 0, 1, Task.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTask_Conditions(), this.getCondition(), null, "conditions", null, 0, -1, Task.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(operatorEClass, Operator.class, "Operator", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1836,14 +1785,14 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 		initEReference(getSpecification_Parametertypes(), this.getParameterType(), null, "parametertypes", null, 0, -1,
 				Specification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSpecification_Workflow(), this.getWorkflow(), null, "workflow", null, 0, 1,
+		initEReference(getSpecification_Workflow(), this.getWorkflow(), null, "workflow", null, 0, -1,
 				Specification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSpecification_Deployedworkflow(), this.getDeployedWorkflow(), null, "deployedworkflow", null,
 				0, -1, Specification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSpecification_Experimentspace(), this.getExperimentSpace(), null, "experimentspace", null, 0,
-				1, Specification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				-1, Specification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(deployedWorkflowEClass, DeployedWorkflow.class, "DeployedWorkflow", !IS_ABSTRACT, !IS_INTERFACE,
@@ -1869,23 +1818,14 @@ public class WorkflowPackageImpl extends EPackageImpl implements WorkflowPackage
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 
-		initEClass(deployedWorkflowParameterSpaceEClass, DeployedWorkflowParameterSpace.class,
-				"DeployedWorkflowParameterSpace", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDeployedWorkflowParameterSpace_Method(), ecorePackage.getEString(), "method", null, 0, 1,
-				DeployedWorkflowParameterSpace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
-				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDeployedWorkflowParameterSpace_Deployedworkflow(), this.getDeployedWorkflow(), null,
-				"deployedworkflow", null, 0, 1, DeployedWorkflowParameterSpace.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDeployedWorkflowParameterSpace_Parameterdomain(), this.getParameterDomain(), null,
-				"parameterdomain", null, 0, -1, DeployedWorkflowParameterSpace.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(experimentSpaceEClass, ExperimentSpace.class, "ExperimentSpace", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getExperimentSpace_Deployedworkflowparameterspace(), this.getDeployedWorkflowParameterSpace(),
-				null, "deployedworkflowparameterspace", null, 0, -1, ExperimentSpace.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getExperimentSpace_Deployedworkflow(), this.getDeployedWorkflow(), null, "deployedworkflow",
+				null, 0, 1, ExperimentSpace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getExperimentSpace_Parameterdomain(), this.getParameterDomain(), null, "parameterdomain", null,
+				0, -1, ExperimentSpace.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(parameterDomainEClass, ParameterDomain.class, "ParameterDomain", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

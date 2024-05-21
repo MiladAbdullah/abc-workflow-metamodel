@@ -391,13 +391,6 @@ public class WorkflowSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case WorkflowPackage.DEPLOYED_WORKFLOW_PARAMETER_SPACE: {
-			DeployedWorkflowParameterSpace deployedWorkflowParameterSpace = (DeployedWorkflowParameterSpace) theEObject;
-			T result = caseDeployedWorkflowParameterSpace(deployedWorkflowParameterSpace);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case WorkflowPackage.EXPERIMENT_SPACE: {
 			ExperimentSpace experimentSpace = (ExperimentSpace) theEObject;
 			T result = caseExperimentSpace(experimentSpace);
@@ -980,21 +973,6 @@ public class WorkflowSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseCondition(Condition object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Deployed Workflow Parameter Space</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Deployed Workflow Parameter Space</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDeployedWorkflowParameterSpace(DeployedWorkflowParameterSpace object) {
 		return null;
 	}
 

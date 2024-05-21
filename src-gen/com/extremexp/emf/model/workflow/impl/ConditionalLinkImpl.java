@@ -4,6 +4,7 @@ package com.extremexp.emf.model.workflow.impl;
 
 import com.extremexp.emf.model.workflow.ConditionalLink;
 import com.extremexp.emf.model.workflow.WorkflowPackage;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

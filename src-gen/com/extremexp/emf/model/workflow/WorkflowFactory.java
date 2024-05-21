@@ -301,15 +301,6 @@ public interface WorkflowFactory extends EFactory {
 	Condition createCondition();
 
 	/**
-	 * Returns a new object of class '<em>Deployed Workflow Parameter Space</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Deployed Workflow Parameter Space</em>'.
-	 * @generated
-	 */
-	DeployedWorkflowParameterSpace createDeployedWorkflowParameterSpace();
-
-	/**
 	 * Returns a new object of class '<em>Experiment Space</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

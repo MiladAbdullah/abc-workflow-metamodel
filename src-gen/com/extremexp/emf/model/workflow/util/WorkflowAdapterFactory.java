@@ -252,11 +252,6 @@ public class WorkflowAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseDeployedWorkflowParameterSpace(DeployedWorkflowParameterSpace object) {
-			return createDeployedWorkflowParameterSpaceAdapter();
-		}
-
-		@Override
 		public Adapter caseExperimentSpace(ExperimentSpace object) {
 			return createExperimentSpaceAdapter();
 		}
@@ -805,20 +800,6 @@ public class WorkflowAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createConditionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.extremexp.emf.model.workflow.DeployedWorkflowParameterSpace <em>Deployed Workflow Parameter Space</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.extremexp.emf.model.workflow.DeployedWorkflowParameterSpace
-	 * @generated
-	 */
-	public Adapter createDeployedWorkflowParameterSpaceAdapter() {
 		return null;
 	}
 

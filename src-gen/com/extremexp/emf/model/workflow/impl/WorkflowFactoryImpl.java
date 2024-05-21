@@ -119,8 +119,6 @@ public class WorkflowFactoryImpl extends EFactoryImpl implements WorkflowFactory
 			return createConfiguredTask();
 		case WorkflowPackage.CONDITION:
 			return createCondition();
-		case WorkflowPackage.DEPLOYED_WORKFLOW_PARAMETER_SPACE:
-			return createDeployedWorkflowParameterSpace();
 		case WorkflowPackage.EXPERIMENT_SPACE:
 			return createExperimentSpace();
 		case WorkflowPackage.PARAMETER_DOMAIN:
@@ -478,16 +476,6 @@ public class WorkflowFactoryImpl extends EFactoryImpl implements WorkflowFactory
 	public Condition createCondition() {
 		ConditionImpl condition = new ConditionImpl();
 		return condition;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DeployedWorkflowParameterSpace createDeployedWorkflowParameterSpace() {
-		DeployedWorkflowParameterSpaceImpl deployedWorkflowParameterSpace = new DeployedWorkflowParameterSpaceImpl();
-		return deployedWorkflowParameterSpace;
 	}
 
 	/**

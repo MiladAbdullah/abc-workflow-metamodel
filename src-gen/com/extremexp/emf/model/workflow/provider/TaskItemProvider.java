@@ -52,7 +52,6 @@ public class TaskItemProvider extends NodeItemProvider {
 			addIsAbstractPropertyDescriptor(object);
 			addImplementationRefPropertyDescriptor(object);
 			addUiPropertyDescriptor(object);
-			addConditionsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -134,20 +133,6 @@ public class TaskItemProvider extends NodeItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Conditions feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addConditionsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Task_conditions_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Task_conditions_feature", "_UI_Task_type"),
-						WorkflowPackage.Literals.TASK__CONDITIONS, true, false, true, null, null, null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -165,7 +150,6 @@ public class TaskItemProvider extends NodeItemProvider {
 			childrenFeatures.add(WorkflowPackage.Literals.TASK__OUTPUTS);
 			childrenFeatures.add(WorkflowPackage.Literals.TASK__PARAMETERS);
 			childrenFeatures.add(WorkflowPackage.Literals.TASK__METADATA);
-			childrenFeatures.add(WorkflowPackage.Literals.TASK__CONDITIONS);
 		}
 		return childrenFeatures;
 	}
@@ -241,7 +225,6 @@ public class TaskItemProvider extends NodeItemProvider {
 		case WorkflowPackage.TASK__OUTPUTS:
 		case WorkflowPackage.TASK__PARAMETERS:
 		case WorkflowPackage.TASK__METADATA:
-		case WorkflowPackage.TASK__CONDITIONS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -285,9 +268,6 @@ public class TaskItemProvider extends NodeItemProvider {
 
 		newChildDescriptors.add(createChildParameter(WorkflowPackage.Literals.TASK__METADATA,
 				WorkflowFactory.eINSTANCE.createMetaData()));
-
-		newChildDescriptors.add(createChildParameter(WorkflowPackage.Literals.TASK__CONDITIONS,
-				WorkflowFactory.eINSTANCE.createCondition()));
 	}
 
 }

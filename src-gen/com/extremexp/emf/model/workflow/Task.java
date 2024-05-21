@@ -24,7 +24,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link com.extremexp.emf.model.workflow.Task#getParameters <em>Parameters</em>}</li>
  *   <li>{@link com.extremexp.emf.model.workflow.Task#getMetadata <em>Metadata</em>}</li>
  *   <li>{@link com.extremexp.emf.model.workflow.Task#getUi <em>Ui</em>}</li>
- *   <li>{@link com.extremexp.emf.model.workflow.Task#getConditions <em>Conditions</em>}</li>
  * </ul>
  *
  * @see com.extremexp.emf.model.workflow.WorkflowPackage#getTask()
@@ -223,17 +222,5 @@ public interface Task extends Node {
 	 * @generated
 	 */
 	void setUi(UI value);
-
-	/**
-	 * Returns the value of the '<em><b>Conditions</b></em>' containment reference list.
-	 * The list contents are of type {@link com.extremexp.emf.model.workflow.Condition}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Conditions</em>' containment reference list.
-	 * @see com.extremexp.emf.model.workflow.WorkflowPackage#getTask_Conditions()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Condition> getConditions();
 
 } // Task

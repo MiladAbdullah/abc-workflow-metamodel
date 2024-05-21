@@ -77,7 +77,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference workflow.ecore#//Task/parameters"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference workflow.ecore#//Task/metadata"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference workflow.ecore#//Task/ui"/>
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference workflow.ecore#//Task/conditions"/>
     </genClasses>
     <genClasses ecoreClass="workflow.ecore#//Operator"/>
     <genClasses ecoreClass="workflow.ecore#//Link">
@@ -139,13 +138,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute workflow.ecore#//Condition/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference workflow.ecore#//Condition/cases"/>
     </genClasses>
-    <genClasses ecoreClass="workflow.ecore#//DeployedWorkflowParameterSpace">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute workflow.ecore#//DeployedWorkflowParameterSpace/method"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference workflow.ecore#//DeployedWorkflowParameterSpace/deployedworkflow"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference workflow.ecore#//DeployedWorkflowParameterSpace/parameterdomain"/>
-    </genClasses>
     <genClasses ecoreClass="workflow.ecore#//ExperimentSpace">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference workflow.ecore#//ExperimentSpace/deployedworkflowparameterspace"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference workflow.ecore#//ExperimentSpace/deployedworkflow"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference workflow.ecore#//ExperimentSpace/parameterdomain"/>
     </genClasses>
     <genClasses ecoreClass="workflow.ecore#//ParameterDomain">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference workflow.ecore#//ParameterDomain/staticparameter"/>

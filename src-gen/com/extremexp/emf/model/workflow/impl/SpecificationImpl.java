@@ -86,14 +86,14 @@ public class SpecificationImpl extends MinimalEObjectImpl.Container implements S
 	protected EList<ParameterType> parametertypes;
 
 	/**
-	 * The cached value of the '{@link #getWorkflow() <em>Workflow</em>}' containment reference.
+	 * The cached value of the '{@link #getWorkflow() <em>Workflow</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getWorkflow()
 	 * @generated
 	 * @ordered
 	 */
-	protected Workflow workflow;
+	protected EList<Workflow> workflow;
 
 	/**
 	 * The cached value of the '{@link #getDeployedworkflow() <em>Deployedworkflow</em>}' containment reference list.
@@ -106,14 +106,14 @@ public class SpecificationImpl extends MinimalEObjectImpl.Container implements S
 	protected EList<DeployedWorkflow> deployedworkflow;
 
 	/**
-	 * The cached value of the '{@link #getExperimentspace() <em>Experimentspace</em>}' containment reference.
+	 * The cached value of the '{@link #getExperimentspace() <em>Experimentspace</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getExperimentspace()
 	 * @generated
 	 * @ordered
 	 */
-	protected ExperimentSpace experimentspace;
+	protected EList<ExperimentSpace> experimentspace;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -185,49 +185,12 @@ public class SpecificationImpl extends MinimalEObjectImpl.Container implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Workflow getWorkflow() {
-		return workflow;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetWorkflow(Workflow newWorkflow, NotificationChain msgs) {
-		Workflow oldWorkflow = workflow;
-		workflow = newWorkflow;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					WorkflowPackage.SPECIFICATION__WORKFLOW, oldWorkflow, newWorkflow);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
+	public EList<Workflow> getWorkflow() {
+		if (workflow == null) {
+			workflow = new EObjectContainmentEList<Workflow>(Workflow.class, this,
+					WorkflowPackage.SPECIFICATION__WORKFLOW);
 		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setWorkflow(Workflow newWorkflow) {
-		if (newWorkflow != workflow) {
-			NotificationChain msgs = null;
-			if (workflow != null)
-				msgs = ((InternalEObject) workflow).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - WorkflowPackage.SPECIFICATION__WORKFLOW, null, msgs);
-			if (newWorkflow != null)
-				msgs = ((InternalEObject) newWorkflow).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - WorkflowPackage.SPECIFICATION__WORKFLOW, null, msgs);
-			msgs = basicSetWorkflow(newWorkflow, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WorkflowPackage.SPECIFICATION__WORKFLOW, newWorkflow,
-					newWorkflow));
+		return workflow;
 	}
 
 	/**
@@ -248,49 +211,12 @@ public class SpecificationImpl extends MinimalEObjectImpl.Container implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ExperimentSpace getExperimentspace() {
-		return experimentspace;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetExperimentspace(ExperimentSpace newExperimentspace, NotificationChain msgs) {
-		ExperimentSpace oldExperimentspace = experimentspace;
-		experimentspace = newExperimentspace;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					WorkflowPackage.SPECIFICATION__EXPERIMENTSPACE, oldExperimentspace, newExperimentspace);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
+	public EList<ExperimentSpace> getExperimentspace() {
+		if (experimentspace == null) {
+			experimentspace = new EObjectContainmentEList<ExperimentSpace>(ExperimentSpace.class, this,
+					WorkflowPackage.SPECIFICATION__EXPERIMENTSPACE);
 		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setExperimentspace(ExperimentSpace newExperimentspace) {
-		if (newExperimentspace != experimentspace) {
-			NotificationChain msgs = null;
-			if (experimentspace != null)
-				msgs = ((InternalEObject) experimentspace).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - WorkflowPackage.SPECIFICATION__EXPERIMENTSPACE, null, msgs);
-			if (newExperimentspace != null)
-				msgs = ((InternalEObject) newExperimentspace).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - WorkflowPackage.SPECIFICATION__EXPERIMENTSPACE, null, msgs);
-			msgs = basicSetExperimentspace(newExperimentspace, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WorkflowPackage.SPECIFICATION__EXPERIMENTSPACE,
-					newExperimentspace, newExperimentspace));
+		return experimentspace;
 	}
 
 	/**
@@ -306,11 +232,11 @@ public class SpecificationImpl extends MinimalEObjectImpl.Container implements S
 		case WorkflowPackage.SPECIFICATION__PARAMETERTYPES:
 			return ((InternalEList<?>) getParametertypes()).basicRemove(otherEnd, msgs);
 		case WorkflowPackage.SPECIFICATION__WORKFLOW:
-			return basicSetWorkflow(null, msgs);
+			return ((InternalEList<?>) getWorkflow()).basicRemove(otherEnd, msgs);
 		case WorkflowPackage.SPECIFICATION__DEPLOYEDWORKFLOW:
 			return ((InternalEList<?>) getDeployedworkflow()).basicRemove(otherEnd, msgs);
 		case WorkflowPackage.SPECIFICATION__EXPERIMENTSPACE:
-			return basicSetExperimentspace(null, msgs);
+			return ((InternalEList<?>) getExperimentspace()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -360,14 +286,16 @@ public class SpecificationImpl extends MinimalEObjectImpl.Container implements S
 			getParametertypes().addAll((Collection<? extends ParameterType>) newValue);
 			return;
 		case WorkflowPackage.SPECIFICATION__WORKFLOW:
-			setWorkflow((Workflow) newValue);
+			getWorkflow().clear();
+			getWorkflow().addAll((Collection<? extends Workflow>) newValue);
 			return;
 		case WorkflowPackage.SPECIFICATION__DEPLOYEDWORKFLOW:
 			getDeployedworkflow().clear();
 			getDeployedworkflow().addAll((Collection<? extends DeployedWorkflow>) newValue);
 			return;
 		case WorkflowPackage.SPECIFICATION__EXPERIMENTSPACE:
-			setExperimentspace((ExperimentSpace) newValue);
+			getExperimentspace().clear();
+			getExperimentspace().addAll((Collection<? extends ExperimentSpace>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -391,13 +319,13 @@ public class SpecificationImpl extends MinimalEObjectImpl.Container implements S
 			getParametertypes().clear();
 			return;
 		case WorkflowPackage.SPECIFICATION__WORKFLOW:
-			setWorkflow((Workflow) null);
+			getWorkflow().clear();
 			return;
 		case WorkflowPackage.SPECIFICATION__DEPLOYEDWORKFLOW:
 			getDeployedworkflow().clear();
 			return;
 		case WorkflowPackage.SPECIFICATION__EXPERIMENTSPACE:
-			setExperimentspace((ExperimentSpace) null);
+			getExperimentspace().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -418,11 +346,11 @@ public class SpecificationImpl extends MinimalEObjectImpl.Container implements S
 		case WorkflowPackage.SPECIFICATION__PARAMETERTYPES:
 			return parametertypes != null && !parametertypes.isEmpty();
 		case WorkflowPackage.SPECIFICATION__WORKFLOW:
-			return workflow != null;
+			return workflow != null && !workflow.isEmpty();
 		case WorkflowPackage.SPECIFICATION__DEPLOYEDWORKFLOW:
 			return deployedworkflow != null && !deployedworkflow.isEmpty();
 		case WorkflowPackage.SPECIFICATION__EXPERIMENTSPACE:
-			return experimentspace != null;
+			return experimentspace != null && !experimentspace.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

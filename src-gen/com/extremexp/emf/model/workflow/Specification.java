@@ -75,26 +75,16 @@ public interface Specification extends EObject {
 	EList<ParameterType> getParametertypes();
 
 	/**
-	 * Returns the value of the '<em><b>Workflow</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Workflow</b></em>' containment reference list.
+	 * The list contents are of type {@link com.extremexp.emf.model.workflow.Workflow}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Workflow</em>' containment reference.
-	 * @see #setWorkflow(Workflow)
+	 * @return the value of the '<em>Workflow</em>' containment reference list.
 	 * @see com.extremexp.emf.model.workflow.WorkflowPackage#getSpecification_Workflow()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Workflow getWorkflow();
-
-	/**
-	 * Sets the value of the '{@link com.extremexp.emf.model.workflow.Specification#getWorkflow <em>Workflow</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Workflow</em>' containment reference.
-	 * @see #getWorkflow()
-	 * @generated
-	 */
-	void setWorkflow(Workflow value);
+	EList<Workflow> getWorkflow();
 
 	/**
 	 * Returns the value of the '<em><b>Deployedworkflow</b></em>' containment reference list.
@@ -109,25 +99,15 @@ public interface Specification extends EObject {
 	EList<DeployedWorkflow> getDeployedworkflow();
 
 	/**
-	 * Returns the value of the '<em><b>Experimentspace</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Experimentspace</b></em>' containment reference list.
+	 * The list contents are of type {@link com.extremexp.emf.model.workflow.ExperimentSpace}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Experimentspace</em>' containment reference.
-	 * @see #setExperimentspace(ExperimentSpace)
+	 * @return the value of the '<em>Experimentspace</em>' containment reference list.
 	 * @see com.extremexp.emf.model.workflow.WorkflowPackage#getSpecification_Experimentspace()
 	 * @model containment="true"
 	 * @generated
 	 */
-	ExperimentSpace getExperimentspace();
-
-	/**
-	 * Sets the value of the '{@link com.extremexp.emf.model.workflow.Specification#getExperimentspace <em>Experimentspace</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Experimentspace</em>' containment reference.
-	 * @see #getExperimentspace()
-	 * @generated
-	 */
-	void setExperimentspace(ExperimentSpace value);
+	EList<ExperimentSpace> getExperimentspace();
 
 } // Specification

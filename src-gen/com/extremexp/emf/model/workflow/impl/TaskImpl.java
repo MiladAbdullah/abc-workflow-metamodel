@@ -2,7 +2,6 @@
  */
 package com.extremexp.emf.model.workflow.impl;
 
-import com.extremexp.emf.model.workflow.Condition;
 import com.extremexp.emf.model.workflow.InputData;
 import com.extremexp.emf.model.workflow.MetaData;
 import com.extremexp.emf.model.workflow.Metric;
@@ -47,7 +46,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.extremexp.emf.model.workflow.impl.TaskImpl#getParameters <em>Parameters</em>}</li>
  *   <li>{@link com.extremexp.emf.model.workflow.impl.TaskImpl#getMetadata <em>Metadata</em>}</li>
  *   <li>{@link com.extremexp.emf.model.workflow.impl.TaskImpl#getUi <em>Ui</em>}</li>
- *   <li>{@link com.extremexp.emf.model.workflow.impl.TaskImpl#getConditions <em>Conditions</em>}</li>
  * </ul>
  *
  * @generated
@@ -202,16 +200,6 @@ public class TaskImpl extends NodeImpl implements Task {
 	 * @ordered
 	 */
 	protected UI ui;
-
-	/**
-	 * The cached value of the '{@link #getConditions() <em>Conditions</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getConditions()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Condition> conditions;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -473,19 +461,6 @@ public class TaskImpl extends NodeImpl implements Task {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Condition> getConditions() {
-		if (conditions == null) {
-			conditions = new EObjectContainmentEList<Condition>(Condition.class, this,
-					WorkflowPackage.TASK__CONDITIONS);
-		}
-		return conditions;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -501,8 +476,6 @@ public class TaskImpl extends NodeImpl implements Task {
 			return ((InternalEList<?>) getParameters()).basicRemove(otherEnd, msgs);
 		case WorkflowPackage.TASK__METADATA:
 			return ((InternalEList<?>) getMetadata()).basicRemove(otherEnd, msgs);
-		case WorkflowPackage.TASK__CONDITIONS:
-			return ((InternalEList<?>) getConditions()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -539,8 +512,6 @@ public class TaskImpl extends NodeImpl implements Task {
 			if (resolve)
 				return getUi();
 			return basicGetUi();
-		case WorkflowPackage.TASK__CONDITIONS:
-			return getConditions();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -592,10 +563,6 @@ public class TaskImpl extends NodeImpl implements Task {
 		case WorkflowPackage.TASK__UI:
 			setUi((UI) newValue);
 			return;
-		case WorkflowPackage.TASK__CONDITIONS:
-			getConditions().clear();
-			getConditions().addAll((Collection<? extends Condition>) newValue);
-			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -641,9 +608,6 @@ public class TaskImpl extends NodeImpl implements Task {
 		case WorkflowPackage.TASK__UI:
 			setUi((UI) null);
 			return;
-		case WorkflowPackage.TASK__CONDITIONS:
-			getConditions().clear();
-			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -679,8 +643,6 @@ public class TaskImpl extends NodeImpl implements Task {
 			return metadata != null && !metadata.isEmpty();
 		case WorkflowPackage.TASK__UI:
 			return ui != null;
-		case WorkflowPackage.TASK__CONDITIONS:
-			return conditions != null && !conditions.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

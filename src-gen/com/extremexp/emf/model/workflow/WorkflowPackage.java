@@ -196,22 +196,13 @@ public interface WorkflowPackage extends EPackage {
 	int TASK__UI = NODE_FEATURE_COUNT + 10;
 
 	/**
-	 * The feature id for the '<em><b>Conditions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK__CONDITIONS = NODE_FEATURE_COUNT + 11;
-
-	/**
 	 * The number of structural features of the '<em>Task</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_FEATURE_COUNT = NODE_FEATURE_COUNT + 12;
+	int TASK_FEATURE_COUNT = NODE_FEATURE_COUNT + 11;
 
 	/**
 	 * The number of operations of the '<em>Task</em>' class.
@@ -330,15 +321,6 @@ public interface WorkflowPackage extends EPackage {
 	 * @ordered
 	 */
 	int WORKFLOW__UI = TASK__UI;
-
-	/**
-	 * The feature id for the '<em><b>Conditions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WORKFLOW__CONDITIONS = TASK__CONDITIONS;
 
 	/**
 	 * The feature id for the '<em><b>Node</b></em>' containment reference list.
@@ -1650,7 +1632,7 @@ public interface WorkflowPackage extends EPackage {
 	int SPECIFICATION__PARAMETERTYPES = 2;
 
 	/**
-	 * The feature id for the '<em><b>Workflow</b></em>' containment reference.
+	 * The feature id for the '<em><b>Workflow</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1668,7 +1650,7 @@ public interface WorkflowPackage extends EPackage {
 	int SPECIFICATION__DEPLOYEDWORKFLOW = 4;
 
 	/**
-	 * The feature id for the '<em><b>Experimentspace</b></em>' containment reference.
+	 * The feature id for the '<em><b>Experimentspace</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1850,15 +1832,6 @@ public interface WorkflowPackage extends EPackage {
 	int CONFIGURED_TASK__UI = TASK__UI;
 
 	/**
-	 * The feature id for the '<em><b>Conditions</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONFIGURED_TASK__CONDITIONS = TASK__CONDITIONS;
-
-	/**
 	 * The feature id for the '<em><b>Configuration</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1932,23 +1905,14 @@ public interface WorkflowPackage extends EPackage {
 	int CONDITION_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.DeployedWorkflowParameterSpaceImpl <em>Deployed Workflow Parameter Space</em>}' class.
+	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.ExperimentSpaceImpl <em>Experiment Space</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see com.extremexp.emf.model.workflow.impl.DeployedWorkflowParameterSpaceImpl
-	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getDeployedWorkflowParameterSpace()
+	 * @see com.extremexp.emf.model.workflow.impl.ExperimentSpaceImpl
+	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getExperimentSpace()
 	 * @generated
 	 */
-	int DEPLOYED_WORKFLOW_PARAMETER_SPACE = 37;
-
-	/**
-	 * The feature id for the '<em><b>Method</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DEPLOYED_WORKFLOW_PARAMETER_SPACE__METHOD = 0;
+	int EXPERIMENT_SPACE = 37;
 
 	/**
 	 * The feature id for the '<em><b>Deployedworkflow</b></em>' reference.
@@ -1957,7 +1921,7 @@ public interface WorkflowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEPLOYED_WORKFLOW_PARAMETER_SPACE__DEPLOYEDWORKFLOW = 1;
+	int EXPERIMENT_SPACE__DEPLOYEDWORKFLOW = 0;
 
 	/**
 	 * The feature id for the '<em><b>Parameterdomain</b></em>' containment reference list.
@@ -1966,44 +1930,7 @@ public interface WorkflowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEPLOYED_WORKFLOW_PARAMETER_SPACE__PARAMETERDOMAIN = 2;
-
-	/**
-	 * The number of structural features of the '<em>Deployed Workflow Parameter Space</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DEPLOYED_WORKFLOW_PARAMETER_SPACE_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Deployed Workflow Parameter Space</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DEPLOYED_WORKFLOW_PARAMETER_SPACE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.impl.ExperimentSpaceImpl <em>Experiment Space</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.extremexp.emf.model.workflow.impl.ExperimentSpaceImpl
-	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getExperimentSpace()
-	 * @generated
-	 */
-	int EXPERIMENT_SPACE = 38;
-
-	/**
-	 * The feature id for the '<em><b>Deployedworkflowparameterspace</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPERIMENT_SPACE__DEPLOYEDWORKFLOWPARAMETERSPACE = 0;
+	int EXPERIMENT_SPACE__PARAMETERDOMAIN = 1;
 
 	/**
 	 * The number of structural features of the '<em>Experiment Space</em>' class.
@@ -2012,7 +1939,7 @@ public interface WorkflowPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPERIMENT_SPACE_FEATURE_COUNT = 1;
+	int EXPERIMENT_SPACE_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Experiment Space</em>' class.
@@ -2031,7 +1958,7 @@ public interface WorkflowPackage extends EPackage {
 	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getParameterDomain()
 	 * @generated
 	 */
-	int PARAMETER_DOMAIN = 39;
+	int PARAMETER_DOMAIN = 38;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2095,7 +2022,7 @@ public interface WorkflowPackage extends EPackage {
 	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getCase()
 	 * @generated
 	 */
-	int CASE = 40;
+	int CASE = 39;
 
 	/**
 	 * The feature id for the '<em><b>Case</b></em>' attribute.
@@ -2141,7 +2068,7 @@ public interface WorkflowPackage extends EPackage {
 	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getEvent()
 	 * @generated
 	 */
-	int EVENT = 41;
+	int EVENT = 40;
 
 	/**
 	 * The meta object id for the '{@link com.extremexp.emf.model.workflow.Primitive <em>Primitive</em>}' enum.
@@ -2151,7 +2078,7 @@ public interface WorkflowPackage extends EPackage {
 	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getPrimitive()
 	 * @generated
 	 */
-	int PRIMITIVE = 42;
+	int PRIMITIVE = 41;
 
 	/**
 	 * The meta object id for the '<em>New Data Type3</em>' data type.
@@ -2161,7 +2088,7 @@ public interface WorkflowPackage extends EPackage {
 	 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getNewDataType3()
 	 * @generated
 	 */
-	int NEW_DATA_TYPE3 = 43;
+	int NEW_DATA_TYPE3 = 42;
 
 	/**
 	 * Returns the meta object for class '{@link com.extremexp.emf.model.workflow.Workflow <em>Workflow</em>}'.
@@ -2622,17 +2549,6 @@ public interface WorkflowPackage extends EPackage {
 	EReference getTask_Ui();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link com.extremexp.emf.model.workflow.Task#getConditions <em>Conditions</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Conditions</em>'.
-	 * @see com.extremexp.emf.model.workflow.Task#getConditions()
-	 * @see #getTask()
-	 * @generated
-	 */
-	EReference getTask_Conditions();
-
-	/**
 	 * Returns the meta object for class '{@link com.extremexp.emf.model.workflow.Operator <em>Operator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3010,10 +2926,10 @@ public interface WorkflowPackage extends EPackage {
 	EReference getSpecification_Parametertypes();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link com.extremexp.emf.model.workflow.Specification#getWorkflow <em>Workflow</em>}'.
+	 * Returns the meta object for the containment reference list '{@link com.extremexp.emf.model.workflow.Specification#getWorkflow <em>Workflow</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Workflow</em>'.
+	 * @return the meta object for the containment reference list '<em>Workflow</em>'.
 	 * @see com.extremexp.emf.model.workflow.Specification#getWorkflow()
 	 * @see #getSpecification()
 	 * @generated
@@ -3032,10 +2948,10 @@ public interface WorkflowPackage extends EPackage {
 	EReference getSpecification_Deployedworkflow();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link com.extremexp.emf.model.workflow.Specification#getExperimentspace <em>Experimentspace</em>}'.
+	 * Returns the meta object for the containment reference list '{@link com.extremexp.emf.model.workflow.Specification#getExperimentspace <em>Experimentspace</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Experimentspace</em>'.
+	 * @return the meta object for the containment reference list '<em>Experimentspace</em>'.
 	 * @see com.extremexp.emf.model.workflow.Specification#getExperimentspace()
 	 * @see #getSpecification()
 	 * @generated
@@ -3128,49 +3044,6 @@ public interface WorkflowPackage extends EPackage {
 	EReference getCondition_Cases();
 
 	/**
-	 * Returns the meta object for class '{@link com.extremexp.emf.model.workflow.DeployedWorkflowParameterSpace <em>Deployed Workflow Parameter Space</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Deployed Workflow Parameter Space</em>'.
-	 * @see com.extremexp.emf.model.workflow.DeployedWorkflowParameterSpace
-	 * @generated
-	 */
-	EClass getDeployedWorkflowParameterSpace();
-
-	/**
-	 * Returns the meta object for the attribute '{@link com.extremexp.emf.model.workflow.DeployedWorkflowParameterSpace#getMethod <em>Method</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Method</em>'.
-	 * @see com.extremexp.emf.model.workflow.DeployedWorkflowParameterSpace#getMethod()
-	 * @see #getDeployedWorkflowParameterSpace()
-	 * @generated
-	 */
-	EAttribute getDeployedWorkflowParameterSpace_Method();
-
-	/**
-	 * Returns the meta object for the reference '{@link com.extremexp.emf.model.workflow.DeployedWorkflowParameterSpace#getDeployedworkflow <em>Deployedworkflow</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Deployedworkflow</em>'.
-	 * @see com.extremexp.emf.model.workflow.DeployedWorkflowParameterSpace#getDeployedworkflow()
-	 * @see #getDeployedWorkflowParameterSpace()
-	 * @generated
-	 */
-	EReference getDeployedWorkflowParameterSpace_Deployedworkflow();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link com.extremexp.emf.model.workflow.DeployedWorkflowParameterSpace#getParameterdomain <em>Parameterdomain</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Parameterdomain</em>'.
-	 * @see com.extremexp.emf.model.workflow.DeployedWorkflowParameterSpace#getParameterdomain()
-	 * @see #getDeployedWorkflowParameterSpace()
-	 * @generated
-	 */
-	EReference getDeployedWorkflowParameterSpace_Parameterdomain();
-
-	/**
 	 * Returns the meta object for class '{@link com.extremexp.emf.model.workflow.ExperimentSpace <em>Experiment Space</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3181,15 +3054,26 @@ public interface WorkflowPackage extends EPackage {
 	EClass getExperimentSpace();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link com.extremexp.emf.model.workflow.ExperimentSpace#getDeployedworkflowparameterspace <em>Deployedworkflowparameterspace</em>}'.
+	 * Returns the meta object for the reference '{@link com.extremexp.emf.model.workflow.ExperimentSpace#getDeployedworkflow <em>Deployedworkflow</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Deployedworkflowparameterspace</em>'.
-	 * @see com.extremexp.emf.model.workflow.ExperimentSpace#getDeployedworkflowparameterspace()
+	 * @return the meta object for the reference '<em>Deployedworkflow</em>'.
+	 * @see com.extremexp.emf.model.workflow.ExperimentSpace#getDeployedworkflow()
 	 * @see #getExperimentSpace()
 	 * @generated
 	 */
-	EReference getExperimentSpace_Deployedworkflowparameterspace();
+	EReference getExperimentSpace_Deployedworkflow();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link com.extremexp.emf.model.workflow.ExperimentSpace#getParameterdomain <em>Parameterdomain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Parameterdomain</em>'.
+	 * @see com.extremexp.emf.model.workflow.ExperimentSpace#getParameterdomain()
+	 * @see #getExperimentSpace()
+	 * @generated
+	 */
+	EReference getExperimentSpace_Parameterdomain();
 
 	/**
 	 * Returns the meta object for class '{@link com.extremexp.emf.model.workflow.ParameterDomain <em>Parameter Domain</em>}'.
@@ -3673,14 +3557,6 @@ public interface WorkflowPackage extends EPackage {
 		EReference TASK__UI = eINSTANCE.getTask_Ui();
 
 		/**
-		 * The meta object literal for the '<em><b>Conditions</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TASK__CONDITIONS = eINSTANCE.getTask_Conditions();
-
-		/**
 		 * The meta object literal for the '{@link com.extremexp.emf.model.workflow.impl.OperatorImpl <em>Operator</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4007,7 +3883,7 @@ public interface WorkflowPackage extends EPackage {
 		EReference SPECIFICATION__PARAMETERTYPES = eINSTANCE.getSpecification_Parametertypes();
 
 		/**
-		 * The meta object literal for the '<em><b>Workflow</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Workflow</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -4023,7 +3899,7 @@ public interface WorkflowPackage extends EPackage {
 		EReference SPECIFICATION__DEPLOYEDWORKFLOW = eINSTANCE.getSpecification_Deployedworkflow();
 
 		/**
-		 * The meta object literal for the '<em><b>Experimentspace</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Experimentspace</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -4101,42 +3977,6 @@ public interface WorkflowPackage extends EPackage {
 		EReference CONDITION__CASES = eINSTANCE.getCondition_Cases();
 
 		/**
-		 * The meta object literal for the '{@link com.extremexp.emf.model.workflow.impl.DeployedWorkflowParameterSpaceImpl <em>Deployed Workflow Parameter Space</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.extremexp.emf.model.workflow.impl.DeployedWorkflowParameterSpaceImpl
-		 * @see com.extremexp.emf.model.workflow.impl.WorkflowPackageImpl#getDeployedWorkflowParameterSpace()
-		 * @generated
-		 */
-		EClass DEPLOYED_WORKFLOW_PARAMETER_SPACE = eINSTANCE.getDeployedWorkflowParameterSpace();
-
-		/**
-		 * The meta object literal for the '<em><b>Method</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DEPLOYED_WORKFLOW_PARAMETER_SPACE__METHOD = eINSTANCE.getDeployedWorkflowParameterSpace_Method();
-
-		/**
-		 * The meta object literal for the '<em><b>Deployedworkflow</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DEPLOYED_WORKFLOW_PARAMETER_SPACE__DEPLOYEDWORKFLOW = eINSTANCE
-				.getDeployedWorkflowParameterSpace_Deployedworkflow();
-
-		/**
-		 * The meta object literal for the '<em><b>Parameterdomain</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DEPLOYED_WORKFLOW_PARAMETER_SPACE__PARAMETERDOMAIN = eINSTANCE
-				.getDeployedWorkflowParameterSpace_Parameterdomain();
-
-		/**
 		 * The meta object literal for the '{@link com.extremexp.emf.model.workflow.impl.ExperimentSpaceImpl <em>Experiment Space</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4147,13 +3987,20 @@ public interface WorkflowPackage extends EPackage {
 		EClass EXPERIMENT_SPACE = eINSTANCE.getExperimentSpace();
 
 		/**
-		 * The meta object literal for the '<em><b>Deployedworkflowparameterspace</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Deployedworkflow</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference EXPERIMENT_SPACE__DEPLOYEDWORKFLOWPARAMETERSPACE = eINSTANCE
-				.getExperimentSpace_Deployedworkflowparameterspace();
+		EReference EXPERIMENT_SPACE__DEPLOYEDWORKFLOW = eINSTANCE.getExperimentSpace_Deployedworkflow();
+
+		/**
+		 * The meta object literal for the '<em><b>Parameterdomain</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXPERIMENT_SPACE__PARAMETERDOMAIN = eINSTANCE.getExperimentSpace_Parameterdomain();
 
 		/**
 		 * The meta object literal for the '{@link com.extremexp.emf.model.workflow.impl.ParameterDomainImpl <em>Parameter Domain</em>}' class.
