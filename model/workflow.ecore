@@ -196,9 +196,13 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DataLink">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="inputdata" lowerBound="1"
-        eType="#//InputData"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="outputdata" lowerBound="1"
-        eType="#//OutputData"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inputdata" eType="#//InputData"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outputdata" eType="#//OutputData"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="taskData" upperBound="-1"
+        eType="#//TaskData" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TaskData">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="task" lowerBound="1" eType="#//Task"/>
   </eClassifiers>
 </ecore:EPackage>
