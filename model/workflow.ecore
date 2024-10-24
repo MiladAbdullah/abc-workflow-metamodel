@@ -20,12 +20,17 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Metric">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="outputdata" eType="#//OutputData"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="kind" eType="#//MetricKind"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="metricType" lowerBound="1"
+        eType="#//ParameterType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Parameter">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//AnySimpleType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//ParameterType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="valueconstraint" upperBound="-1"
+        eType="#//ValueConstraint" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ParameterType" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -56,13 +61,10 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" upperBound="-1"
         eType="#//InputData" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="generates" upperBound="-1"
-        eType="#//Metric" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="outputs" upperBound="-1"
         eType="#//OutputData" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="metadata" upperBound="-1"
         eType="#//MetaData" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ui" eType="#//UI"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Operator" abstract="true" eSuperTypes="#//Node"/>
   <eClassifiers xsi:type="ecore:EClass" name="Link" abstract="true">
@@ -76,14 +78,12 @@
   <eClassifiers xsi:type="ecore:EClass" name="ExceptionalLink" eSuperTypes="#//Link">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="event" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="UI"/>
   <eClassifiers xsi:type="ecore:EClass" name="Group">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="metadata" upperBound="-1"
         eType="#//MetaData" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tasks" upperBound="-1"
         eType="#//Task"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ui" eType="#//UI"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MetaData">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -155,7 +155,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TaskSpecification" eSuperTypes="#//Workflow">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="implementation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="generates" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="metrics" upperBound="-1"
         eType="#//Metric" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
         eType="#//Parameter" containment="true"/>
@@ -204,5 +204,12 @@
   <eClassifiers xsi:type="ecore:EClass" name="TaskData">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="task" lowerBound="1" eType="#//Task"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ValueConstraint">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="constraint" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="MetricKind">
+    <eLiterals name="SERIES"/>
+    <eLiterals name="SCALAR" value="1"/>
   </eClassifiers>
 </ecore:EPackage>
