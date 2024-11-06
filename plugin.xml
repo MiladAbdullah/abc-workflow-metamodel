@@ -10,7 +10,7 @@
       <!-- @generated workflow -->
       <package
             uri="http://www.example.org/workflow"
-            class="com.extremexp.emf.model.workflow.WorkflowPackage"
+            class="eu.extremexp.emf.model.workflow.WorkflowPackage"
             genModel="model/workflow.genmodel"/>
    </extension>
 
@@ -18,7 +18,7 @@
       <!-- @generated workflow -->
       <factory
             uri="http://www.example.org/workflow"
-            class="com.extremexp.emf.model.workflow.provider.WorkflowItemProviderAdapterFactory"
+            class="eu.extremexp.emf.model.workflow.provider.WorkflowItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
@@ -33,9 +33,9 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="com.extremexp.emf.model.workflow.presentation.WorkflowModelWizardID"
+            id="eu.extremexp.emf.model.workflow.presentation.WorkflowModelWizardID"
             name="%_UI_WorkflowModelWizard_label"
-            class="com.extremexp.emf.model.workflow.presentation.WorkflowModelWizard"
+            class="eu.extremexp.emf.model.workflow.presentation.WorkflowModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
             icon="icons/full/obj16/WorkflowModelFile.gif">
          <description>%_UI_WorkflowModelWizard_description</description>
@@ -46,13 +46,12 @@
    <extension point="org.eclipse.ui.editors">
       <!-- @generated workflow -->
       <editor
-            id="com.extremexp.emf.model.workflow.presentation.WorkflowEditorID"
+            id="eu.extremexp.emf.model.workflow.presentation.WorkflowEditorID"
             name="%_UI_WorkflowEditor_label"
             icon="icons/full/obj16/WorkflowModelFile.gif"
             extensions="workflow"
-            class="com.extremexp.emf.model.workflow.presentation.WorkflowEditor"
-            contributorClass="com.extremexp.emf.model.workflow.presentation.WorkflowActionBarContributor">
+            class="eu.extremexp.emf.model.workflow.presentation.WorkflowEditor"
+            contributorClass="eu.extremexp.emf.model.workflow.presentation.WorkflowActionBarContributor">
       </editor>
    </extension>
-
 </plugin>
