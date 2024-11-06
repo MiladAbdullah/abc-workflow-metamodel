@@ -3,9 +3,13 @@
   <viewpoint:DAnalysis uid="_Kq0f8H_4Ee6u6-aKdvAVnQ" selectedViews="_KrWEYH_4Ee6u6-aKdvAVnQ _PzNnwI-UEe-8YOXOV6C0_w" version="15.4.1.202403191723">
     <semanticResources>workflow.ecore</semanticResources>
     <semanticResources>workflow.genmodel</semanticResources>
+    <semanticResources>../.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi</semanticResources>
+    <semanticResources>platform:/plugin/org.eclipse.pde.spy.preferences/fragment.e4xmi</semanticResources>
+    <semanticResources>../.metadata/.plugins/org.eclipse.oomph.setup/workspace.setup</semanticResources>
+    <semanticResources>GenerateSource.mwe2</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_KrWEYH_4Ee6u6-aKdvAVnQ">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_Krf1YH_4Ee6u6-aKdvAVnQ" name="workflow" repPath="#_KrenQH_4Ee6u6-aKdvAVnQ" changeId="1729797751758">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_Krf1YH_4Ee6u6-aKdvAVnQ" name="workflow" repPath="#_KrenQH_4Ee6u6-aKdvAVnQ" changeId="1730140375467">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="workflow.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -1496,17 +1500,17 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_czaf8I0pEe-BZMZ3zLYBbw" type="4001" element="_ElQCH4CSEe6XhN7kgUdBAQ" source="_1MhD8H_6Ee6qQMkECJ5lgQ" target="_6c9p4H_6Ee6qQMkECJ5lgQ">
           <children xmi:type="notation:Node" xmi:id="_czbHAI0pEe-BZMZ3zLYBbw" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_czbHAY0pEe-BZMZ3zLYBbw" x="19" y="-27"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_czbHAY0pEe-BZMZ3zLYBbw" x="7" y="-27"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_czbHAo0pEe-BZMZ3zLYBbw" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_czbHA40pEe-BZMZ3zLYBbw" x="121" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_czbHA40pEe-BZMZ3zLYBbw" x="97" y="10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_czbHBI0pEe-BZMZ3zLYBbw" type="6003">
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_czbHBY0pEe-BZMZ3zLYBbw" x="17" y="10"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_czaf8Y0pEe-BZMZ3zLYBbw" routing="Rectilinear"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_czaf8o0pEe-BZMZ3zLYBbw" fontColor="7490599" fontName="DejaVu Sans" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_czaf840pEe-BZMZ3zLYBbw" points="[0, 23, -107, -165]$[0, 188, -107, 0]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_czaf840pEe-BZMZ3zLYBbw" points="[0, 23, -107, -165]$[0, 94, -107, -94]$[107, 94, 0, -94]$[107, 188, 0, 0]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_czbuEI0pEe-BZMZ3zLYBbw" id="(0.16101694915254236,0.7012987012987013)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_czbuEY0pEe-BZMZ3zLYBbw" id="(0.5,0.0)"/>
         </edges>
@@ -1560,17 +1564,17 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_DdwtEJFMEe-fFIVGnmMFbA" type="4001" element="_DdXEppFMEe-fFIVGnmMFbA" source="_1MhD8H_6Ee6qQMkECJ5lgQ" target="_3UjfkJFLEe-fFIVGnmMFbA">
           <children xmi:type="notation:Node" xmi:id="_DdwtFJFMEe-fFIVGnmMFbA" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DdwtFZFMEe-fFIVGnmMFbA" x="-29" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DdwtFZFMEe-fFIVGnmMFbA" y="10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_DdwtFpFMEe-fFIVGnmMFbA" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DdwtF5FMEe-fFIVGnmMFbA" x="4"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DdwtF5FMEe-fFIVGnmMFbA" y="10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_DdwtGJFMEe-fFIVGnmMFbA" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DdwtGZFMEe-fFIVGnmMFbA" x="2" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DdwtGZFMEe-fFIVGnmMFbA" x="44" y="10"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_DdwtEZFMEe-fFIVGnmMFbA" routing="Rectilinear"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_DdwtEpFMEe-fFIVGnmMFbA" fontColor="7490599" fontName="Segoe UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_DdwtE5FMEe-fFIVGnmMFbA" points="[58, 7, 93, -108]$[58, 115, 93, 0]$[-35, 115, 0, 0]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_DdwtE5FMEe-fFIVGnmMFbA" points="[118, -31, 153, -146]$[209, -31, 244, -146]$[209, 115, 244, 0]$[-35, 115, 0, 0]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_DdwtGpFMEe-fFIVGnmMFbA" id="(0.0,0.9090909090909091)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_DdwtG5FMEe-fFIVGnmMFbA" id="(1.0,0.5)"/>
         </edges>
@@ -3086,7 +3090,7 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_DdXEppFMEe-fFIVGnmMFbA" name="[0..*] valueconstraint" sourceNode="_1McygH_6Ee6qQMkECJ5lgQ" targetNode="_3T1G0JFLEe-fFIVGnmMFbA">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_DdXEppFMEe-fFIVGnmMFbA" name="[0..1] valueconstraint" sourceNode="_1McygH_6Ee6qQMkECJ5lgQ" targetNode="_3T1G0JFLEe-fFIVGnmMFbA">
       <target xmi:type="ecore:EReference" href="workflow.ecore#//Parameter/valueconstraint"/>
       <semanticElements xmi:type="ecore:EReference" href="workflow.ecore#//Parameter/valueconstraint"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_DdXrgJFMEe-fFIVGnmMFbA" description="_y8aScIAOEe6XhN7kgUdBAQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
